@@ -1,2 +1,13 @@
 @import "./global/global";
 @import './global/navigation';
+
+header {
+    background: linear-gradient(90deg, $dark25, $dark25), url("../assests/images/hero.jpeg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

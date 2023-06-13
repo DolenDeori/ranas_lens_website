@@ -1,0 +1,139 @@
+$animation_timing : 200ms ease-in-out;
+$bar_height: .15rem;
+$bar_width: 1.5rem;
+$bar_gap: .3rem;
+$hamberger_height: calc(($bar_height*3) + ($bar_gap)*2);
+
+$x_width: calc($hamberger_height * 1.41421356237);
+
+nav.nav_container {
+    background-color: $color_white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8rem;
+    border-bottom: 1px solid $dark25;
+
+    .hamberger {
+        display: flex;
+        flex-direction: column;
+        gap: $bar_gap;
+        cursor: pointer;
+        // background: red;
+        width: max-content;
+        z-index: 99;
+
+        input {
+            appearance: none;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            pointer-events: none;
+
+            &:checked {
+                opacity: 0;
+                width: 0;
+            }
+        }
+    }
+
+    .hamberger::before,
+    .hamberger::after,
+    .hamberger input {
+        content: "";
+        width: $bar_width;
+        height: $bar_height;
+        transform-origin: left center;
+        background: $dark100;
+        border-radius: 1rem;
+        transition: all $animation_timing;
+    }
+
+    .hamberger:has(input:checked)::before {
+        rotate: 45deg;
+        width: $x_width;
+        translate: 0 calc($bar_height / -2);
+        transition: all $animation_timing;
+    }
+
+    .hamberger:has(input:checked)::after {
+        rotate: -45deg;
+        width: $x_width;
+        translate: 0 calc($bar_height / 2);
+        transition: all $animation_timing;
+    }
+
+    .logo_container img {
+        height: 2.5rem;
+    }
+
+    .social_container {
+        .social_icon svg {
+            margin: 0 .5rem;
+            color: $dark100;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: $color_primary;
+            }
+        }
+    }
+}
+
+.nav_link_container {
+    position: relative;
+    height: 100%;
+    transition: all $animation_timing;
+
+    ul.nav_links {
+        position: fixed;
+        background: $color_white;
+        height: 100%;
+        width: 0%;
+        border-right: 1px solid $dark25;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: all $animation_timing;
+
+        .links {
+            font-family: $playfair_display;
+            font-size: $heading_4;
+            margin: 1.5rem 0rem;
+
+            a {
+                color: $dark100;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    color: $color_primary;
+
+                }
+            }
+        }
+
+        #social_container_2 {
+            margin-top: 1rem;
+            border-top: 1px solid $dark25;
+            padding: 1rem;
+            display: none;
+
+            .social_icon svg {
+                height: 1rem;
+                color: $dark100;
+                margin: 0 1rem;
+
+                &:hover {
+                    color: $color_primary;
+                }
+            }
+        }
+    }
+
+    ul.show {
+        width: 50%;
+        transition: all $animation_timing;
+    }
+}
