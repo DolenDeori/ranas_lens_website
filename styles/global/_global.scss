@@ -5,7 +5,7 @@
 }
 
 // ------------------------- VARIABLES -------------------------------
-//COLORS
+//? COLORS
 $color_primary : #00BD9D;
 $color_white : #FCFFFF;
 $color_error : #FA402F;
@@ -15,18 +15,27 @@ $dark25 : rgba(12, 23, 28, 0.25);
 $dark10 : rgba(12, 23, 28, 0.1);
 $dark5 : rgba(12, 23, 28, 0.05);
 
-//FONTS
+//? FONTS
 $open_sans: 'Open Sans', sans-serif;
 $playfair_display: 'Playfair Display', serif;
 
-//FONTS SIZES DESKTOP
-$heading-1: 5.7rem; //(119px/21px)rem
-$heading-2: 4rem; //(84px/21px)rem
-$heading-3: 2.8rem; //(60px/21px)rem
-$heading-4: 2rem; //(42px/21px)rem
-$heading-5: 1.4rem; //(30px/21px)rem
+//? FONTS SIZES DESKTOP
+$heading_1: 5.7rem; //(119px/21px)rem
+$heading_2: 4rem; //(84px/21px)rem
+$heading_3: 2.8rem; //(60px/21px)rem
+$heading_4: 2rem; //(42px/21px)rem
+$heading_5: 1.4rem; //(30px/21px)rem
 $paragraph: 1rem; //(21px/21px)rem
-
 
 // BORDER RADIUS
 $border-raius: 0.47rem;
+
+
+// LINKS
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,15 +1,2 @@
 @import "./global/global";
-
-// ------------------- FUNCTIONS ---------------------
-@mixin button_primary($color_bg, $color_text) {
-    font-family: $open_sans;
-    font-size: $heading-5;
-    background-color: $color_bg;
-    color: $color_text;
-    padding: 2rem;
-}
-
-h1 {
-    font-family: $playfair_display;
-    font-size: $heading-1;
-}
+@import './global/navigation';
