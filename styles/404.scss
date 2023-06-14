@@ -1,0 +1,39 @@
+@import './global/global';
+@import './global/navigation';
+
+// header {
+//     @mixin
+// }
+
+header .error_text_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    // background: lightcoral;
+    // z-index: -1;
+
+    .text_area {
+        margin-bottom: 4rem;
+    }
+
+    h1 {
+        font-size: $heading_1;
+        margin-bottom: 4rem;
+        color: $color_error;
+    }
+
+    h2 {
+        font-size: $heading_2
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        background-color: $dark100;
+        font-family: $open_sans;
+        border-radius: $border_radious;
+        color: $color_white;
+    }
+}
