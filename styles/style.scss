@@ -10,4 +10,25 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+}
+
+header .hero_text_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    // background: lightcoral;
+    color: $color_white;
+    // z-index: -1;
+
+    h1 {
+        font-size: $heading_1;
+    }
+
+    h3 {
+        font-size: $heading_3
+    }
 }

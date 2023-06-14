@@ -39,3 +39,17 @@ li {
 a {
     text-decoration: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $playfair_display;
+}
+
+p {
+    font-family: $open_sans;
+    font-size: $paragraph;
+}

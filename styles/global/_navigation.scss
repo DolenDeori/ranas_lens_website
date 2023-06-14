@@ -84,6 +84,7 @@ nav.nav_container {
     position: relative;
     height: 100%;
     transition: all $animation_timing;
+    z-index: 111;
 
     ul.nav_links {
         position: fixed;
@@ -102,6 +103,10 @@ nav.nav_container {
             font-family: $playfair_display;
             font-size: $heading_4;
             margin: 1.5rem 0rem;
+
+            &:nth-child(1) {
+                margin-top: 0;
+            }
 
             a {
                 color: $dark100;
