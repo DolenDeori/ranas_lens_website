@@ -1,13 +1,10 @@
 @import "./global/global";
 @import './global/navigation';
 
+$img_link : url("../assests/images/hero.jpeg");
+
 header {
-    background: linear-gradient(90deg, $dark25, $dark25), url("../assests/images/hero.jpeg");
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
+    @include make_header($img_link);
 }
 
 header .hero_text_container {

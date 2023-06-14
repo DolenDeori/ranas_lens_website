@@ -1,0 +1,127 @@
+@import "./global/global";
+@import "./global/navigation";
+
+$img_link : url("../assests/images/img12.jpeg");
+
+header {
+    height: 100vh;
+    @include make_header($img_link);
+}
+
+header .hero_text_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    // background: lightcoral;
+    color: $color_white;
+    // z-index: -1;
+
+    h1 {
+        font-size: $heading_1;
+    }
+
+    h3 {
+        font-size: $heading_3
+    }
+}
+
+.filter_links_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    // background: lightcoral;
+    padding: 0rem 8rem;
+    margin: auto;
+    margin-top: 8rem;
+
+    .filter_links {
+        cursor: pointer;
+        font-family: $open_sans;
+        // background: $dark25;
+        padding: 0.5rem;
+        width: 100%;
+        margin: 0rem .5rem;
+        text-align: center;
+        font-size: $paragraph;
+        font-weight: bold;
+        color: $dark100;
+
+        &.active {
+            color: $color_primary;
+            border-top: 2px solid $color_primary;
+        }
+    }
+}
+
+main {
+    // background-color: aqua;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 0 8rem;
+
+    .gallery {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .images {
+            gap: 1rem;
+            columns: 4 300px;
+            max-width: 80%;
+
+            li {
+                margin-bottom: 1rem;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .show_item {
+                animation: show .5s ease 0s 1 forwards;
+                transform-origin: center;
+            }
+
+            .hide_item {
+                animation: hide .5s ease 0s 1 forwards;
+                transform-origin: center;
+            }
+
+        }
+    }
+
+}
+
+@keyframes hide {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+        margin: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes show {
+    0% {
+        transform: scale(0);
+        margin: 0;
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

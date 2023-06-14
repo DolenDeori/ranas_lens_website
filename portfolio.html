@@ -4,21 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Through Rana's Lens - Home</title>
+    <title>Through Rana's Lens - Portfolio</title>
 
     <!-- CUSTOM CSS FILE -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/portfolio.css">
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
-
-</head>
+        rel="stylesheet" </head>
 
 <body>
+
     <div class="main_body">
         <header class="hero_container">
             <div class="navigation_area">
@@ -101,8 +100,37 @@
             </div>
         </header>
     </div>
+
+    <div class="filter_links_container">
+        <li class="filter_links active" data-filter="all">All</li>
+        <li class="filter_links" data-filter="wedding">Wedding</li>
+        <li class="filter_links" data-filter="fashion">Fashion</li>
+        <li class="filter_links" data-filter="travelling">Travelling</li>
+        <li class="filter_links" data-filter="portrait">Portrait</li>
+    </div>
+
+    <main class="main">
+        <section class="gallery">
+            <ul class="images">
+                <li class="itembox wedding" data-item="wedding"><img src="./assests/images/img4.jpeg" alt=""></li>
+                <li class="itembox portrait" data-item="wedding"><img src="./assests/images/img2.jpeg" alt=""></li>
+                <li class="itembox wedding" data-item="wedding"><img src="./assests/images/img3.jpeg" alt=""></li>
+                <li class="itembox fashion" data-item="wedding"><img src="./assests/images/img11.jpeg" alt=""></li>
+                <li class="itembox fashion" data-item="portrait"><img src="./assests/images/img2.jpeg" alt=""></li>
+                <li class="itembox portrait" data-item="wedding"><img src="./assests/images/img11.jpeg" alt=""></li>
+                <li class="itembox wedding" data-item="wedding"><img src="./assests/images/img4.jpeg" alt=""></li>
+                <li class="itembox travelling" data-item="travelling"><img src="./assests/images/img2.jpeg" alt=""></li>
+            </ul>
+        </section>
+
+        <div class="contact us">
+
+        </div>
+    </main>
 </body>
-<!-- NAVIGATION JS FILE -->
+
+<!-- JS FILES -->
 <script src="./js/nav.js"></script>
+<script src="./js/portfolio.js"></script>
 
 </html>

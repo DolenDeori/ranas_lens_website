@@ -53,3 +53,13 @@ p {
     font-family: $open_sans;
     font-size: $paragraph;
 }
+
+//? HEADER FUNCTION
+@mixin make_header($img) {
+    background: linear-gradient(90deg, $dark25, $dark25), $img;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
