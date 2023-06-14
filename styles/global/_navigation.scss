@@ -6,6 +6,12 @@ $hamberger_height: calc(($bar_height*3) + ($bar_gap)*2);
 
 $x_width: calc($hamberger_height * 1.41421356237);
 
+.navigation_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 nav.nav_container {
     background-color: $color_white;
     display: flex;
