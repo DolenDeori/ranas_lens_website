@@ -1,5 +1,6 @@
 @import "./global/global";
 @import "./global/navigation";
+@import "./global/footer";
 
 $img_link : url("../assests/images/img12.jpeg");
 
@@ -58,14 +59,7 @@ header .hero_text_container {
 }
 
 main {
-    // background-color: aqua;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // padding: 0 8rem;
-
-    .gallery {
+    section.gallery {
         margin-top: 4rem;
         display: flex;
         justify-content: center;
@@ -98,6 +92,58 @@ main {
         }
     }
 
+    section.contact_us {
+        margin: 8rem 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contact_us_area {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                font-size: $heading_3;
+            }
+
+            p {
+                font-size: $paragraph;
+            }
+
+            .contact_info {
+                margin-top: 2rem;
+                @extend .contact_us_area;
+
+                p {
+                    color: $dark100;
+                    margin: .2rem 0;
+
+                    svg {
+                        fill: $color_primary;
+                        height: 1rem;
+                        margin-right: .5rem;
+                    }
+                }
+            }
+
+            a.btn {
+                margin-top: 3rem;
+                @include make_button($color_white, $color_primary);
+
+                svg {
+                    height: 24px;
+                    width: 24px;
+                    margin-left: 1rem;
+
+                    path {
+                        fill: $color_white;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes hide {

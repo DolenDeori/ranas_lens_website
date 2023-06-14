@@ -64,6 +64,19 @@ p {
     position: relative;
 }
 
+//? MAKE BUTTON
+@mixin make_button($color_f, $color_b) {
+    font-family: $open_sans;
+    font-size: $paragraph;
+    padding: 1rem 2rem;
+    border-radius: $border_radious;
+    background-color: $color_b;
+    color: $color_f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main_body {
     min-height: 100vh;
     height: 100%;
