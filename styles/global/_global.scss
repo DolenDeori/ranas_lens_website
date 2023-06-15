@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: $color_white;
+}
+
 // ------------------------- VARIABLES -------------------------------
 //? COLORS
 $color_primary : #00BD9D;
@@ -28,7 +32,7 @@ $heading_5: 1.4rem; //(30px/21px)rem
 $paragraph: 1rem; //(21px/21px)rem
 
 // BORDER RADIUS
-$border_radious: 0.47rem;
+$border_radious: 0.2rem;
 
 
 // LINKS

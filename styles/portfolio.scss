@@ -48,7 +48,6 @@ header .hero_text_container {
         margin: 0rem .5rem;
         text-align: center;
         font-size: $paragraph;
-        font-weight: bold;
         color: $dark100;
 
         &.active {
@@ -74,9 +73,24 @@ main {
                 margin-bottom: 1rem;
             }
 
+            .itembox {
+                width: 100%;
+                height: auto;
+                max-height: 500px;
+                border-radius: $border_radious;
+                overflow: hidden;
+            }
+
             img {
                 width: 100%;
+                max-height: 500px;
                 object-fit: cover;
+                border-radius: $border_radious;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
 
             .show_item {
@@ -136,10 +150,15 @@ main {
                     height: 24px;
                     width: 24px;
                     margin-left: 1rem;
+                    transition: all .3s ease-in-out;
 
                     path {
                         fill: $color_white;
                     }
+                }
+
+                &:hover svg {
+                    transform: translate(5px);
                 }
             }
         }

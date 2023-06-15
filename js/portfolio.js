@@ -4,8 +4,6 @@ const filter_links = document.querySelector(".filter_links_container");
 
 const itembox = document.querySelectorAll(".itembox");
 filter_links.addEventListener("click", (e) => {
-  console.log(e);
-
   /* this code will add the active class to the selected 
   link and remove active class from other links */
 
