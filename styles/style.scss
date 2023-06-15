@@ -26,3 +26,65 @@ header .hero_text_container {
         font-size: $heading_3
     }
 }
+
+
+main {
+    section.section {
+        margin-top: 8rem;
+        padding: 0 8rem;
+
+        .service_container {
+            margin-bottom: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 8rem;
+
+            .service_work_info {
+                flex: 1;
+
+                h3.service_title {
+                    font-size: $heading_3;
+                }
+
+                p.service_desc {
+                    margin-top: 1rem;
+                    margin-bottom: 7rem;
+                    line-height: 1.5rem;
+                }
+
+                .btn {
+                    font-family: $open_sans;
+                    color: $dark100;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    svg {
+                        margin-left: .5rem;
+                        transition: all .25s ease-in-out;
+                    }
+
+                    &:hover svg {
+                        transform: translate(8px);
+                    }
+                }
+            }
+
+            .service_image {
+                flex: 1;
+                height: 500px;
+                // margin-left: 3rem;
+                position: relative;
+                overflow: hidden;
+                // background: firebrick;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
