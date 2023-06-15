@@ -39,6 +39,7 @@ main {
             justify-content: center;
             align-items: flex-start;
             gap: 8rem;
+            background: lightsalmon;
 
             .service_work_info {
                 flex: 1;
@@ -73,11 +74,9 @@ main {
 
             .service_image {
                 flex: 1;
-                height: 500px;
-                // margin-left: 3rem;
+                min-height: 500px;
                 position: relative;
                 overflow: hidden;
-                // background: firebrick;
 
                 img {
                     position: absolute;
