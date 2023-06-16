@@ -1,0 +1,130 @@
+@import './global/global';
+@import './global/navigation';
+@import './global/footer';
+
+$img_link : url("../assests/images/img2.jpeg");
+
+header {
+    @include make_header($img_link);
+
+    .hero_text_container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: $color_white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid $color_primary;
+
+        .contact_info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8rem;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5rem;
+                color: $color_primary;
+
+                svg {
+                    fill: $color_primary;
+                }
+            }
+        }
+    }
+}
+
+main {
+    padding: 0rem 8rem;
+
+    section {
+        margin: 4rem 0;
+        text-align: center;
+
+        h1 {
+            font-size: $heading_2;
+        }
+    }
+
+    section.contact_form_area {
+
+        form {
+            width: 60%;
+            margin: auto;
+        }
+
+        .input_group_area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            .input_group {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                // background-color: bisque;
+                width: 100%;
+                margin-bottom: 2rem;
+
+                input,
+                select,
+                textarea {
+                    width: 100%;
+                    height: 2.5rem;
+                    border: 2px solid $dark10;
+                    font-family: $open_sans;
+                    font-size: $paragraph;
+                    border-radius: $border_radious;
+                    outline: none;
+                    background-color: $dark5;
+                    margin-top: .5rem
+                }
+
+                textarea {
+                    height: 5rem;
+                    width: 100%;
+                    resize: vertical;
+                    max-height: 8rem;
+                    min-height: 2.5rem
+                }
+            }
+        }
+
+        button.btn {
+            @include make_button($color_white, $color_primary);
+            gap: 1rem;
+            width: 100%;
+            margin-top: 2rem;
+            cursor: pointer;
+            border: none;
+            outline: none;
+
+            &.disabled {
+                cursor: not-allowed;
+                // pointer-events: none;
+                opacity: 50%;
+
+            }
+
+
+
+            svg {
+                height: 1rem;
+                fill: $color_white;
+                transition: all .3s ease-in-out;
+            }
+
+            &:hover svg {
+                transform: translate(4px);
+            }
+        }
+    }
+}
