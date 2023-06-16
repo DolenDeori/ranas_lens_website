@@ -130,15 +130,16 @@ main {
                 margin-top: 2rem;
                 @extend .contact_us_area;
 
-                p {
-                    color: $dark100;
-                    margin: .2rem 0;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .5rem;
+                    margin-top: .5rem;
+                }
 
-                    svg {
-                        fill: $color_primary;
-                        height: 1rem;
-                        margin-right: .5rem;
-                    }
+                svg {
+                    fill: $color_primary;
                 }
             }
 
