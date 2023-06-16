@@ -1,7 +1,7 @@
 @import "./global/global";
 @import './global/navigation';
 
-$img_link : url("../assests/images/hero.jpeg");
+$img_link : url("../assests/images/travelling_2.webp");
 
 header {
     @include make_header($img_link);
@@ -14,9 +14,7 @@ header .hero_text_container {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
-    // background: lightcoral;
     color: $color_white;
-    // z-index: -1;
 
     h1 {
         font-size: $heading_1;
@@ -36,7 +34,7 @@ main {
         .service_container {
             margin-bottom: 8rem;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: flex-start;
             gap: 8rem;
 
@@ -76,6 +74,7 @@ main {
                 min-height: 500px;
                 position: relative;
                 overflow: hidden;
+                background: fuchsia;
 
                 img {
                     position: absolute;

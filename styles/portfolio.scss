@@ -108,61 +108,7 @@ main {
 
     section.contact_us {
         margin: 8rem 8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .contact_us_area {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            h3 {
-                font-size: $heading_3;
-            }
-
-            p {
-                font-size: $paragraph;
-            }
-
-            .contact_info {
-                margin-top: 2rem;
-                @extend .contact_us_area;
-
-                a {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: .5rem;
-                    margin-top: .5rem;
-                }
-
-                svg {
-                    fill: $color_primary;
-                }
-            }
-
-            a.btn {
-                margin-top: 3rem;
-                @include make_button($color_white, $color_primary);
-
-                svg {
-                    height: 24px;
-                    width: 24px;
-                    margin-left: 1rem;
-                    transition: all .3s ease-in-out;
-
-                    path {
-                        fill: $color_white;
-                    }
-                }
-
-                &:hover svg {
-                    transform: translate(5px);
-                }
-            }
-        }
+        @include make_contact_section()
     }
 }
 
