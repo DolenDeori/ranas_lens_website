@@ -78,7 +78,7 @@ main {
         align-items: center;
         justify-content: space-between;
         overflow: hidden;
-        background: linear-gradient(90deg, $dark25, $dark25), url('../assests/images/hero.jpeg') repeat fixed;
+        background: linear-gradient(90deg, $dark75, $dark75), url('../assests/images/hero.jpeg') repeat fixed;
         background-size: 100%;
         background-position: center;
 
@@ -104,8 +104,6 @@ main {
             align-items: center;
             justify-content: space-between;
             margin-top: 4rem;
-            // background: lightblue;
-            // width: auto;
             gap: 1rem;
             overflow: hidden;
 
@@ -113,10 +111,8 @@ main {
                 position: relative;
                 height: 300px;
                 top: 0;
-                // background: lightcoral;
                 flex: 1;
                 overflow: hidden;
-                border-radius: $border_radious;
 
                 &:hover img {
                     transform: scale(1.04);
