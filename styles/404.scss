@@ -2,27 +2,23 @@
 @import './global/navigation';
 @import "./global/footer";
 
-// header {
-//     @mixin
-// }
+//? MAIN PAGE CONTENT STYLING START 
 
 header .error_text_container {
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 100%;
-    // background: lightcoral;
-    // z-index: -1;
 
     .text_area {
         margin-bottom: 4rem;
     }
 
     h1 {
-        font-size: $heading_1;
         margin-bottom: 4rem;
+        font-size: $heading_1;
         color: $color_error;
     }
 
@@ -35,16 +31,18 @@ header .error_text_container {
     }
 
     .btn {
+        outline: none;
+        transition: .3s ease-in-out;
         padding: 1rem 2rem;
         background-color: $dark100;
         font-family: $open_sans;
         border-radius: $border_radious;
         color: $color_white;
-        transition: .3s ease-in-out;
-        outline: none;
 
         &:hover {
             background: $color_primary;
         }
     }
 }
+
+//? MAIN PAGE CONTENT STYLING END

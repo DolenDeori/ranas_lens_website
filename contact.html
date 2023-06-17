@@ -18,7 +18,10 @@
 
 <body>
     <div class="main_body">
+
+        <!-- ------------------------ HEADER AREA START --------------------------  -->
         <header class="hero_container">
+            <!-- NAVIGATION AREA START -->
             <div class="navigation_area">
                 <nav class="nav_container">
                     <label class="hamberger">
@@ -86,6 +89,9 @@
                 </div>
                 <div class="overlay"></div>
             </div>
+            <!-- NAVIGATION AREA END -->
+
+            <!-- HERO CONTENT START -->
             <div class="hero_text_container">
                 <div class="contact_info">
                     <a href="mailto:medhirana9@gmail.com">
@@ -104,8 +110,11 @@
                     </a>
                 </div>
             </div>
+            <!-- HERO CONTENT START -->
         </header>
+        <!-- ----------------------- HEADER AREA END --------------------------------  -->
 
+        <!-- ------------------- MAIN BODY AREA START --------------------------- -->
         <main class="main">
             <section class="contact_info_area">
                 <h1>Unleash Your Vision</h1>
@@ -118,7 +127,7 @@
                     <div class="input_group_area">
                         <div class="input_group">
                             <label for="full_name">
-                                <p>Your Full name</p>
+                                <p>Your Full name <span>*</span></p>
                             </label>
                             <input type="text" id="full_name" name="full_name" placeholder="Full Name" required>
                         </div>
@@ -126,14 +135,14 @@
                     <div class="input_group_area">
                         <div class="input_group">
                             <label for="phone_number">
-                                <p>Phone number</p>
+                                <p>Phone number <span>*</span></p>
                             </label>
                             <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number"
                                 required>
                         </div>
                         <div class="input_group">
                             <label for="email">
-                                <p>Email</p>
+                                <p>Email <span>*</span></p>
                             </label>
                             <input type="text" id="email" name="email" placeholder="user@email.com" required>
                         </div>
@@ -141,7 +150,7 @@
                     <div class="input_group_area">
                         <div class="input_group">
                             <label for="service_selection">
-                                <p>Your Full name</p>
+                                <p>Inquiry Type <span>*</span></p>
                             </label>
                             <select name="service_selection" id="service_selection" required>
                                 <option value="" selected>Select...</option>
@@ -153,7 +162,7 @@
                         </div>
                         <div class="input_group">
                             <label for="event_date">
-                                <p>Event Date</p>
+                                <p>Event Date <span>*</span></p>
                             </label>
                             <input type="date" id="event_date" name="event_date" required>
                         </div>
@@ -161,19 +170,19 @@
                     <div class="input_group_area">
                         <div class="input_group">
                             <label for="state">
-                                <p>State</p>
+                                <p>State <span>*</span></p>
                             </label>
                             <input type="text" id="state" name="state" placeholder="You State" required>
                         </div>
                         <div class="input_group">
                             <label for="city">
-                                <p>City</p>
+                                <p>City <span>*</span></p>
                             </label>
                             <input type="text" id="city" name="city" placeholder="Your City" required>
                         </div>
                         <div class="input_group">
                             <label for="zipcode">
-                                <p>Zipcode</p>
+                                <p>Zipcode <span>*</span></p>
                             </label>
                             <input type="text" id="zipcode" name="zipcode" placeholder="Your Zipcode" required>
                         </div>
@@ -181,7 +190,7 @@
                     <div class="input_group_area">
                         <div class="input_group">
                             <label for="vanue_name">
-                                <p>Vanue Name</p>
+                                <p>Venue Name <span>*</span></p>
                             </label>
                             <input type="text" id="vanue_name" name="vanue_name" placeholder="Enter Vanue Name"
                                 required>
@@ -217,7 +226,10 @@
                 </form>
             </section>
         </main>
+        <!-- ------------------- MAIN BODY AREA START --------------------------- -->
     </div>
+
+    <!-- ------------------ FOOTER AREA START --------------------------- -->
     <footer class="footer_area">
         <div class="copyright_text">
             <p>&copy; Through Rana’s Lens | 2023</p>
@@ -257,6 +269,8 @@
             </a>
         </div>
     </footer>
+    <!-- ------------------ FOOTER AREA END --------------------------- -->
+
 </body>
 <!-- JS FILES -->
 <script src="./js/nav.js"></script>
