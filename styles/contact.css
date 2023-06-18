@@ -415,8 +415,17 @@ main section.contact_form_area button.btn svg {
   }
 }
 @media screen and (max-width: 450px) {
+  header .hero_text_container .contact_info a svg {
+    height: 0.7rem;
+  }
+  header .hero_text_container .contact_info a p {
+    font-size: 0.7rem;
+  }
   main {
     padding: 0rem 2rem;
+  }
+  main section.contact_info_area {
+    text-align: left;
   }
   main section.contact_info_area h1 {
     font-size: 2.1rem;
@@ -428,6 +437,11 @@ main section.contact_form_area button.btn svg {
   }
   main section.contact_form_area .input_group_area .input_group {
     margin-bottom: 1rem;
+  }
+  main section.contact_form_area .input_group_area textarea {
+    height: 5rem !important;
+    max-height: 8rem;
+    min-height: 3rem;
   }
   main section.contact_form_area button.btn {
     font-size: 0.7rem;
