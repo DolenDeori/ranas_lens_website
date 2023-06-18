@@ -1,6 +1,7 @@
 @import './global/global';
 @import './global/navigation';
 @import "./global/footer";
+@import './global/responsive';
 
 //? MAIN PAGE CONTENT STYLING START 
 
@@ -46,3 +47,36 @@ header .error_text_container {
 }
 
 //? MAIN PAGE CONTENT STYLING END
+
+
+//? RESPONSIVE STYLING
+@include mobile {
+    header .error_text_container {
+
+        h1 {
+            font-size: $heading_1_t;
+        }
+
+        h2 {
+            font-size: $heading_2_t;
+        }
+
+        p {
+            font-size: $paragraph_t;
+        }
+
+        .btn {
+            font-size: $paragraph_t;
+        }
+    }
+}
+
+@include mobile_small {
+    header .error_text_container {
+
+        h2 {
+            font-size: $heading_3_t;
+        }
+    }
+
+}
