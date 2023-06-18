@@ -322,6 +322,10 @@ main section.contact_info_area {
 main section.contact_info_area h1 {
   font-size: 4rem;
 }
+main section.contact_info_area p {
+  width: 60%;
+  margin: 1rem auto;
+}
 main section.contact_form_area form {
   width: 70%;
   margin: 6rem auto;
@@ -400,6 +404,8 @@ main section.contact_form_area button.btn svg {
   }
   main section.contact_info_area p {
     font-size: 0.7rem;
+    width: 100%;
+    margin: auto;
   }
   main section.contact_form_area form {
     width: 100%;

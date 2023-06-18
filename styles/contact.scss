@@ -60,6 +60,11 @@ main {
         h1 {
             font-size: $heading_2;
         }
+
+        p {
+            width: 60%;
+            margin: 1rem auto;
+        }
     }
 
     //? CONTACT FORM AREA STYLING ------------
@@ -149,6 +154,8 @@ main {
 
             p {
                 font-size: $paragraph_t;
+                width: 100%;
+                margin: auto;
             }
         }
 
