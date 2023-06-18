@@ -1,5 +1,4 @@
-// VARIABLE for hamberger
-
+//? VARIABLE for hamberger
 $animation_timing : 200ms ease-in-out;
 $bar_height: .15rem;
 $bar_width: 1.5rem;
@@ -30,7 +29,6 @@ nav.nav_container {
         flex-direction: column;
         gap: $bar_gap;
         cursor: pointer;
-        // background: red;
         width: max-content;
 
         input {
@@ -80,8 +78,8 @@ nav.nav_container {
     .social_container {
         .social_icon svg {
             margin: 0 .7rem;
-            color: $dark100;
             transition: all .3s ease-in-out;
+            color: $dark100;
 
             &:hover {
                 color: $color_primary;
@@ -90,17 +88,20 @@ nav.nav_container {
     }
 }
 
+
+//? NAVIGATION LINKS CONTAINER STYLING
 .nav_link_container {
     position: relative;
     height: 100%;
-    transition: all $animation_timing;
     z-index: 1;
+    transition: all $animation_timing;
 
     ul.nav_links {
         position: fixed;
         background: $color_white;
         height: 100%;
         width: 0%;
+        margin-top: 3.5rem;
         border-right: 1px solid $dark25;
         display: flex;
         flex-direction: column;
@@ -166,4 +167,44 @@ nav.nav_container {
 
 .overlay.show {
     display: initial;
+}
+
+
+
+//? RESPONSIVE STYLING ----------------------------------------- 
+
+@media screen and (max-width: 768px) {
+    .social_container {
+        display: none;
+    }
+
+    .nav_link_container {
+        ul.nav_links {
+            margin-top: 3rem;
+
+            #social_container_2 {
+                display: initial;
+            }
+        }
+
+        ul.show {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav.nav_container {
+        padding: 1rem 4rem;
+
+        .logo_container img {
+            height: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    nav.nav_container {
+        padding: 1rem 1.5rem;
+    }
 }
