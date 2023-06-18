@@ -1,6 +1,7 @@
 @import './global/global';
 @import './global/navigation';
 @import './global/footer';
+@import './global/responsive';
 
 $img_link : url("../assests/images/img2.jpeg");
 
@@ -11,7 +12,7 @@ header {
 
     .hero_text_container {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         position: absolute;
         padding: 1rem 0;
@@ -23,9 +24,11 @@ header {
 
         .contact_info {
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
-            gap: 8rem;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: .5rem;
 
             a {
                 display: flex;
@@ -63,7 +66,7 @@ main {
     section.contact_form_area {
 
         form {
-            width: 60%;
+            width: 70%;
             margin: 6rem auto;
         }
 
@@ -128,6 +131,70 @@ main {
                 height: 1rem;
                 transition: all .3s ease-in-out;
                 fill: $color_white;
+            }
+        }
+    }
+}
+
+
+//? RESPONSIVE STYLING
+@include tablet {
+    main {
+        padding: 0rem 4rem;
+
+        section.contact_info_area {
+            h1 {
+                font-size: $heading_2_t;
+            }
+
+            p {
+                font-size: $paragraph_t;
+            }
+        }
+
+        section.contact_form_area form {
+            width: 100%;
+            margin: 2rem auto;
+
+            .input_group_area .input_group {
+                label p {
+                    font-size: $paragraph_t;
+                }
+
+                input,
+                select,
+                textarea {
+                    font-size: $paragraph_t;
+                }
+            }
+        }
+
+    }
+}
+
+@include mobile {
+    main {
+        padding: 0rem 2rem;
+
+        section.contact_info_area {
+            h1 {
+                font-size: $heading_3_t;
+            }
+        }
+
+        section.contact_form_area {
+            .input_group_area {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0rem;
+
+                .input_group {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            button.btn {
+                font-size: $paragraph_t;
             }
         }
     }
