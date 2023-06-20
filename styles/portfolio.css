@@ -349,6 +349,9 @@ main section.contact_us .contact_us_area a.btn {
   justify-content: center;
   align-items: center;
 }
+main section.contact_us .contact_us_area a.btn p {
+  color: #FCFFFF;
+}
 main section.contact_us .contact_us_area a.btn svg {
   height: 24px;
   width: 24px;
@@ -364,5 +367,14 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 @media screen and (max-width: 450px) {
   main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
     font-size: 2.1rem;
+  }
+  main section.contact_us .contact_us_area a.btn .contact_info p {
+    font-size: 0.7rem;
+  }
+  main section.contact_us .contact_us_area a.btn p {
+    font-size: 0.7rem;
+  }
+  main section.contact_us .contact_us_area a.btn svg {
+    height: 1rem;
   }
 }/*# sourceMappingURL=portfolio.css.map */

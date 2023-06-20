@@ -130,6 +130,10 @@ p {
             margin-top: 3rem;
             @include make_button($color_white, $color_primary);
 
+            p {
+                color: $color_white;
+            }
+
             svg {
                 height: 24px;
                 width: 24px;
@@ -151,6 +155,20 @@ p {
         .contact_us_area {
             h3 {
                 font-size: $heading_3_t;
+            }
+
+            a.btn {
+                .contact_info p {
+                    font-size: $paragraph_t;
+                }
+
+                p {
+                    font-size: $paragraph_t;
+                }
+
+                svg {
+                    height: 1rem;
+                }
             }
         }
     }
