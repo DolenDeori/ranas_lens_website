@@ -470,9 +470,6 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   main section.contact_us .contact_us_area a.btn .contact_info p {
     font-size: 0.7rem;
   }
-  main section.contact_us .contact_us_area a.btn p {
-    font-size: 0.7rem;
-  }
   main section.contact_us .contact_us_area a.btn svg {
     height: 1rem;
   }
