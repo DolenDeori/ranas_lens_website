@@ -93,10 +93,6 @@ p {
 
 //? STYLING FOR CONTACT SECTION
 @mixin make_contact_section() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
 
     .contact_us_area {
         display: flex;
@@ -147,6 +143,14 @@ p {
 
             &:hover svg {
                 transform: translate(5px);
+            }
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .contact_us_area {
+            h3 {
+                font-size: $heading_3_t;
             }
         }
     }

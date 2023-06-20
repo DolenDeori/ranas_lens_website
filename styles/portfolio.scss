@@ -1,6 +1,7 @@
 @import "./global/global";
 @import "./global/navigation";
 @import "./global/footer";
+@import "./global/responsive";
 
 $img_link : url("../assests/images/img12.jpeg");
 
@@ -37,22 +38,7 @@ header .hero_text_container {
     width: 80%;
     margin: 8rem auto 4rem auto;
     padding: 0rem 8rem;
-
-    .filter_links {
-        cursor: pointer;
-        width: 100%;
-        padding: 0.5rem;
-        margin: 0rem .5rem;
-        text-align: center;
-        font-family: $open_sans;
-        font-size: $paragraph;
-        color: $dark100;
-
-        &.active {
-            color: $color_primary;
-            border-top: 2px solid $color_primary;
-        }
-    }
+    // background: $dark75;     
 }
 
 //? STYLING ALL THE FULTER BUTTONS end ------------------------------
@@ -60,41 +46,6 @@ header .hero_text_container {
 
 //? MAIN BODY STYLING start --------------------------
 main {
-    section.gallery {
-        margin: 0 8rem;
-        margin-top: 4rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .images {
-            gap: 1rem;
-            columns: 3 200px;
-
-            .itembox {
-                width: 100%;
-                height: auto;
-                max-height: 500px;
-                margin-bottom: 1rem;
-                overflow: hidden;
-                transform-origin: center;
-
-                img {
-                    width: 100%;
-                    max-height: 500px;
-                    object-fit: cover;
-                }
-            }
-
-            .show_item {
-                animation: show .5s ease 0s 1 forwards;
-            }
-
-            .hide_item {
-                animation: hide .5s ease 0s 1 forwards;
-            }
-        }
-    }
 
     section.contact_us {
         margin: 8rem 0;
@@ -105,30 +56,4 @@ main {
 //? MAIN BODY STYLING end --------------------------
 
 
-//? IMAGE HIDE ANIMATION
-@keyframes hide {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(0);
-        margin: 0;
-        width: 0;
-        height: 0;
-    }
-}
-
-//? IMAGE SHOW ANIMATION 
-@keyframes show {
-    0% {
-        transform: scale(0);
-        margin: 0;
-        width: 0;
-        height: 0;
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
+//? RESPONSIVE STYLING 

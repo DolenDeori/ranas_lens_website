@@ -299,67 +299,93 @@ header .hero_text_container h3 {
 }
 
 main section.section {
-  margin: 8rem 0;
-  padding: 0 8rem;
+  padding: 8rem 8rem 0 8rem;
 }
-main section.about_us_area {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 8rem;
+main section:last-child {
+  padding-bottom: 8rem;
 }
-main section.about_us_area .about_text_container {
-  flex: 1;
+main section.about_us_area .about_founder_container {
+  display: grid;
+  grid-template-areas: "founder founder_img";
+  gap: 6rem;
 }
-main section.about_us_area .about_text_container h4 {
-  font-family: "Open Sans", sans-serif;
+main section.about_us_area .about_founder_container #founder {
+  grid-area: founder;
 }
-main section.about_us_area .about_text_container h1 {
-  line-height: 2.5rem;
-  margin-bottom: 2rem;
+main section.about_us_area .about_founder_container #founder h3 {
   font-size: 2.8rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
 }
-main section.about_us_area .about_text_container p {
-  line-height: 1.7rem;
-}
-main section.about_us_area .about_image_container {
-  min-height: 500px;
-  position: relative;
+main section.about_us_area .about_founder_container #founder_img {
+  grid-area: founder_img;
   overflow: hidden;
-  background: fuchsia;
-  flex: 1;
+  max-height: 500px;
 }
-main section.about_us_area .about_image_container img {
-  position: absolute;
+main section.about_us_area .about_founder_container #founder_img .img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: grayscale(1);
+}
+main section.about_us_area .about_team_container {
+  display: grid;
+  grid-template-areas: "team_img team";
+  gap: 8rem;
+  margin-top: 8rem;
+}
+main section.about_us_area .about_team_container #team {
+  grid-area: team;
+}
+main section.about_us_area .about_team_container #team h3 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+main section.about_us_area .about_team_container #team_img {
+  grid-area: team_img;
+  overflow: hidden;
+  max-height: 500px;
+}
+main section.about_us_area .about_team_container #team_img .img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(1);
 }
 main section.work_counter {
-  background: linear-gradient(90deg, rgba(12, 23, 28, 0.75), rgba(12, 23, 28, 0.75)), url("../assests/images/hero.jpeg") repeat fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  background-position: center;
-  background-size: 100%;
+  display: grid;
+  grid-template-areas: "work1 work2 work3 work4";
+}
+main section.work_counter .wrok_1 {
+  grid-area: work1;
+}
+main section.work_counter .wrok_2 {
+  grid-area: work2;
+}
+main section.work_counter .wrok_3 {
+  grid-area: work3;
+}
+main section.work_counter .wrok_4 {
+  grid-area: work4;
 }
 main section.work_counter .work {
   text-align: center;
-  padding: 8rem 0;
-  color: #FCFFFF;
+  color: #0c171c;
 }
 main section.work_counter .work h1 {
   font-size: 4rem;
+}
+main section.work_counter .work h4 {
+  font-size: 1rem;
+  color: rgba(12, 23, 28, 0.75);
 }
 main section.instagram_work_area h3 {
   font-size: 2.8rem;
   text-align: center;
 }
 main section.instagram_work_area .insta_pic_area {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   overflow: hidden;
   margin-top: 4rem;
   gap: 1rem;
@@ -383,13 +409,6 @@ main section.instagram_work_area .insta_pic_area .insta_pic_container img {
   -o-object-fit: cover;
      object-fit: cover;
   transition: all 0.5s ease-in-out;
-}
-main section.contact_us {
-  margin: 8rem 8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
 }
 main section.contact_us .contact_us_area, main section.contact_us .contact_us_area .contact_info {
   display: flex;
@@ -440,4 +459,83 @@ main section.contact_us .contact_us_area a.btn svg path {
 }
 main section.contact_us .contact_us_area a.btn:hover svg {
   transform: translate(5px);
+}
+@media screen and (max-width: 450px) {
+  main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section.about_us_area .about_founder_container,
+  section.about_us_area .about_team_container {
+    gap: 2rem !important;
+  }
+  section.work_counter {
+    grid-template-areas: "work1 work2" "work3 work4" !important;
+    gap: 4rem;
+  }
+}
+@media screen and (max-width: 830px) {
+  section.about_us_area .about_founder_container {
+    grid-template-areas: "founder_img" "founder" !important;
+  }
+  section.about_us_area .about_team_container {
+    grid-template-areas: "team_img" "team" !important;
+  }
+  section.instagram_work_area .insta_pic_area {
+    margin-top: 2rem !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  header .hero_text_container h1 {
+    font-size: 4.2rem;
+  }
+  section.section {
+    padding: 4rem 2rem 0 2rem !important;
+  }
+  section.section .about_founder_container,
+  section.section .about_team_container {
+    margin-top: 4rem !important;
+  }
+  section.section .about_founder_container h3,
+  section.section .about_team_container h3 {
+    font-size: 2.1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  section.instagram_work_area h3.section_title {
+    font-size: 2.1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  section.contact_us {
+    margin: 4rem 0rem !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  header .hero_text_container h1 {
+    font-size: 3rem;
+  }
+  section.section {
+    padding: 2rem 2rem !important;
+  }
+  .about_founder_container p,
+  .about_team_container p {
+    font-size: 0.7rem;
+  }
+  section.work_counter {
+    gap: 1rem;
+  }
+  section.work_counter h1 {
+    font-size: 3rem !important;
+  }
+  section.work_counter h4 {
+    font-size: 0.7rem;
+  }
+  section.instagram_work_area h3 {
+    text-align: left !important;
+  }
+  section.instagram_work_area .insta_pic_area {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }/*# sourceMappingURL=about.css.map */

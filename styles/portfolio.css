@@ -307,59 +307,9 @@ header .hero_text_container h3 {
   margin: 8rem auto 4rem auto;
   padding: 0rem 8rem;
 }
-.filter_links_container .filter_links {
-  cursor: pointer;
-  width: 100%;
-  padding: 0.5rem;
-  margin: 0rem 0.5rem;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  color: #0c171c;
-}
-.filter_links_container .filter_links.active {
-  color: #00BD9D;
-  border-top: 2px solid #00BD9D;
-}
 
-main section.gallery {
-  margin: 0 8rem;
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main section.gallery .images {
-  gap: 1rem;
-  -moz-columns: 3 200px;
-       columns: 3 200px;
-}
-main section.gallery .images .itembox {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  transform-origin: center;
-}
-main section.gallery .images .itembox img {
-  width: 100%;
-  max-height: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main section.gallery .images .show_item {
-  animation: show 0.5s ease 0s 1 forwards;
-}
-main section.gallery .images .hide_item {
-  animation: hide 0.5s ease 0s 1 forwards;
-}
 main section.contact_us {
   margin: 8rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
 }
 main section.contact_us .contact_us_area, main section.contact_us .contact_us_area .contact_info {
   display: flex;
@@ -411,26 +361,8 @@ main section.contact_us .contact_us_area a.btn svg path {
 main section.contact_us .contact_us_area a.btn:hover svg {
   transform: translate(5px);
 }
-
-@keyframes hide {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-    margin: 0;
-    width: 0;
-    height: 0;
-  }
-}
-@keyframes show {
-  0% {
-    transform: scale(0);
-    margin: 0;
-    width: 0;
-    height: 0;
-  }
-  100% {
-    transform: scale(1);
+@media screen and (max-width: 450px) {
+  main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
+    font-size: 2.1rem;
   }
 }/*# sourceMappingURL=portfolio.css.map */
