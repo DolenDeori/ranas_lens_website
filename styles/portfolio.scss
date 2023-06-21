@@ -38,22 +38,146 @@ header .hero_text_container {
     width: 80%;
     margin: 8rem auto 4rem auto;
     padding: 0rem 8rem;
-    // background: $dark75;     
 }
-
-//? STYLING ALL THE FULTER BUTTONS end ------------------------------
-
 
 //? MAIN BODY STYLING start --------------------------
 main {
+    section.section {
+        margin: 8rem 8rem 0;
+    }
+
+    section:last-child {
+        margin-bottom: 8rem;
+    }
+
+    section.gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 300px 300px;
+        grid-auto-flow: dense;
+        gap: 1rem;
+        grid-template-rows: masonry;
+
+        .img_container {
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+
+                &:hover {
+                    filter: brightness(-1);
+                }
+            }
+
+            .img_title {
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $color_white;
+                pointer-events: none;
+            }
+
+            &:hover .img_title {
+                opacity: 1;
+
+            }
+        }
+    }
 
     section.contact_us {
-        margin: 8rem 0;
         @include make_contact_section();
     }
+}
+
+//? Light box Styling
+.lightbox_area {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10111;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+    display: none;
+
+    .lightbox_container {
+        position: relative;
+
+        #lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10000;
+            background: $dark75;
+
+        }
+    }
+
+}
+
+.lightbox_area.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 //? MAIN BODY STYLING end --------------------------
 
 
 //? RESPONSIVE STYLING 
+@media screen and (max-width: 900px) {
+    section.gallery {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@include tablet {
+    header .hero_text_container {
+        h1 {
+            font-size: $heading_1_t;
+        }
+    }
+
+    section.section {
+        margin: 4rem 4rem 0 !important;
+    }
+
+    section.gallery {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@include mobile {
+    header .hero_text_container {
+        h1 {
+            font-size: $heading_2_t;
+        }
+
+        p {
+            font-size: $paragraph_t;
+        }
+    }
+
+    section.section {
+        margin: 4rem 2rem 0 !important;
+    }
+
+    section:last-child {
+        margin-bottom: 4rem !important;
+    }
+
+    section.gallery {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}

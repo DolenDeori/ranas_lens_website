@@ -15,7 +15,6 @@ $x_width: calc($hamberger_height * 1.41421356237);
 nav.nav_container {
     position: fixed;
     width: 100%;
-    // background-color: rgb(36, 225, 225);
     background-color: $color_white;
     display: flex;
     justify-content: space-between;
