@@ -33,7 +33,7 @@ header .hero_text_container {
 //? MAIN BODY CONTENT STYLING
 main {
     section.section {
-        padding: 8rem 8rem 0 8rem;
+        padding: 8rem 8rem 0;
     }
 
     section:last-child {
@@ -225,7 +225,7 @@ main {
     }
 
     section.section {
-        padding: 4rem 2rem 0 2rem !important;
+        padding: 4rem 2rem 0 !important;
 
         .about_founder_container,
         .about_team_container {

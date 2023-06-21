@@ -299,7 +299,7 @@ header .hero_text_container h3 {
 }
 
 main section.section {
-  padding: 8rem 8rem 0 8rem;
+  padding: 8rem 8rem 0;
 }
 main section:last-child {
   padding-bottom: 8rem;
@@ -502,7 +502,7 @@ main section.contact_us .contact_us_area a.btn:hover svg {
     font-size: 4.2rem;
   }
   section.section {
-    padding: 4rem 2rem 0 2rem !important;
+    padding: 4rem 2rem 0 !important;
   }
   section.section .about_founder_container,
   section.section .about_team_container {
