@@ -96,10 +96,6 @@ p {
 
 //? STYLING FOR CONTACT SECTION
 @mixin make_contact_section() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
 
     .contact_us_area {
         display: flex;
@@ -137,6 +133,10 @@ p {
             margin-top: 3rem;
             @include make_button($color_white, $color_primary);
 
+            p {
+                color: $color_white;
+            }
+
             svg {
                 height: 24px;
                 width: 24px;
@@ -153,8 +153,28 @@ p {
             }
         }
     }
+
+    //? CONTACT SECTION RESPONSIVE CODE
+    @media screen and (max-width: 450px) {
+        .contact_us_area {
+            h3 {
+                font-size: $heading_3_t;
+            }
+
+            a.btn {
+                .contact_info p {
+                    font-size: $paragraph_t;
+                }
+
+                svg {
+                    height: 1rem;
+                }
+            }
+        }
+    }
 }
 
+//? MAINBODY STYLING
 .main_body {
     min-height: 100vh;
     height: 100%;

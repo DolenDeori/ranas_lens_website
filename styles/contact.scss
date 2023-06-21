@@ -60,6 +60,11 @@ main {
         h1 {
             font-size: $heading_2;
         }
+
+        p {
+            width: 60%;
+            margin: 1rem auto;
+        }
     }
 
     //? CONTACT FORM AREA STYLING ------------
@@ -149,6 +154,8 @@ main {
 
             p {
                 font-size: $paragraph_t;
+                width: 100%;
+                margin: auto;
             }
         }
 
@@ -173,10 +180,27 @@ main {
 }
 
 @include mobile {
+
+    header {
+        .hero_text_container {
+            .contact_info a {
+                svg {
+                    height: .7rem;
+                }
+
+                p {
+                    font-size: $paragraph_t;
+                }
+            }
+        }
+    }
+
     main {
         padding: 0rem 2rem;
 
         section.contact_info_area {
+            text-align: left;
+
             h1 {
                 font-size: $heading_3_t;
             }
@@ -190,6 +214,12 @@ main {
 
                 .input_group {
                     margin-bottom: 1rem;
+                }
+
+                textarea {
+                    height: 5rem !important;
+                    max-height: 8rem;
+                    min-height: 3rem
                 }
             }
 
