@@ -299,51 +299,243 @@ header .hero_text_container h3 {
 }
 
 main section.section {
-  margin-top: 8rem;
-  padding: 0 8rem;
+  margin: 8rem 8rem 0;
 }
-main section.section .service_container {
+main section.section:last-child {
+  margin-bottom: 8rem;
+}
+main section.service_showcase_area .service_container {
   margin-bottom: 8rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 8rem;
 }
-main section.section .service_container .service_work_info {
+main section.service_showcase_area .service_container .service_work_info {
   flex: 1;
 }
-main section.section .service_container .service_work_info h3.service_title {
+main section.service_showcase_area .service_container .service_work_info h3.service_title {
   font-size: 2.8rem;
 }
-main section.section .service_container .service_work_info p.service_desc {
+main section.service_showcase_area .service_container .service_work_info p.service_desc {
   margin-top: 1rem;
   margin-bottom: 7rem;
   line-height: 1.5rem;
 }
-main section.section .service_container .service_work_info .btn {
+main section.service_showcase_area .service_container .service_work_info .btn {
   font-family: "Open Sans", sans-serif;
   color: #0c171c;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-main section.section .service_container .service_work_info .btn svg {
+main section.service_showcase_area .service_container .service_work_info .btn svg {
   margin-left: 0.5rem;
   transition: all 0.25s ease-in-out;
 }
-main section.section .service_container .service_work_info .btn:hover svg {
+main section.service_showcase_area .service_container .service_work_info .btn:hover svg {
   transform: translate(8px);
 }
-main section.section .service_container .service_image {
+main section.service_showcase_area .service_container .service_image {
   flex: 1;
   min-height: 500px;
   position: relative;
   overflow: hidden;
   background: fuchsia;
 }
-main section.section .service_container .service_image img {
+main section.service_showcase_area .service_container .service_image img {
   position: absolute;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main section.call_to_action .cta_imge_area {
+  position: relative;
+  background: lightcoral;
+  padding: 0;
+  height: 70vh;
+}
+main section.call_to_action .cta_imge_area img {
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section.call_to_action .cta_imge_area .call_to_action_textarea {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+main section.call_to_action .cta_imge_area .call_to_action_textarea .cta_title {
+  font-size: 4rem;
+}
+main section.call_to_action .cta_imge_area .call_to_action_textarea .cta_desc {
+  font-size: 1rem;
+}
+main section.call_to_action .cta_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(12, 23, 28, 0.25);
+  padding: 1rem 8rem;
+  margin: 0;
+}
+main section.call_to_action .cta_footer .cta_footer_textarea h1.cta_footer_title {
+  font-size: 2rem;
+}
+main section.call_to_action .cta_footer .btn_cta_footer a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: #0c171c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+main section.call_to_action .cta_footer .btn_cta_footer a p {
+  color: #FCFFFF;
+}
+main section.call_to_action .cta_footer .btn_cta_footer a:hover svg {
+  transform: translate(4px);
+}
+main section.call_to_action .cta_footer .btn_cta_footer a svg {
+  transition: all 0.3s ease-in-out;
+}
+main section.call_to_action .cta_footer .btn_cta_footer a svg path {
+  fill: #FCFFFF;
+}
+main section.glimpse_of_work h1.glimpse_title {
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+main section.glimpse_of_work .works_image_area {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 400px;
+  gap: 1rem;
+}
+main section.glimpse_of_work .works_image_area .glimpse_img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+main section.glimpse_of_work .works_image_area .glimpse_img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+main section.glimpse_of_work .glimpse_arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+main section.glimpse_of_work .glimpse_arrows .arrow a svg {
+  height: 2rem;
+  width: 2rem;
+}
+main section.glimpse_of_work .glimpse_arrows .arrow a svg path {
+  fill: #0c171c;
+}
+main section.instagram_work_area h3 {
+  font-size: 2.8rem;
+  text-align: center;
+}
+main section.instagram_work_area .insta_pic_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+main section.instagram_work_area .insta_pic_area .insta_pic_container {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  top: 0;
+  left: 0;
+  flex: 1;
+}
+main section.instagram_work_area .insta_pic_area .insta_pic_container:hover img {
+  transform: scale(1.05);
+}
+main section.instagram_work_area .insta_pic_area .insta_pic_container img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+main section.contact_us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main section.contact_us .contact_us_area, main section.contact_us .contact_us_area .contact_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
+  font-size: 2.8rem;
+}
+main section.contact_us .contact_us_area p, main section.contact_us .contact_us_area .contact_info p {
+  font-size: 1rem;
+  color: #0c171c;
+}
+main section.contact_us .contact_us_area .contact_info {
+  margin-top: 2rem;
+}
+main section.contact_us .contact_us_area .contact_info a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+main section.contact_us .contact_us_area .contact_info svg {
+  fill: #00BD9D;
+}
+main section.contact_us .contact_us_area a.btn {
+  margin-top: 3rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: #00BD9D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section.contact_us .contact_us_area a.btn p {
+  color: #FCFFFF;
+}
+main section.contact_us .contact_us_area a.btn svg {
+  height: 24px;
+  width: 24px;
+  margin-left: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+main section.contact_us .contact_us_area a.btn svg path {
+  fill: #FCFFFF;
+}
+main section.contact_us .contact_us_area a.btn:hover svg {
+  transform: translate(5px);
 }/*# sourceMappingURL=style.css.map */
