@@ -87,7 +87,6 @@ main {
 
             &:hover .img_title {
                 opacity: 1;
-
             }
         }
     }
@@ -98,37 +97,62 @@ main {
 }
 
 //? Light box Styling
-.lightbox_area {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+
+
+#lightBox {
     position: fixed;
-    z-index: 10111;
     top: 0;
     left: 0;
-    background-color: aqua;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: $dark75;
     display: none;
 
-    .lightbox_container {
-        position: relative;
-
-        #lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            z-index: 10000;
-            background: $dark75;
-
-        }
+    .ld_img {
+        height: 500px;
+        width: 60%;
+        object-fit: cover;
+        object-position: 50% 50%;
     }
-
 }
 
-.lightbox_area.active {
+#lightBox.active {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.lightbox_control {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 8rem;
+    z-index: 100001;
+    display: none;
+
+    .control_btn {
+        padding: 1rem;
+        cursor: pointer;
+
+        svg {
+            height: 8rem;
+            width: 2rem;
+            // background: lightseagreen;
+
+            path {
+                padding: 2rem;
+                fill: $color_white;
+            }
+        }
+    }
+}
+
+.lightbox_control.active_control {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -138,8 +162,24 @@ main {
 //? RESPONSIVE STYLING 
 @media screen and (max-width: 900px) {
     section.gallery {
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
     }
+
+    #lightBox {
+        .ld_img {
+            width: 90%;
+        }
+    }
+
+    .lightbox_control {
+        padding: 0rem 4rem;
+
+        .control_btn {
+            background-color: $dark25;
+            border-radius: $border_radius;
+        }
+    }
+
 }
 
 @include tablet {
@@ -153,8 +193,23 @@ main {
         margin: 4rem 4rem 0 !important;
     }
 
+    section:last-child {
+        margin-bottom: 4rem !important;
+    }
+
     section.gallery {
         grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    #lightBox {
+        .ld_img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .lightbox_control {
+        padding: 0rem 1rem;
     }
 }
 
@@ -179,5 +234,17 @@ main {
 
     section.gallery {
         grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .lightbox_control {
+        padding: 0rem 0rem;
+
+        .control_btn {
+
+            svg {
+                height: 8rem;
+                width: 1.5rem;
+            }
+        }
     }
 }

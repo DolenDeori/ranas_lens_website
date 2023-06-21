@@ -102,7 +102,7 @@ nav.nav_container .logo_container img {
 }
 nav.nav_container .social_container .social_icon svg {
   margin: 0 0.7rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   color: #0c171c;
 }
 nav.nav_container .social_container .social_icon svg:hover {
@@ -121,7 +121,6 @@ nav.nav_container .social_container .social_icon svg:hover {
   height: 100%;
   width: 0%;
   margin-top: 3.5rem;
-  border-right: 1px solid rgba(12, 23, 28, 0.25);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,6 +159,7 @@ nav.nav_container .social_container .social_icon svg:hover {
 }
 .nav_link_container ul.show {
   width: 50%;
+  border-right: 1px solid rgba(12, 23, 28, 0.25);
   transition: all 200ms ease-in-out;
 }
 
@@ -481,12 +481,6 @@ main section.instagram_work_area .insta_pic_area .insta_pic_container img {
      object-fit: cover;
   transition: all 0.5s ease-in-out;
 }
-main section.contact_us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
 main section.contact_us .contact_us_area, main section.contact_us .contact_us_area .contact_info {
   display: flex;
   flex-direction: column;
@@ -527,6 +521,9 @@ main section.contact_us .contact_us_area a.btn {
 main section.contact_us .contact_us_area a.btn p {
   color: #FCFFFF;
 }
+main section.contact_us .contact_us_area a.btn p {
+  color: #FCFFFF;
+}
 main section.contact_us .contact_us_area a.btn svg {
   height: 24px;
   width: 24px;
@@ -538,4 +535,15 @@ main section.contact_us .contact_us_area a.btn svg path {
 }
 main section.contact_us .contact_us_area a.btn:hover svg {
   transform: translate(5px);
+}
+@media screen and (max-width: 450px) {
+  main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
+    font-size: 2.1rem;
+  }
+  main section.contact_us .contact_us_area a.btn .contact_info p {
+    font-size: 0.7rem;
+  }
+  main section.contact_us .contact_us_area a.btn svg {
+    height: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */

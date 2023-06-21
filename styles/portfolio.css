@@ -102,7 +102,7 @@ nav.nav_container .logo_container img {
 }
 nav.nav_container .social_container .social_icon svg {
   margin: 0 0.7rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   color: #0c171c;
 }
 nav.nav_container .social_container .social_icon svg:hover {
@@ -121,7 +121,6 @@ nav.nav_container .social_container .social_icon svg:hover {
   height: 100%;
   width: 0%;
   margin-top: 3.5rem;
-  border-right: 1px solid rgba(12, 23, 28, 0.25);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,6 +159,7 @@ nav.nav_container .social_container .social_icon svg:hover {
 }
 .nav_link_container ul.show {
   width: 50%;
+  border-right: 1px solid rgba(12, 23, 28, 0.25);
   transition: all 200ms ease-in-out;
 }
 
@@ -391,6 +391,9 @@ main section.contact_us .contact_us_area a.btn {
 main section.contact_us .contact_us_area a.btn p {
   color: #FCFFFF;
 }
+main section.contact_us .contact_us_area a.btn p {
+  color: #FCFFFF;
+}
 main section.contact_us .contact_us_area a.btn svg {
   height: 24px;
   width: 24px;
@@ -415,21 +418,7 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   }
 }
 
-.lightbox_area {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 10111;
-  top: 0;
-  left: 0;
-  background-color: aqua;
-  display: none;
-}
-.lightbox_area .lightbox_container {
-  position: relative;
-}
-.lightbox_area .lightbox_container #lightbox {
+#lightBox {
   position: fixed;
   top: 0;
   left: 0;
@@ -437,17 +426,65 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   width: 100%;
   z-index: 10000;
   background: rgba(12, 23, 28, 0.75);
+  display: none;
+}
+#lightBox .ld_img {
+  height: 500px;
+  width: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
-.lightbox_area.active {
+#lightBox.active {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.lightbox_control {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 8rem;
+  z-index: 100001;
+  display: none;
+}
+.lightbox_control .control_btn {
+  padding: 1rem;
+  cursor: pointer;
+}
+.lightbox_control .control_btn svg {
+  height: 8rem;
+  width: 2rem;
+}
+.lightbox_control .control_btn svg path {
+  padding: 2rem;
+  fill: #FCFFFF;
+}
+
+.lightbox_control.active_control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media screen and (max-width: 900px) {
   section.gallery {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  #lightBox .ld_img {
+    width: 90%;
+  }
+  .lightbox_control {
+    padding: 0rem 4rem;
+  }
+  .lightbox_control .control_btn {
+    background-color: rgba(12, 23, 28, 0.25);
+    border-radius: 0.2rem;
   }
 }
 @media screen and (max-width: 800px) {
@@ -457,8 +494,18 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   section.section {
     margin: 4rem 4rem 0 !important;
   }
+  section:last-child {
+    margin-bottom: 4rem !important;
+  }
   section.gallery {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+  #lightBox .ld_img {
+    width: 100%;
+    height: auto;
+  }
+  .lightbox_control {
+    padding: 0rem 1rem;
   }
 }
 @media screen and (max-width: 450px) {
@@ -476,5 +523,12 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   }
   section.gallery {
     grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .lightbox_control {
+    padding: 0rem 0rem;
+  }
+  .lightbox_control .control_btn svg {
+    height: 8rem;
+    width: 1.5rem;
   }
 }/*# sourceMappingURL=portfolio.css.map */
