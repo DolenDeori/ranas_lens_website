@@ -306,52 +306,52 @@ main section.section:last-child {
 }
 main section.service_showcase_area .service_container {
   margin-bottom: 8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 8rem;
-}
-main section.service_showcase_area .service_container .service_work_info {
-  flex: 1;
-}
-main section.service_showcase_area .service_container .service_work_info h3.service_title {
-  font-size: 2.8rem;
-}
-main section.service_showcase_area .service_container .service_work_info p.service_desc {
-  margin-top: 1rem;
-  margin-bottom: 7rem;
-  line-height: 1.5rem;
-}
-main section.service_showcase_area .service_container .service_work_info .btn {
-  font-family: "Open Sans", sans-serif;
-  color: #0c171c;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-main section.service_showcase_area .service_container .service_work_info .btn svg {
-  margin-left: 0.5rem;
-  transition: all 0.25s ease-in-out;
-}
-main section.service_showcase_area .service_container .service_work_info .btn:hover svg {
-  transform: translate(8px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "service_info service_image";
+  gap: 6rem;
 }
 main section.service_showcase_area .service_container .service_image {
-  flex: 1;
-  min-height: 500px;
-  position: relative;
+  grid-area: service_image;
+}
+main section.service_showcase_area .service_container .service_info {
+  grid-area: service_info;
+}
+main section.service_showcase_area .service_container:nth-child(even) {
+  grid-template-areas: "service_image service_info";
+}
+main section.service_showcase_area .service_container .service_info h3 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+main section.service_showcase_area .service_container .service_info a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+main section.service_showcase_area .service_container .service_info a p.view_more_btn {
+  color: #0c171c;
+}
+main section.service_showcase_area .service_container .service_info a:hover svg {
+  transform: translate(5px);
+}
+main section.service_showcase_area .service_container .service_image {
   overflow: hidden;
-  background: fuchsia;
+  height: 550px;
+  width: 100%;
 }
 main section.service_showcase_area .service_container .service_image img {
-  position: absolute;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
 }
 main section.call_to_action .cta_imge_area {
   position: relative;
-  background: lightcoral;
   padding: 0;
   height: 70vh;
 }
@@ -413,7 +413,7 @@ main section.call_to_action .cta_footer .btn_cta_footer a svg path {
 }
 main section.glimpse_of_work h1.glimpse_title {
   font-size: 2.8rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 main section.glimpse_of_work .works_image_area {
@@ -458,7 +458,7 @@ main section.instagram_work_area .insta_pic_area {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  margin-top: 4rem;
+  margin-top: 2rem;
   gap: 1rem;
 }
 main section.instagram_work_area .insta_pic_area .insta_pic_container {
@@ -545,5 +545,12 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   }
   main section.contact_us .contact_us_area a.btn svg {
     height: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section.service_showcase_area .service_container {
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-areas: "service_image" "service_info" !important;
   }
 }/*# sourceMappingURL=style.css.map */

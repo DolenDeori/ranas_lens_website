@@ -1,6 +1,7 @@
 @import "./global/global";
 @import './global/navigation';
 @import './global/footer';
+@import './global/responsive';
 
 $img_link : url("../assests/images/travelling_2.webp");
 
@@ -30,166 +31,178 @@ header .hero_text_container {
 main {
     section.section {
         margin: 8rem 8rem 0; // top | left and right | bottom
-        &:last-child{
+
+        &:last-child {
             margin-bottom: 8rem;
         }
     }
-    section.service_showcase_area{
+
+    section.service_showcase_area {
         .service_container {
             margin-bottom: 8rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 8rem;
 
-            .service_work_info {
-                flex: 1;
+            .service_image {
+                grid-area: service_image;
+            }
 
-                h3.service_title {
+            .service_info {
+                grid-area: service_info;
+            }
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 'service_info service_image';
+            gap: 6rem;
+
+            &:nth-child(even) {
+                grid-template-areas: 'service_image service_info';
+            }
+
+            .service_info {
+                h3 {
                     font-size: $heading_3;
+                    margin-bottom: 1rem;
                 }
 
-                p.service_desc {
-                    margin-top: 1rem;
-                    margin-bottom: 7rem;
-                    line-height: 1.5rem;
-                }
-
-                .btn {
-                    font-family: $open_sans;
-                    color: $dark100;
+                a {
                     display: flex;
-                    align-items: center;
                     justify-content: flex-start;
+                    align-items: center;
+                    margin-top: 4rem;
+                    gap: 1rem;
 
-                    svg {
-                        margin-left: .5rem;
-                        transition: all .25s ease-in-out;
+                    p.view_more_btn {
+                        color: $dark100;
                     }
 
                     &:hover svg {
-                        transform: translate(8px);
+                        transform: translate(5px)
                     }
                 }
             }
 
             .service_image {
-                flex: 1;
-                min-height: 500px;
-                position: relative;
                 overflow: hidden;
-                background: fuchsia;
+                height: 550px;
+                width: 100%;
 
                 img {
-                    position: absolute;
+                    height: 100%;
                     width: 100%;
                     object-fit: cover;
+                    object-position: 50% 0;
                 }
             }
         }
     }
 
-    section.call_to_action{
-        .cta_imge_area{
+    section.call_to_action {
+        .cta_imge_area {
             position: relative;
-            background: lightcoral;
-            padding:0;
-            height:70vh;
-            img{
+            padding: 0;
+            height: 70vh;
+
+            img {
                 padding: 0 !important;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-            
-            .call_to_action_textarea{
+
+            .call_to_action_textarea {
                 position: absolute;
                 top: 3%;
                 left: 50%;
-                transform: translate(-50% , 0%);
+                transform: translate(-50%, 0%);
                 width: 100%;
                 color: #fff;
                 text-align: center;
-                
-                .cta_title{
+
+                .cta_title {
                     font-size: $heading_2;
                 }
 
-                .cta_desc{
+                .cta_desc {
                     font-size: $paragraph;
                 }
             }
         }
 
-        .cta_footer{
+        .cta_footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: $dark25;
             padding: 1rem 8rem; //top and bottom | left and right
             margin: 0;
-            .cta_footer_textarea{
-                h1.cta_footer_title{
+
+            .cta_footer_textarea {
+                h1.cta_footer_title {
                     font-size: $heading_4;
                 }
             }
 
-            .btn_cta_footer{
-                a{
+            .btn_cta_footer {
+                a {
                     @include make_button($color_white, $dark100);
-                    gap:.5rem;
-                    &:hover svg{
+                    gap: .5rem;
+
+                    &:hover svg {
                         transform: translate(4px);
                     }
-                    svg{
+
+                    svg {
                         transition: all .3s ease-in-out;
-                        path{
+
+                        path {
                             fill: $color_white;
                         }
                     }
                 }
             }
-        }  
+        }
     }
-    
-    section.glimpse_of_work{
-        h1.glimpse_title{
-            font-size:$heading_3;
-            margin-bottom: 4rem;
-            text-align:center;
+
+    section.glimpse_of_work {
+        h1.glimpse_title {
+            font-size: $heading_3;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
-        .works_image_area{
+        .works_image_area {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 400px;
             gap: 1rem;
 
-            .glimpse_img{
+            .glimpse_img {
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
-                img{
-                    height:100%;
-                    width:100%;
+
+                img {
+                    height: 100%;
+                    width: 100%;
                     object-fit: cover;
                     object-position: 50% 50%;
                 }
             }
         }
 
-        .glimpse_arrows{
+        .glimpse_arrows {
             // background: lawngreen;
-            display:flex;
+            display: flex;
             justify-content: center;
             align-items: center;
             gap: 4rem;
             margin-top: 2rem;
 
-            .arrow a svg{
-                    height: 2rem;
-                    width: 2rem;
-                path{
+            .arrow a svg {
+                height: 2rem;
+                width: 2rem;
+
+                path {
                     fill: $dark100
                 }
             }
@@ -207,7 +220,7 @@ main {
             align-items: center;
             justify-content: space-between;
             overflow: hidden;
-            margin-top: 4rem;
+            margin-top: 2rem;
             gap: 1rem;
 
             .insta_pic_container {
@@ -235,24 +248,19 @@ main {
         }
     }
 
-    section.contact_us{
+    section.contact_us {
         @include make_contact_section();
-    }    
+    }
 }
 
 
-      
+//?? RESPONSIVE DESIGN
 
-        
-
-      
-
-  
-
-
-
-
-
-
-
-
+@include tablet {
+    section.service_showcase_area {
+        .service_container {
+            grid-template-columns: repeat(1, 1fr) !important;
+            grid-template-areas: 'service_image' 'service_info' !important;
+        }
+    }
+}
