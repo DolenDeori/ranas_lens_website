@@ -314,42 +314,31 @@ main section.section {
 main section:last-child {
   margin-bottom: 8rem;
 }
-main section.gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 300px 300px;
-  grid-auto-flow: dense;
-  gap: 1rem;
-  grid-template-rows: masonry;
+main section.fashion_pics h1.section_title {
+  margin-bottom: 2rem !important;
+  font-size: 2rem;
 }
-main section.gallery .img_container {
+main section.fashion_pics .gallery {
+  -moz-columns: 4 300px;
+       columns: 4 300px;
+}
+main section.fashion_pics .gallery .img_container {
   height: 100%;
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  margin-bottom: 0.8rem;
 }
-main section.gallery .img_container img {
+main section.fashion_pics .gallery .img_container img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
 }
-main section.gallery .img_container img:hover {
+main section.fashion_pics .gallery .img_container img:hover {
   filter: brightness(-1);
-}
-main section.gallery .img_container .img_title {
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #FCFFFF;
-  pointer-events: none;
-}
-main section.gallery .img_container:hover .img_title {
-  opacity: 1;
 }
 main section.contact_us .contact_us_area, main section.contact_us .contact_us_area .contact_info {
   display: flex;
@@ -429,14 +418,22 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   display: none;
 }
 #lightBox .ld_img {
-  height: 500px;
-  width: 60%;
+  height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+  animation: show_image 0.5s ease-in-out forwards;
 }
 
+@keyframes show_image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 #lightBox.active {
   display: flex;
   justify-content: center;
@@ -473,11 +470,11 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 
 @media screen and (max-width: 900px) {
-  section.gallery {
+  section.fashion_pics .gallery {
     grid-template-columns: repeat(2, 1fr) !important;
   }
   #lightBox .ld_img {
-    width: 90%;
+    height: 500px;
   }
   .lightbox_control {
     padding: 0rem 4rem;
@@ -497,12 +494,8 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   section:last-child {
     margin-bottom: 4rem !important;
   }
-  section.gallery {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
   #lightBox .ld_img {
-    width: 100%;
-    height: auto;
+    height: 500px;
   }
   .lightbox_control {
     padding: 0rem 1rem;
@@ -521,8 +514,12 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   section:last-child {
     margin-bottom: 4rem !important;
   }
-  section.gallery {
+  section.fashion_pics .gallery {
     grid-template-columns: repeat(1, 1fr) !important;
+  }
+  #lightBox .ld_img {
+    height: auto;
+    width: 100%;
   }
   .lightbox_control {
     padding: 0rem 0rem;

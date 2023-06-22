@@ -22,6 +22,7 @@ const add_image = function (src) {
   lightbox.appendChild(img);
 };
 
+
 imagebox.forEach((image, index) => {
   image.addEventListener("click", (e) => {
     lightbox.classList.toggle("active");
