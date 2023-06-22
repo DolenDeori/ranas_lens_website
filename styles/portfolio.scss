@@ -54,15 +54,10 @@ main {
         h1.section_title {
             margin-bottom: 2rem !important;
             font-size: $heading_4;
-            // text-align: center;
         }
 
         .gallery {
-            // display: grid;
-            // grid-template-columns: repeat(4, 1fr);
-            // grid-auto-rows: 300px 300px;
-            // gap: 1rem;
-            columns: 4 300px;
+            columns: 3 20rem;
 
             .img_container {
                 height: 100%;
@@ -253,7 +248,7 @@ main {
         .control_btn {
 
             svg {
-                height: 8rem;
+                height: 4rem;
                 width: 1.5rem;
             }
         }

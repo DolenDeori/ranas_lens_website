@@ -319,8 +319,8 @@ main section.fashion_pics h1.section_title {
   font-size: 2rem;
 }
 main section.fashion_pics .gallery {
-  -moz-columns: 4 300px;
-       columns: 4 300px;
+  -moz-columns: 3 20rem;
+       columns: 3 20rem;
 }
 main section.fashion_pics .gallery .img_container {
   height: 100%;
@@ -525,7 +525,7 @@ main section.contact_us .contact_us_area a.btn:hover svg {
     padding: 0rem 0rem;
   }
   .lightbox_control .control_btn svg {
-    height: 8rem;
+    height: 4rem;
     width: 1.5rem;
   }
 }/*# sourceMappingURL=portfolio.css.map */
