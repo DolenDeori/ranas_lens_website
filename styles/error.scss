@@ -3,8 +3,6 @@
 @import "./global/footer";
 @import './global/responsive';
 
-//? MAIN PAGE CONTENT STYLING START 
-
 header .error_text_container {
     position: absolute;
     width: 100%;
@@ -29,6 +27,7 @@ header .error_text_container {
 
     p {
         color: $dark75;
+        font-size: $paragraph;
     }
 
     .btn {
@@ -37,7 +36,7 @@ header .error_text_container {
         padding: 1rem 2rem;
         background-color: $dark100;
         font-family: $open_sans;
-        border-radius: $border_radious;
+        border-radius: $border_radius;
         color: $color_white;
 
         &:hover {
@@ -46,10 +45,7 @@ header .error_text_container {
     }
 }
 
-//? MAIN PAGE CONTENT STYLING END
 
-
-//? RESPONSIVE STYLING
 @include mobile {
     header .error_text_container {
 

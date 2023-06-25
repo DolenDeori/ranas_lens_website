@@ -102,7 +102,7 @@ nav.nav_container .logo_container img {
 }
 nav.nav_container .social_container .social_icon svg {
   margin: 0 0.7rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   color: #0c171c;
 }
 nav.nav_container .social_container .social_icon svg:hover {
@@ -121,7 +121,6 @@ nav.nav_container .social_container .social_icon svg:hover {
   height: 100%;
   width: 0%;
   margin-top: 3.5rem;
-  border-right: 1px solid rgba(12, 23, 28, 0.25);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,6 +159,7 @@ nav.nav_container .social_container .social_icon svg:hover {
 }
 .nav_link_container ul.show {
   width: 50%;
+  border-right: 1px solid rgba(12, 23, 28, 0.25);
   transition: all 200ms ease-in-out;
 }
 
@@ -242,7 +242,7 @@ footer.footer_area .social_container .social_icon svg:hover {
 
 @media screen and (max-width: 1040px) {
   footer.footer_area {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     padding: 1rem 2rem;
   }
   footer.footer_area .social_container svg {
@@ -286,7 +286,7 @@ header .error_text_container .text_area {
 }
 header .error_text_container h1 {
   margin-bottom: 4rem;
-  font-size: 5.7rem;
+  font-size: 5.653rem;
   color: #FA402F;
 }
 header .error_text_container h2 {
@@ -294,6 +294,7 @@ header .error_text_container h2 {
 }
 header .error_text_container p {
   color: rgba(12, 23, 28, 0.75);
+  font-size: 1rem;
 }
 header .error_text_container .btn {
   outline: none;
@@ -310,20 +311,20 @@ header .error_text_container .btn:hover {
 
 @media screen and (max-width: 450px) {
   header .error_text_container h1 {
-    font-size: 4.2rem;
+    font-size: 4.946rem;
   }
   header .error_text_container h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   header .error_text_container p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   header .error_text_container .btn {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
 }
 @media screen and (max-width: 320px) {
   header .error_text_container h2 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
   }
-}/*# sourceMappingURL=404.css.map */
+}/*# sourceMappingURL=error.css.map */

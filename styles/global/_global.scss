@@ -21,19 +21,23 @@ $dark5 : rgba(12, 23, 28, 0.05);
 $open_sans: 'Open Sans', sans-serif;
 $playfair_display: 'Playfair Display', serif;
 
-//? FONTS SIZES DESKTOP
-$heading_1: 5.7rem; //(119px/21px)rem
-$heading_2: 4rem; //(84px/21px)rem
-$heading_3: 2.8rem; //(60px/21px)rem
-$heading_4: 2rem; //(42px/21px)rem
-$heading_5: 1.4rem; //(30px/21px)rem
-$paragraph: 1rem; //(21px/21px)rem
 
-//? FONT SIZE FOR TABLET
-$heading_1_t: 4.2rem; //(90px/21px)rem
-$heading_2_t: 3rem; //(64px/21px)rem
-$heading_3_t: 2.1rem; //(45px/21px)rem
-$paragraph_t: 0.7rem; //(16px/21px)rem
+// 1rem = 16px
+//? FONTS SIZES DESKTOP
+$heading_1: 5.653rem;
+$heading_2: 4rem;
+$heading_3: 2.827rem;
+$heading_4: 2rem;
+$heading_5: 1.414rem;
+$paragraph: 1rem;
+
+//? FONT SIZE FOR TABLET and MOILE
+$heading_1_t: 4.946rem; //(90px/21px)rem
+$heading_2_t: 3.5rem; //(64px/21px)rem
+$heading_3_t: 2.5rem; //(45px/21px)rem
+$heading_4_t: 1.75rem; //(45px/21px)rem
+$heading_5_t: 1.25rem; //(45px/21px)rem
+$paragraph_t: 0.875rem; //(16px/21px)rem
 
 //? BORDER RADIUS
 $border_radius: 0.2rem;

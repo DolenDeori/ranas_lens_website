@@ -242,7 +242,7 @@ footer.footer_area .social_container .social_icon svg:hover {
 
 @media screen and (max-width: 1040px) {
   footer.footer_area {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     padding: 1rem 2rem;
   }
   footer.footer_area .social_container svg {
@@ -292,10 +292,10 @@ header .hero_text_container {
   color: #FCFFFF;
 }
 header .hero_text_container h1 {
-  font-size: 5.7rem;
+  font-size: 5.653rem;
 }
 header .hero_text_container h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
 }
 
 main section.section {
@@ -313,7 +313,7 @@ main section.about_us_area .about_founder_container #founder {
   grid-area: founder;
 }
 main section.about_us_area .about_founder_container #founder h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
   line-height: 2rem;
   margin-bottom: 2rem;
 }
@@ -338,7 +338,7 @@ main section.about_us_area .about_team_container #team {
   grid-area: team;
 }
 main section.about_us_area .about_team_container #team h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
   margin-bottom: 2rem;
 }
 main section.about_us_area .about_team_container #team_img {
@@ -380,7 +380,7 @@ main section.work_counter .work h4 {
   color: rgba(12, 23, 28, 0.75);
 }
 main section.instagram_work_area h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
   text-align: center;
 }
 main section.instagram_work_area .insta_pic_area {
@@ -417,7 +417,7 @@ main section.contact_us .contact_us_area, main section.contact_us .contact_us_ar
   align-items: center;
 }
 main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
 }
 main section.contact_us .contact_us_area p, main section.contact_us .contact_us_area .contact_info p {
   font-size: 1rem;
@@ -467,10 +467,10 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 @media screen and (max-width: 450px) {
   main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
   }
   main section.contact_us .contact_us_area a.btn .contact_info p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   main section.contact_us .contact_us_area a.btn svg {
     height: 1rem;
@@ -501,7 +501,7 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 @media screen and (max-width: 800px) {
   header .hero_text_container h1 {
-    font-size: 4.2rem;
+    font-size: 4.946rem;
   }
   section.section {
     padding: 4rem 2rem 0 !important;
@@ -512,11 +512,11 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   }
   section.section .about_founder_container h3,
   section.section .about_team_container h3 {
-    font-size: 2.1rem !important;
+    font-size: 2.5rem !important;
     margin-bottom: 1rem !important;
   }
   section.instagram_work_area h3.section_title {
-    font-size: 2.1rem !important;
+    font-size: 2.5rem !important;
     margin-bottom: 1rem !important;
   }
   section.contact_us {
@@ -525,23 +525,23 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 @media screen and (max-width: 450px) {
   header .hero_text_container h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   section.section {
     padding: 2rem 2rem !important;
   }
   .about_founder_container p,
   .about_team_container p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   section.work_counter {
     gap: 1rem;
   }
   section.work_counter h1 {
-    font-size: 3rem !important;
+    font-size: 3.5rem !important;
   }
   section.work_counter h4 {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   section.instagram_work_area h3 {
     text-align: left !important;

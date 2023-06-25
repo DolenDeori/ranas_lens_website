@@ -242,7 +242,7 @@ footer.footer_area .social_container .social_icon svg:hover {
 
 @media screen and (max-width: 1040px) {
   footer.footer_area {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     padding: 1rem 2rem;
   }
   footer.footer_area .social_container svg {
@@ -293,10 +293,10 @@ header .hero_text_container {
   color: #FCFFFF;
 }
 header .hero_text_container h1 {
-  font-size: 5.7rem;
+  font-size: 5.653rem;
 }
 header .hero_text_container h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
 }
 
 .filter_links_container {
@@ -347,7 +347,7 @@ main section.contact_us .contact_us_area, main section.contact_us .contact_us_ar
   align-items: center;
 }
 main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
 }
 main section.contact_us .contact_us_area p, main section.contact_us .contact_us_area .contact_info p {
   font-size: 1rem;
@@ -397,10 +397,10 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 @media screen and (max-width: 450px) {
   main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
   }
   main section.contact_us .contact_us_area a.btn .contact_info p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   main section.contact_us .contact_us_area a.btn svg {
     height: 1rem;
@@ -486,7 +486,7 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 @media screen and (max-width: 800px) {
   header .hero_text_container h1 {
-    font-size: 4.2rem;
+    font-size: 4.946rem;
   }
   section.section {
     margin: 4rem 4rem 0 !important;
@@ -503,10 +503,10 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 @media screen and (max-width: 450px) {
   header .hero_text_container h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   header .hero_text_container p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   section.section {
     margin: 4rem 2rem 0 !important;

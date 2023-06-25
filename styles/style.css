@@ -242,7 +242,7 @@ footer.footer_area .social_container .social_icon svg:hover {
 
 @media screen and (max-width: 1040px) {
   footer.footer_area {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     padding: 1rem 2rem;
   }
   footer.footer_area .social_container svg {
@@ -292,10 +292,10 @@ header .hero_text_container {
   color: #FCFFFF;
 }
 header .hero_text_container h1 {
-  font-size: 5.7rem;
+  font-size: 5.653rem;
 }
 header .hero_text_container h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
 }
 
 main section.section {
@@ -321,7 +321,7 @@ main section.service_showcase_area .service_container:nth-child(even) {
   grid-template-areas: "service_image service_info";
 }
 main section.service_showcase_area .service_container .service_info h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
   margin-bottom: 1rem;
 }
 main section.service_showcase_area .service_container .service_info a {
@@ -418,7 +418,7 @@ main section.glimpse_of_work {
   flex-direction: column;
 }
 main section.glimpse_of_work h1.glimpse_title {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -491,7 +491,7 @@ main section.glimpse_of_work .wrapper .control_button .control svg path {
   fill: #FCFFFF;
 }
 main section.instagram_work_area h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
   text-align: center;
 }
 main section.instagram_work_area .insta_pic_area {
@@ -529,7 +529,7 @@ main section.contact_us .contact_us_area, main section.contact_us .contact_us_ar
   align-items: center;
 }
 main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-  font-size: 2.8rem;
+  font-size: 2.827rem;
 }
 main section.contact_us .contact_us_area p, main section.contact_us .contact_us_area .contact_info p {
   font-size: 1rem;
@@ -579,10 +579,10 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 @media screen and (max-width: 450px) {
   main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
   }
   main section.contact_us .contact_us_area a.btn .contact_info p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   main section.contact_us .contact_us_area a.btn svg {
     height: 1rem;
@@ -591,13 +591,13 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 
 @media screen and (max-width: 800px) {
   header .hero_text_container h1 {
-    font-size: 4.2rem;
+    font-size: 4.946rem;
   }
   header .hero_text_container h3 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
   }
   header .hero_text_container p.description {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   section.section {
     margin: 4rem 4rem 0 !important;
@@ -611,22 +611,22 @@ main section.contact_us .contact_us_area a.btn:hover svg {
     gap: 2rem !important;
   }
   section.service_showcase_area .service_container .service_info h3.service_title {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
   }
   section.service_showcase_area .service_container .service_info p.service_desc {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   section.service_showcase_area .service_container .service_info a {
     margin-top: 2rem;
   }
   section.service_showcase_area .service_container .service_info a p.view_more_btn {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   section.call_to_action .cta_imge_area .call_to_action_textarea .cta_title {
-    font-size: 2.1rem !important;
+    font-size: 2.5rem !important;
   }
   section.call_to_action .cta_imge_area .call_to_action_textarea .cta_desc p {
-    font-size: 0.7rem !important;
+    font-size: 0.875rem !important;
   }
   section.call_to_action .cta_footer {
     flex-direction: column !important;
@@ -638,7 +638,7 @@ main section.contact_us .contact_us_area a.btn:hover svg {
     font-size: 1rem !important;
   }
   section.call_to_action .cta_footer .cta_footer_textarea p.cta_footer_desc {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   section.call_to_action .cta_footer .btn_cta_footer a {
     font-family: "Open Sans", sans-serif;
@@ -656,7 +656,7 @@ main section.contact_us .contact_us_area a.btn:hover svg {
     color: #FCFFFF;
   }
   section.call_to_action .cta_footer .btn_cta_footer a p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   section.call_to_action .cta_footer .btn_cta_footer a:hover svg {
     transform: translate(4px);
@@ -673,13 +673,13 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 @media screen and (max-width: 450px) {
   header .hero_text_container h1 {
-    font-size: 2.8rem;
+    font-size: 2.827rem;
   }
   header .hero_text_container h3 {
-    font-size: 1.4rem;
+    font-size: 1.414rem;
   }
   header .hero_text_container p.description {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   section.section {
     margin: 2rem 2rem 0 !important;
