@@ -106,7 +106,7 @@ nav.nav_container .social_container .social_icon svg {
   color: #0c171c;
 }
 nav.nav_container .social_container .social_icon svg:hover {
-  color: #00BD9D;
+  color: #00b496;
 }
 
 .nav_link_container {
@@ -141,7 +141,7 @@ nav.nav_container .social_container .social_icon svg:hover {
   transition: all 0.2s ease-in-out;
 }
 .nav_link_container ul.nav_links .links a:hover {
-  color: #00BD9D;
+  color: #00b496;
 }
 .nav_link_container ul.nav_links #social_container_2 {
   margin-top: 1rem;
@@ -155,7 +155,7 @@ nav.nav_container .social_container .social_icon svg:hover {
   margin: 0 1rem;
 }
 .nav_link_container ul.nav_links #social_container_2 .social_icon svg:hover {
-  color: #00BD9D;
+  color: #00b496;
 }
 .nav_link_container ul.show {
   width: 50%;
@@ -434,7 +434,7 @@ main section.contact_us .contact_us_area .contact_info a {
   margin-top: 0.5rem;
 }
 main section.contact_us .contact_us_area .contact_info svg {
-  fill: #00BD9D;
+  fill: #00b496;
 }
 main section.contact_us .contact_us_area a.btn {
   margin-top: 3rem;
@@ -442,7 +442,7 @@ main section.contact_us .contact_us_area a.btn {
   font-size: 1rem;
   padding: 1rem 2rem;
   border-radius: 0.2rem;
-  background-color: #00BD9D;
+  background-color: #00b496;
   display: flex;
   justify-content: center;
   align-items: center;

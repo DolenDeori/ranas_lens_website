@@ -106,7 +106,7 @@ nav.nav_container .social_container .social_icon svg {
   color: #0c171c;
 }
 nav.nav_container .social_container .social_icon svg:hover {
-  color: #00BD9D;
+  color: #00b496;
 }
 
 .nav_link_container {
@@ -141,7 +141,7 @@ nav.nav_container .social_container .social_icon svg:hover {
   transition: all 0.2s ease-in-out;
 }
 .nav_link_container ul.nav_links .links a:hover {
-  color: #00BD9D;
+  color: #00b496;
 }
 .nav_link_container ul.nav_links #social_container_2 {
   margin-top: 1rem;
@@ -155,7 +155,7 @@ nav.nav_container .social_container .social_icon svg:hover {
   margin: 0 1rem;
 }
 .nav_link_container ul.nav_links #social_container_2 .social_icon svg:hover {
-  color: #00BD9D;
+  color: #00b496;
 }
 .nav_link_container ul.show {
   width: 50%;
@@ -306,7 +306,7 @@ header .error_text_container .btn {
   color: #FCFFFF;
 }
 header .error_text_container .btn:hover {
-  background: #00BD9D;
+  background: #00b496;
 }
 
 @media screen and (max-width: 450px) {
