@@ -89,6 +89,20 @@ main {
                 width: 100%;
                 margin-bottom: 2rem;
 
+                .error {
+                    color: $color_error;
+                }
+
+                label {
+                    font-family: $open_sans;
+                    // font-weight: bold;
+                    color: $dark100;
+
+                    &.error {
+                        color: $color_error;
+                    }
+                }
+
                 input,
                 select,
                 textarea {
@@ -99,7 +113,7 @@ main {
                     padding: .5rem;
                     font-family: $open_sans;
                     font-size: $paragraph;
-                    border-radius: $border_radious;
+                    border-radius: $border_radius;
                     background-color: $dark5;
                     border: 2px solid $dark10;
                 }

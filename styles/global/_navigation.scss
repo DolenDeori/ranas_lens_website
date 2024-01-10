@@ -70,14 +70,14 @@ nav.nav_container {
         transition: all $animation_timing;
     }
 
-    .logo_container img {
-        height: 2.5rem;
+    .logo_container .logo {
+        height: 35px;
     }
 
     .social_container {
         .social_icon svg {
             margin: 0 .7rem;
-            transition: all .3s ease-in-out !important;
+            // transition: all .3s ease-in-out !important;
             color: $dark100;
 
             &:hover {

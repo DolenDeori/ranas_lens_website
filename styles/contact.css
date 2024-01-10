@@ -97,16 +97,15 @@ nav.nav_container .hamberger:has(input:checked)::after {
   translate: 0 0.075rem;
   transition: all 200ms ease-in-out;
 }
-nav.nav_container .logo_container img {
-  height: 2.5rem;
+nav.nav_container .logo_container .logo {
+  height: 35px;
 }
 nav.nav_container .social_container .social_icon svg {
   margin: 0 0.7rem;
-  transition: all 0.3s ease-in-out;
   color: #0c171c;
 }
 nav.nav_container .social_container .social_icon svg:hover {
-  color: #00BD9D;
+  color: #ad50d2;
 }
 
 .nav_link_container {
@@ -121,7 +120,6 @@ nav.nav_container .social_container .social_icon svg:hover {
   height: 100%;
   width: 0%;
   margin-top: 3.5rem;
-  border-right: 1px solid rgba(12, 23, 28, 0.25);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,7 +140,7 @@ nav.nav_container .social_container .social_icon svg:hover {
   transition: all 0.2s ease-in-out;
 }
 .nav_link_container ul.nav_links .links a:hover {
-  color: #00BD9D;
+  color: #ad50d2;
 }
 .nav_link_container ul.nav_links #social_container_2 {
   margin-top: 1rem;
@@ -156,10 +154,11 @@ nav.nav_container .social_container .social_icon svg:hover {
   margin: 0 1rem;
 }
 .nav_link_container ul.nav_links #social_container_2 .social_icon svg:hover {
-  color: #00BD9D;
+  color: #ad50d2;
 }
 .nav_link_container ul.show {
   width: 50%;
+  border-right: 1px solid rgba(12, 23, 28, 0.25);
   transition: all 200ms ease-in-out;
 }
 
@@ -242,7 +241,7 @@ footer.footer_area .social_container .social_icon svg:hover {
 
 @media screen and (max-width: 1040px) {
   footer.footer_area {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     padding: 1rem 2rem;
   }
   footer.footer_area .social_container svg {
@@ -291,7 +290,7 @@ header .hero_text_container {
   left: 0;
   width: 100%;
   background: #FCFFFF;
-  border-bottom: 1px solid #00BD9D;
+  border-bottom: 1px solid #ad50d2;
 }
 header .hero_text_container .contact_info {
   display: flex;
@@ -306,10 +305,10 @@ header .hero_text_container .contact_info a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: #00BD9D;
+  color: #ad50d2;
 }
 header .hero_text_container .contact_info a svg {
-  fill: #00BD9D;
+  fill: #ad50d2;
 }
 
 main {
@@ -344,6 +343,16 @@ main section.contact_form_area .input_group_area .input_group {
   width: 100%;
   margin-bottom: 2rem;
 }
+main section.contact_form_area .input_group_area .input_group .error {
+  color: #FA402F;
+}
+main section.contact_form_area .input_group_area .input_group label {
+  font-family: "Open Sans", sans-serif;
+  color: #0c171c;
+}
+main section.contact_form_area .input_group_area .input_group label.error {
+  color: #FA402F;
+}
 main section.contact_form_area .input_group_area .input_group input,
 main section.contact_form_area .input_group_area .input_group select,
 main section.contact_form_area .input_group_area .input_group textarea {
@@ -370,8 +379,7 @@ main section.contact_form_area button.btn {
   font-size: 1rem;
   padding: 1rem 2rem;
   border-radius: 0.2rem;
-  background-color: #00BD9D;
-  color: #FCFFFF;
+  background-color: #ad50d2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -381,6 +389,9 @@ main section.contact_form_area button.btn {
   margin-top: 2rem;
   border: none;
   outline: none;
+}
+main section.contact_form_area button.btn p {
+  color: #FCFFFF;
 }
 main section.contact_form_area button.btn.disabled {
   cursor: not-allowed;
@@ -400,10 +411,10 @@ main section.contact_form_area button.btn svg {
     padding: 0rem 4rem;
   }
   main section.contact_info_area h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   main section.contact_info_area p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     width: 100%;
     margin: auto;
   }
@@ -412,12 +423,12 @@ main section.contact_form_area button.btn svg {
     margin: 2rem auto;
   }
   main section.contact_form_area form .input_group_area .input_group label p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   main section.contact_form_area form .input_group_area .input_group input,
   main section.contact_form_area form .input_group_area .input_group select,
   main section.contact_form_area form .input_group_area .input_group textarea {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
 }
 @media screen and (max-width: 450px) {
@@ -425,7 +436,7 @@ main section.contact_form_area button.btn svg {
     height: 0.7rem;
   }
   header .hero_text_container .contact_info a p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   main {
     padding: 0rem 2rem;
@@ -434,7 +445,7 @@ main section.contact_form_area button.btn svg {
     text-align: left;
   }
   main section.contact_info_area h1 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
   }
   main section.contact_form_area .input_group_area {
     display: flex;
@@ -450,6 +461,6 @@ main section.contact_form_area button.btn svg {
     min-height: 3rem;
   }
   main section.contact_form_area button.btn {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
 }/*# sourceMappingURL=contact.css.map */

@@ -97,16 +97,15 @@ nav.nav_container .hamberger:has(input:checked)::after {
   translate: 0 0.075rem;
   transition: all 200ms ease-in-out;
 }
-nav.nav_container .logo_container img {
-  height: 2.5rem;
+nav.nav_container .logo_container .logo {
+  height: 35px;
 }
 nav.nav_container .social_container .social_icon svg {
   margin: 0 0.7rem;
-  transition: all 0.3s ease-in-out !important;
   color: #0c171c;
 }
 nav.nav_container .social_container .social_icon svg:hover {
-  color: #00b496;
+  color: #ad50d2;
 }
 
 .nav_link_container {
@@ -141,7 +140,7 @@ nav.nav_container .social_container .social_icon svg:hover {
   transition: all 0.2s ease-in-out;
 }
 .nav_link_container ul.nav_links .links a:hover {
-  color: #00b496;
+  color: #ad50d2;
 }
 .nav_link_container ul.nav_links #social_container_2 {
   margin-top: 1rem;
@@ -155,7 +154,7 @@ nav.nav_container .social_container .social_icon svg:hover {
   margin: 0 1rem;
 }
 .nav_link_container ul.nav_links #social_container_2 .social_icon svg:hover {
-  color: #00b496;
+  color: #ad50d2;
 }
 .nav_link_container ul.show {
   width: 50%;
@@ -546,7 +545,7 @@ main section.contact_us .contact_us_area .contact_info a {
   margin-top: 0.5rem;
 }
 main section.contact_us .contact_us_area .contact_info svg {
-  fill: #00b496;
+  fill: #ad50d2;
 }
 main section.contact_us .contact_us_area a.btn {
   margin-top: 3rem;
@@ -554,7 +553,7 @@ main section.contact_us .contact_us_area a.btn {
   font-size: 1rem;
   padding: 1rem 2rem;
   border-radius: 0.2rem;
-  background-color: #00b496;
+  background-color: #ad50d2;
   display: flex;
   justify-content: center;
   align-items: center;

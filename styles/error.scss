@@ -4,74 +4,44 @@
 @import './global/responsive';
 
 header .error_text_container {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    padding: 1rem;
 
     .text_area {
-        margin-bottom: 4rem;
-    }
-
-    h1 {
-        margin-bottom: 4rem;
-        font-size: $heading_1;
-        color: $color_error;
-    }
-
-    h2 {
-        font-size: $heading_2
-    }
-
-    p {
-        color: $dark75;
-        font-size: $paragraph;
-    }
-
-    .btn {
-        outline: none;
-        transition: .3s ease-in-out;
-        padding: 1rem 2rem;
-        background-color: $dark100;
-        font-family: $open_sans;
-        border-radius: $border_radius;
-        color: $color_white;
-
-        &:hover {
-            background: $color_primary;
-        }
-    }
-}
-
-
-@include mobile {
-    header .error_text_container {
-
         h1 {
-            font-size: $heading_1_t;
+            font-size: $heading_1;
+            color: $color_error;
         }
 
         h2 {
-            font-size: $heading_2_t;
+            font-size: $heading_2;
         }
 
         p {
-            font-size: $paragraph_t;
+            margin-bottom: 3rem;
         }
 
         .btn {
-            font-size: $paragraph_t;
+            background: $dark100;
+            padding: 1rem 2rem;
+            font-family: $open_sans;
+            color: white;
+            border-radius: $border_radius;
+
+            &:hover {
+                background-color: $color_primary;
+            }
         }
     }
 }
 
+
 @include mobile_small {
     header .error_text_container {
-
         h2 {
-            font-size: $heading_3_t;
+            font-size: $heading_2_t !important;
         }
     }
 
