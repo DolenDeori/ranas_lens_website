@@ -256,6 +256,8 @@ main {
     }
 
     section.instagram_work_area {
+        margin: 8rem 0;
+
         h3 {
             font-size: $heading_3;
             text-align: center;
@@ -267,12 +269,13 @@ main {
             justify-content: space-between;
             overflow: hidden;
             margin-top: 2rem;
-            gap: 1rem;
+            // gap: 1rem;
 
             .insta_pic_container {
                 position: relative;
                 overflow: hidden;
-                height: 400px;
+                height: 250px;
+                width: 200px;
                 top: 0;
                 left: 0;
                 flex: 1;

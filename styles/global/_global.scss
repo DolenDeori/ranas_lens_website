@@ -9,6 +9,7 @@
 // ------------------------- VARIABLES -------------------------------
 //? COLORS
 $color_primary : #ad50d2;
+$color_primary_light : #ad50d23e;
 $color_white : #FCFFFF;
 $color_error : #FA402F;
 $dark100 : #0c171c;
@@ -40,7 +41,7 @@ $heading_5_t: 1.25rem; //(45px/21px)rem
 $paragraph_t: 0.875rem; //(16px/21px)rem
 
 //? BORDER RADIUS
-$border_radius: 0.2rem;
+$border_radius: 0rem;
 
 body {
     background-color: $color_white;
