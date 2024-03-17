@@ -3,27 +3,44 @@
 @import './global/footer';
 @import './global/responsive';
 
-$img_link : url("../assests/images/travelling_2.webp");
-
+// header {
+//     // @include make_header();
+// }
 header {
-    @include make_header($img_link);
+    @include make_header();
 }
 
 header .hero_text_container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
+    // background-color: aqua;
+    height: 100%;
+    padding: 0 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: auto;
     color: $color_white;
 
-    h1 {
+    .hero_title_text {
         font-size: $heading_1;
+        line-height: 1em;
+        margin-bottom: 2rem;
     }
 
-    h3 {
-        font-size: $heading_3
+    .hero_body_text {
+        width: 80ch;
+    }
+
+    .hero_cta_area {
+        margin-top: 4rem;
+
+        a {
+            padding: 1rem 3rem;
+            background-color: $dark75;
+            color: $color_white;
+            border: 2px solid $color_white;
+            font-family: $open_sans;
+            border-radius: 10rem;
+        }
     }
 }
 
@@ -306,17 +323,18 @@ main {
 //?? RESPONSIVE DESIGN
 
 @include tablet {
-    header .hero_text_container {
-        h1 {
-            font-size: $heading_1_t;
-        }
+    .hero_container {
+        .hero_text_container {
+            padding: 0 4rem;
 
-        h3 {
-            font-size: $heading_3_t
-        }
+            .hero_title_text {
+                font-size: $heading_3;
+            }
 
-        p.description {
-            font-size: $paragraph_t;
+            .hero_body_text {
+                padding-right: .5rem;
+                width: 50ch;
+            }
         }
     }
 
@@ -419,17 +437,17 @@ main {
 }
 
 @include mobile {
-    header .hero_text_container {
-        h1 {
-            font-size: $heading_3;
-        }
+    .hero_container {
+        .hero_text_container {
+            padding: 0 2rem;
 
-        h3 {
-            font-size: $heading_5
-        }
+            .hero_title_text {
+                font-size: $heading_4;
+            }
 
-        p.description {
-            font-size: $paragraph_t;
+            .hero_body_text {
+                width: 30ch;
+            }
         }
     }
 

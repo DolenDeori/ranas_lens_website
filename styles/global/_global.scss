@@ -1,8 +1,9 @@
+@import './responsive';
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all .3s ease-in-out;
 }
 
 
@@ -13,10 +14,10 @@ $color_primary_light : #ad50d23e;
 $color_white : #FCFFFF;
 $color_error : #FA402F;
 $dark100 : #0c171c;
-$dark75 : rgba(12, 23, 28, 0.75);
-$dark25 : rgba(12, 23, 28, 0.25);
-$dark10 : rgba(12, 23, 28, 0.1);
-$dark5 : rgba(12, 23, 28, 0.05);
+$dark75 : #0c171cbf;
+$dark25 : #0c171c40;
+$dark10 : #0c171c1a;
+$dark5 : #0c171c0d;
 
 //? FONTS
 $open_sans: 'Open Sans', sans-serif;
@@ -25,11 +26,12 @@ $playfair_display: 'Playfair Display', serif;
 
 // 1rem = 16px
 //? FONTS SIZES DESKTOP
-$heading_1: 5.653rem;
-$heading_2: 4rem;
-$heading_3: 2.827rem;
-$heading_4: 2rem;
-$heading_5: 1.414rem;
+$heading_1: 5.61rem;
+$heading_2: 4.209rem;
+$heading_3: 3.157rem;
+$heading_4: 2.369rem;
+$heading_5: 1.777rem;
+$heading_6: 1.333rem;
 $paragraph: 1rem;
 
 //? FONT SIZE FOR TABLET and MOILE
@@ -74,13 +76,18 @@ p {
 }
 
 //? HEADER FUNCTION
-@mixin make_header($img) {
-    background: linear-gradient(90deg, $dark25, $dark25), $img;
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+@mixin make_header() {
+    overflow: hidden;
     position: relative;
+    height: 100vh;
+
+    .hero_image {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+    }
 }
 
 //? MAKE BUTTON
@@ -90,7 +97,6 @@ p {
     padding: 1rem 2rem;
     border-radius: $border_radius;
     background-color: $color_b;
-    // color: $color_f;
     display: flex;
     justify-content: center;
     align-items: center;

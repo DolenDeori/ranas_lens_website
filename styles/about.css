@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -44,8 +43,8 @@ nav.nav_container {
   width: 100%;
   background-color: #FCFFFF;
   padding: 1rem 8rem;
-  border-bottom: 1px solid rgba(12, 23, 28, 0.25);
   z-index: 9999;
+  border: 1px solid rgba(12, 23, 28, 0.2509803922);
 }
 nav.nav_container .hamberger {
   display: flex;
@@ -119,6 +118,7 @@ nav.nav_container .social_container i.social_icons:hover {
   align-items: center;
   gap: 3em;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
 }
 .nav_link_container ul.nav_links .link_area {
   display: flex;
@@ -128,7 +128,7 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 .nav_link_container ul.nav_links .links {
   font-family: "Playfair Display", serif;
-  font-size: 2rem;
+  font-size: 2.369rem;
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
@@ -186,9 +186,10 @@ nav.nav_container .social_container i.social_icons:hover {
 .nav_link_container ul.show {
   height: 100%;
   transition: all 200ms ease-in-out;
+  pointer-events: all;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   nav.nav_container {
     padding: 1rem 4rem;
   }
@@ -208,10 +209,10 @@ nav.nav_container .social_container i.social_icons:hover {
     display: initial;
   }
   .nav_link_container ul.show {
-    width: 100%;
+    height: 100%;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
   nav.nav_container {
     padding: 1rem 2rem;
   }
@@ -219,7 +220,10 @@ nav.nav_container .social_container i.social_icons:hover {
     height: 35px;
   }
   .nav_link_container ul.nav_links {
-    padding: 0em 1em;
+    padding: 0em 2rem;
+  }
+  .nav_link_container ul.nav_links .link_area .links a {
+    font-size: 2.369rem;
   }
 }
 footer.footer_area {
@@ -228,10 +232,10 @@ footer.footer_area {
   align-items: center;
   width: 100%;
   padding: 1rem 8rem;
-  background: rgba(12, 23, 28, 0.1);
+  background: rgba(12, 23, 28, 0.1019607843);
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  color: rgba(12, 23, 28, 0.75);
+  color: rgba(12, 23, 28, 0.7490196078);
 }
 footer.footer_area .short_links {
   display: flex;
@@ -240,7 +244,7 @@ footer.footer_area .short_links {
 }
 footer.footer_area .short_links a {
   margin: 0rem 1rem;
-  color: rgba(12, 23, 28, 0.75);
+  color: rgba(12, 23, 28, 0.7490196078);
 }
 footer.footer_area .short_links a:hover {
   color: #0c171c;
@@ -253,7 +257,7 @@ footer.footer_area .social_container {
 footer.footer_area .social_container .social_icon svg {
   margin: 0rem 1rem;
   transition: 0.3s ease-in-out;
-  color: rgba(12, 23, 28, 0.75);
+  color: rgba(12, 23, 28, 0.7490196078);
 }
 footer.footer_area .social_container .social_icon svg:hover {
   color: #0c171c;
@@ -293,12 +297,17 @@ footer.footer_area .social_container .social_icon svg:hover {
   }
 }
 header {
-  background: linear-gradient(90deg, rgba(12, 23, 28, 0.25), rgba(12, 23, 28, 0.25)), url("../assests/images/concert_1.webp");
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  overflow: hidden;
   position: relative;
+  height: 100vh;
+}
+header .hero_image {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 header .hero_text_container {
@@ -311,10 +320,10 @@ header .hero_text_container {
   color: #FCFFFF;
 }
 header .hero_text_container h1 {
-  font-size: 5.653rem;
+  font-size: 5.61rem;
 }
 header .hero_text_container h3 {
-  font-size: 2.827rem;
+  font-size: 3.157rem;
 }
 
 main section.section {
@@ -332,7 +341,7 @@ main section.about_us_area .about_founder_container #founder {
   grid-area: founder;
 }
 main section.about_us_area .about_founder_container #founder h3 {
-  font-size: 2.827rem;
+  font-size: 3.157rem;
   line-height: 2rem;
   margin-bottom: 2rem;
 }
@@ -357,7 +366,7 @@ main section.about_us_area .about_team_container #team {
   grid-area: team;
 }
 main section.about_us_area .about_team_container #team h3 {
-  font-size: 2.827rem;
+  font-size: 3.157rem;
   margin-bottom: 2rem;
 }
 main section.about_us_area .about_team_container #team_img {
@@ -392,14 +401,14 @@ main section.work_counter .work {
   color: #0c171c;
 }
 main section.work_counter .work h1 {
-  font-size: 4rem;
+  font-size: 4.209rem;
 }
 main section.work_counter .work h4 {
   font-size: 1rem;
-  color: rgba(12, 23, 28, 0.75);
+  color: rgba(12, 23, 28, 0.7490196078);
 }
 main section.instagram_work_area h3 {
-  font-size: 2.827rem;
+  font-size: 3.157rem;
   text-align: center;
 }
 main section.instagram_work_area .insta_pic_area {
@@ -436,7 +445,7 @@ main section.contact_us .contact_us_area, main section.contact_us .contact_us_ar
   align-items: center;
 }
 main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-  font-size: 2.827rem;
+  font-size: 3.157rem;
 }
 main section.contact_us .contact_us_area p, main section.contact_us .contact_us_area .contact_info p {
   font-size: 1rem;

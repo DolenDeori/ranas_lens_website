@@ -3,11 +3,9 @@
 @import './global/footer';
 @import './global/responsive';
 
-$img_link: url('../assests/images/concert_1.webp');
-
 //? HEADER STYLING
 header {
-    @include make_header($img_link);
+    @include make_header();
 }
 
 //? HERO AREA CONTENT STYLING

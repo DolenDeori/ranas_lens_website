@@ -1,3 +1,5 @@
+@import './responsive';
+
 //? VARIABLE for hamberger
 $animation_timing : 200ms ease-in-out;
 $bar_height: .15rem;
@@ -14,8 +16,8 @@ nav.nav_container {
     width: 100%;
     background-color: $color_white;
     padding: 1rem 8rem;
-    border-bottom: 1px solid $dark25;
     z-index: 9999;
+    border: 1px solid $dark25;
 
     .hamberger {
         display: flex;
@@ -99,6 +101,7 @@ nav.nav_container {
         align-items: center;
         gap: 3em;
         overflow: hidden;
+        transition: all 0.2s ease-in-out;
 
         .link_area {
             display: flex;
@@ -183,13 +186,14 @@ nav.nav_container {
     ul.show {
         height: 100%;
         transition: all $animation_timing;
+        pointer-events: all;
     }
 }
 
 
 //? RESPONSIVE STYLING ----------------------------------------- 
 
-@media screen and (max-width: 768px) {
+@include tablet {
     nav.nav_container {
         padding: 1rem 4rem;
     }
@@ -215,24 +219,27 @@ nav.nav_container {
         }
 
         ul.show {
-            width: 100%;
+            height: 100%;
         }
     }
 }
 
-@media screen and (max-width: 480px) {
+@include mobile {
     nav.nav_container {
         padding: 1rem 2rem;
 
         .logo_container .logo {
             height: 35px;
         }
-
     }
 
     .nav_link_container {
         ul.nav_links {
-            padding: 0em 1em;
+            padding: 0em 2rem;
+
+            .link_area .links a {
+                font-size: $heading_4;
+            }
         }
     }
 }

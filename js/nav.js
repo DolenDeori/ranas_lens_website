@@ -16,9 +16,3 @@ hamberger_bar.addEventListener("click", function () {
     icons.classList.toggle("fade_icons");
   });
 });
-
-// overlay.addEventListener("click", () => {
-//   nav_link.classList.remove("show");
-//   overlay.classList.toggle("show");
-//   hamberger_bar.checked = false;
-// });

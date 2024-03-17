@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -44,8 +43,8 @@ nav.nav_container {
   width: 100%;
   background-color: #FCFFFF;
   padding: 1rem 8rem;
-  border-bottom: 1px solid rgba(12, 23, 28, 0.25);
   z-index: 9999;
+  border: 1px solid rgba(12, 23, 28, 0.2509803922);
 }
 nav.nav_container .hamberger {
   display: flex;
@@ -119,6 +118,7 @@ nav.nav_container .social_container i.social_icons:hover {
   align-items: center;
   gap: 3em;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
 }
 .nav_link_container ul.nav_links .link_area {
   display: flex;
@@ -128,7 +128,7 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 .nav_link_container ul.nav_links .links {
   font-family: "Playfair Display", serif;
-  font-size: 2rem;
+  font-size: 2.369rem;
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
@@ -186,9 +186,10 @@ nav.nav_container .social_container i.social_icons:hover {
 .nav_link_container ul.show {
   height: 100%;
   transition: all 200ms ease-in-out;
+  pointer-events: all;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   nav.nav_container {
     padding: 1rem 4rem;
   }
@@ -208,10 +209,10 @@ nav.nav_container .social_container i.social_icons:hover {
     display: initial;
   }
   .nav_link_container ul.show {
-    width: 100%;
+    height: 100%;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
   nav.nav_container {
     padding: 1rem 2rem;
   }
@@ -219,7 +220,10 @@ nav.nav_container .social_container i.social_icons:hover {
     height: 35px;
   }
   .nav_link_container ul.nav_links {
-    padding: 0em 1em;
+    padding: 0em 2rem;
+  }
+  .nav_link_container ul.nav_links .link_area .links a {
+    font-size: 2.369rem;
   }
 }
 footer.footer_area {
@@ -228,10 +232,10 @@ footer.footer_area {
   align-items: center;
   width: 100%;
   padding: 1rem 8rem;
-  background: rgba(12, 23, 28, 0.1);
+  background: rgba(12, 23, 28, 0.1019607843);
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  color: rgba(12, 23, 28, 0.75);
+  color: rgba(12, 23, 28, 0.7490196078);
 }
 footer.footer_area .short_links {
   display: flex;
@@ -240,7 +244,7 @@ footer.footer_area .short_links {
 }
 footer.footer_area .short_links a {
   margin: 0rem 1rem;
-  color: rgba(12, 23, 28, 0.75);
+  color: rgba(12, 23, 28, 0.7490196078);
 }
 footer.footer_area .short_links a:hover {
   color: #0c171c;
@@ -253,7 +257,7 @@ footer.footer_area .social_container {
 footer.footer_area .social_container .social_icon svg {
   margin: 0rem 1rem;
   transition: 0.3s ease-in-out;
-  color: rgba(12, 23, 28, 0.75);
+  color: rgba(12, 23, 28, 0.7490196078);
 }
 footer.footer_area .social_container .social_icon svg:hover {
   color: #0c171c;
@@ -293,28 +297,46 @@ footer.footer_area .social_container .social_icon svg:hover {
   }
 }
 header {
-  background: linear-gradient(90deg, rgba(12, 23, 28, 0.25), rgba(12, 23, 28, 0.25)), url("../assests/images/travelling_2.webp");
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  overflow: hidden;
   position: relative;
+  height: 100vh;
+}
+header .hero_image {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 header .hero_text_container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
+  height: 100%;
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: auto;
   color: #FCFFFF;
 }
-header .hero_text_container h1 {
-  font-size: 5.653rem;
+header .hero_text_container .hero_title_text {
+  font-size: 5.61rem;
+  line-height: 1em;
+  margin-bottom: 2rem;
 }
-header .hero_text_container h3 {
-  font-size: 2.827rem;
+header .hero_text_container .hero_body_text {
+  width: 80ch;
+}
+header .hero_text_container .hero_cta_area {
+  margin-top: 4rem;
+}
+header .hero_text_container .hero_cta_area a {
+  padding: 1rem 3rem;
+  background-color: rgba(12, 23, 28, 0.7490196078);
+  color: #FCFFFF;
+  border: 2px solid #FCFFFF;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10rem;
 }
 
 main section.section {
@@ -340,7 +362,7 @@ main section.service_showcase_area .service_container:nth-child(even) {
   grid-template-areas: "service_image service_info";
 }
 main section.service_showcase_area .service_container .service_info h3 {
-  font-size: 2.827rem;
+  font-size: 3.157rem;
   margin-bottom: 1rem;
 }
 main section.service_showcase_area .service_container .service_info a {
@@ -391,7 +413,7 @@ main section.call_to_action .cta_imge_area .call_to_action_textarea {
   text-align: center;
 }
 main section.call_to_action .cta_imge_area .call_to_action_textarea .cta_title {
-  font-size: 4rem;
+  font-size: 4.209rem;
 }
 main section.call_to_action .cta_imge_area .call_to_action_textarea .cta_desc {
   font-size: 1rem;
@@ -400,12 +422,12 @@ main section.call_to_action .cta_footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(12, 23, 28, 0.25);
+  background: rgba(12, 23, 28, 0.2509803922);
   padding: 1rem 8rem;
   margin: 0;
 }
 main section.call_to_action .cta_footer .cta_footer_textarea h1.cta_footer_title {
-  font-size: 2rem;
+  font-size: 2.369rem;
 }
 main section.call_to_action .cta_footer .btn_cta_footer a {
   font-family: "Open Sans", sans-serif;
@@ -437,7 +459,7 @@ main section.glimpse_of_work {
   flex-direction: column;
 }
 main section.glimpse_of_work h1.glimpse_title {
-  font-size: 2.827rem;
+  font-size: 3.157rem;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -491,7 +513,7 @@ main section.glimpse_of_work .wrapper .control_button {
   margin-top: 2rem;
 }
 main section.glimpse_of_work .wrapper .control_button .control {
-  background: rgba(12, 23, 28, 0.75);
+  background: rgba(12, 23, 28, 0.7490196078);
   padding: 0.5rem 1rem;
   border-radius: 0rem;
   cursor: pointer;
@@ -513,7 +535,7 @@ main section.instagram_work_area {
   margin: 8rem 0;
 }
 main section.instagram_work_area h3 {
-  font-size: 2.827rem;
+  font-size: 3.157rem;
   text-align: center;
 }
 main section.instagram_work_area .insta_pic_area {
@@ -551,7 +573,7 @@ main section.contact_us .contact_us_area, main section.contact_us .contact_us_ar
   align-items: center;
 }
 main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-  font-size: 2.827rem;
+  font-size: 3.157rem;
 }
 main section.contact_us .contact_us_area p, main section.contact_us .contact_us_area .contact_info p {
   font-size: 1rem;
@@ -612,14 +634,15 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 
 @media screen and (max-width: 800px) {
-  header .hero_text_container h1 {
-    font-size: 4.946rem;
+  .hero_container .hero_text_container {
+    padding: 0 4rem;
   }
-  header .hero_text_container h3 {
-    font-size: 2.5rem;
+  .hero_container .hero_text_container .hero_title_text {
+    font-size: 3.157rem;
   }
-  header .hero_text_container p.description {
-    font-size: 0.875rem;
+  .hero_container .hero_text_container .hero_body_text {
+    padding-right: 0.5rem;
+    width: 50ch;
   }
   section.section {
     margin: 4rem 4rem 0 !important;
@@ -694,14 +717,14 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   }
 }
 @media screen and (max-width: 450px) {
-  header .hero_text_container h1 {
-    font-size: 2.827rem;
+  .hero_container .hero_text_container {
+    padding: 0 2rem;
   }
-  header .hero_text_container h3 {
-    font-size: 1.414rem;
+  .hero_container .hero_text_container .hero_title_text {
+    font-size: 2.369rem;
   }
-  header .hero_text_container p.description {
-    font-size: 0.875rem;
+  .hero_container .hero_text_container .hero_body_text {
+    width: 30ch;
   }
   section.section {
     margin: 2rem 2rem 0 !important;

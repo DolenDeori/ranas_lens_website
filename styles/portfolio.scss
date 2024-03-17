@@ -3,11 +3,9 @@
 @import "./global/footer";
 @import "./global/responsive";
 
-$img_link : url("../assests/images/img12.jpeg");
-
 header {
     height: 100vh;
-    @include make_header($img_link);
+    @include make_header();
 }
 
 header .hero_text_container {
