@@ -44,7 +44,7 @@ nav.nav_container {
   background-color: #FCFFFF;
   padding: 1rem 8rem;
   z-index: 9999;
-  border: 1px solid rgba(12, 23, 28, 0.2509803922);
+  border-bottom: 1px solid rgba(12, 23, 28, 0.2509803922);
 }
 nav.nav_container .hamberger {
   display: flex;
@@ -309,6 +309,34 @@ header .hero_image {
   position: absolute;
   z-index: -1;
 }
+header .hero_text_container {
+  height: 100%;
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: auto;
+  color: #FCFFFF;
+}
+header .hero_text_container .hero_title_text {
+  font-size: 5.61rem;
+  line-height: 1em;
+  margin-bottom: 2rem;
+}
+header .hero_text_container .hero_body_text {
+  width: 60%;
+}
+header .hero_text_container .hero_cta_area {
+  margin-top: 4rem;
+}
+header .hero_text_container .hero_cta_area a {
+  padding: 1rem 3rem;
+  background-color: rgba(12, 23, 28, 0.7490196078);
+  color: #FCFFFF;
+  border: 2px solid #FCFFFF;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10rem;
+}
 
 header .hero_text_container {
   position: absolute;
@@ -474,9 +502,18 @@ main section.contact_us .contact_us_area a.btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 main section.contact_us .contact_us_area a.btn p {
   color: #FCFFFF;
+}
+main section.contact_us .contact_us_area a.btn .btn_arrow {
+  transition: all 0.2s ease-in-out;
+  color: #FCFFFF;
+}
+main section.contact_us .contact_us_area a.btn:hover > .btn_arrow {
+  transform: translateX(5px);
+  transition: all 0.2s ease-in-out;
 }
 main section.contact_us .contact_us_area a.btn p {
   color: #FCFFFF;

@@ -88,6 +88,39 @@ p {
         position: absolute;
         z-index: -1;
     }
+
+    .hero_text_container {
+        height: 100%;
+        padding: 0 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: auto;
+        color: $color_white;
+
+        .hero_title_text {
+            font-size: $heading_1;
+            line-height: 1em;
+            margin-bottom: 2rem;
+        }
+
+        .hero_body_text {
+            width: 60%;
+        }
+
+        .hero_cta_area {
+            margin-top: 4rem;
+
+            a {
+                padding: 1rem 3rem;
+                background-color: $dark75;
+                color: $color_white;
+                border: 2px solid $color_white;
+                font-family: $open_sans;
+                border-radius: 10rem;
+            }
+        }
+    }
 }
 
 //? MAKE BUTTON
@@ -100,9 +133,20 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
 
     p {
         color: $color_f;
+    }
+
+    .btn_arrow {
+        transition: all .2s ease-in-out;
+        color: $color_white;
+    }
+
+    &:hover>.btn_arrow {
+        transform: translateX(5px);
+        transition: all .2s ease-in-out;
     }
 }
 

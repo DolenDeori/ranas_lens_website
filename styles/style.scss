@@ -3,47 +3,9 @@
 @import './global/footer';
 @import './global/responsive';
 
-// header {
-//     // @include make_header();
-// }
 header {
     @include make_header();
 }
-
-header .hero_text_container {
-    // background-color: aqua;
-    height: 100%;
-    padding: 0 8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: auto;
-    color: $color_white;
-
-    .hero_title_text {
-        font-size: $heading_1;
-        line-height: 1em;
-        margin-bottom: 2rem;
-    }
-
-    .hero_body_text {
-        width: 80ch;
-    }
-
-    .hero_cta_area {
-        margin-top: 4rem;
-
-        a {
-            padding: 1rem 3rem;
-            background-color: $dark75;
-            color: $color_white;
-            border: 2px solid $color_white;
-            font-family: $open_sans;
-            border-radius: 10rem;
-        }
-    }
-}
-
 
 main {
     section.section {
@@ -54,125 +16,157 @@ main {
         }
     }
 
-    section.service_showcase_area {
-        .service_container {
-            margin-bottom: 8rem;
+    section.about_section {
+        margin-bottom: 8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
 
-            .service_image {
-                grid-area: service_image;
-            }
+        .about_section_image_area {
+            width: 100%;
 
-            .service_info {
-                grid-area: service_info;
-            }
-
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-areas: 'service_info service_image';
-            gap: 6rem;
-
-            &:nth-child(even) {
-                grid-template-areas: 'service_image service_info';
-            }
-
-            .service_info {
-                h3 {
-                    font-size: $heading_3;
-                    margin-bottom: 1rem;
-                }
-
-                a {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    margin-top: 4rem;
-                    gap: 1rem;
-
-                    p.view_more_btn {
-                        color: $dark100;
-                    }
-
-                    &:hover svg {
-                        transform: translate(5px)
-                    }
-                }
-            }
-
-            .service_image {
-                overflow: hidden;
-                height: 550px;
+            img {
+                height: 600px;
                 width: 100%;
+                object-fit: cover;
+                object-position: top;
+                filter: grayscale(1);
+            }
+        }
 
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    object-position: 50% 0;
+        .about_section_info_area {
+            .about_section_sub_heading {
+                font-family: $open_sans;
+                font-weight: bold;
+                color: $color_primary;
+                margin-bottom: 1rem;
+            }
+
+            .about_section_title {
+                font-size: $heading_3;
+                line-height: 3.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .about_section_desc {
+                margin-bottom: 4rem;
+            }
+
+            a.about_cta_btn {
+                @include make_button($color_white, $color_primary);
+                width: 30%;
+            }
+
+            .about_social_media {
+                margin-top: 2rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .social_icons {
+                    color: $dark100;
+                    font-size: 20px;
+                    padding: .5rem;
+                    border-radius: 100%;
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        background: $color_primary;
+                    }
                 }
             }
         }
     }
 
-    section.call_to_action {
-        .cta_imge_area {
-            position: relative;
-            padding: 0;
-            height: 70vh;
+    section.services_section {
+        background-color: $dark100;
+        padding: 4rem 8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
 
-            img {
-                padding: 0 !important;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+        .service_section_info {
+            text-align: center;
+
+            .service_section_sub_title {
+                font-weight: bold;
+                color: $color_primary;
+                margin-bottom: 1rem;
             }
 
-            .call_to_action_textarea {
-                position: absolute;
-                top: 3%;
-                left: 50%;
-                transform: translate(-50%, 0%);
-                width: 100%;
-                color: #fff;
-                text-align: center;
-
-                .cta_title {
-                    font-size: $heading_2;
-                }
-
-                .cta_desc {
-                    font-size: $paragraph;
-                }
+            .service_section_title {
+                font-size: $heading_3;
+                color: $color_white;
             }
         }
 
-        .cta_footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: $dark25;
-            padding: 1rem 8rem; //top and bottom | left and right
-            margin: 0;
+        .services_container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
 
-            .cta_footer_textarea {
-                h1.cta_footer_title {
-                    font-size: $heading_4;
+            .card {
+                position: relative;
+                height: 60vh;
+                border: 1px solid #ffffff6c;
+                overflow: hidden;
+
+                .card_image {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    opacity: 5%;
+                    transition: all .2s ease-in-out;
                 }
-            }
 
-            .btn_cta_footer {
-                a {
-                    @include make_button($color_white, $dark100);
-                    gap: .5rem;
+                &:hover>.card_image {
+                    opacity: 50%;
+                }
 
-                    &:hover svg {
-                        transform: translate(4px);
+                .service_count {
+                    position: absolute;
+                    top: 4%;
+                    margin: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 10rem;
+                    background: $dark100;
+                    box-shadow: 1px 1px 5px $dark75;
+
+                    .service_number {
+                        color: $color_white;
+                    }
+                }
+
+                .card_service_info_area {
+                    position: absolute;
+                    bottom: 4%;
+                    color: $color_white;
+                    padding: 1rem;
+
+                    .card_title {
+                        margin-bottom: 2rem;
+                        font-family: $open_sans;
                     }
 
-                    svg {
-                        transition: all .3s ease-in-out;
+                    .card_desc {
+                        margin-bottom: 1rem;
+                    }
 
-                        path {
-                            fill: $color_white;
+                    .card_btn .btn {
+                        color: $color_white;
+                        font-family: $open_sans;
+                        padding-bottom: .2rem;
+                        border-bottom: 1px solid #ffffff57;
+                        transition: all .2s ease-in-out;
+
+                        &:hover {
+                            border-bottom: 1px solid #ffffff
                         }
                     }
                 }
@@ -272,48 +266,6 @@ main {
 
     }
 
-    section.instagram_work_area {
-        margin: 8rem 0;
-
-        h3 {
-            font-size: $heading_3;
-            text-align: center;
-        }
-
-        .insta_pic_area {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            overflow: hidden;
-            margin-top: 2rem;
-            // gap: 1rem;
-
-            .insta_pic_container {
-                position: relative;
-                overflow: hidden;
-                height: 250px;
-                width: 200px;
-                top: 0;
-                left: 0;
-                flex: 1;
-
-                &:hover img {
-                    transform: scale(1.05);
-                }
-
-                img {
-                    position: absolute;
-                    width: 100%;
-                    top: 0;
-                    left: 0;
-                    object-fit: cover;
-                    transition: all .5s ease-in-out;
-                }
-            }
-
-        }
-    }
-
     section.contact_us {
         @include make_contact_section();
     }
@@ -333,95 +285,65 @@ main {
 
             .hero_body_text {
                 padding-right: .5rem;
-                width: 50ch;
+                width: 90%;
             }
         }
     }
 
-    section.section {
-        margin: 4rem 4rem 0 !important; // top | left and right | bottom
+    main section.section {
+        margin: 4rem 4rem 0; // top | left and right | bottom
 
         &:last-child {
-            margin-bottom: 4rem !important;
+            margin-bottom: 4rem;
         }
     }
 
-    section.service_showcase_area {
-        .service_container {
-            grid-template-columns: repeat(1, 1fr) !important;
-            grid-template-areas: 'service_image' 'service_info' !important;
-            gap: 2rem !important;
+    main section.about_section {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 4rem;
+        gap: 1rem;
 
-            .service_info {
-                h3.service_title {
-                    font-size: $heading_3_t
-                }
+        .about_section_image_area {
+            img {
+                height: 400px;
+                width: inherit;
+            }
+        }
 
-                p.service_desc {
-                    font-size: $paragraph_t;
-                }
+        .about_section_info_area {
+            .about_section_title {
+                font-size: $heading_3;
+                line-height: 3.5rem;
+            }
 
-                a {
-                    margin-top: 2rem;
+            .about_section_desc {
+                margin-bottom: 2rem;
+            }
 
-                    p.view_more_btn {
-                        font-size: $paragraph_t;
-                    }
-                }
+            a.about_cta_btn {
+                width: 100%;
             }
         }
     }
 
-    section.call_to_action {
-        .cta_imge_area {
-            .call_to_action_textarea {
-                .cta_title {
-                    font-size: $heading_3_t !important;
-                }
+    main section.services_section {
+        padding: 4rem 4rem;
 
-                .cta_desc p {
-                    font-size: $paragraph_t !important;
-                }
+        .service_section_info {
+            .service_section_title {
+                font-size: $heading_3;
             }
         }
 
-        .cta_footer {
-            flex-direction: column !important;
+        .services_container {
+            grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
-            align-items: flex-start !important;
-            padding: 1rem 4rem !important; //top and bottom | left and right
 
-            .cta_footer_textarea {
-                h1.cta_footer_title {
-                    font-size: $paragraph !important;
-                }
-
-                p.cta_footer_desc {
-                    font-size: $paragraph_t
-                }
-            }
-
-            .btn_cta_footer {
-                a {
-                    @include make_button($color_white, $dark100);
-                    gap: .5rem;
-                    padding: .5rem 1rem !important;
-
-                    p {
-                        font-size: $paragraph_t;
-                    }
-
-                    &:hover svg {
-                        transform: translate(4px);
-                    }
-
-                    svg {
-                        transition: all .3s ease-in-out;
-
-                        path {
-                            fill: $color_white;
-                        }
-                    }
+            .card {
+                .card_image {
+                    opacity: 30%;
                 }
             }
         }
@@ -446,19 +368,61 @@ main {
             }
 
             .hero_body_text {
-                width: 30ch;
+                width: 100%;
             }
         }
     }
 
-    section.section {
-        margin: 2rem 2rem 0 !important;
+    main section.section {
+        margin: 2rem 2rem 0;
     }
 
+    main section.about_section {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 2rem;
 
-    section.glimpse_of_work {
+        .about_section_image_area {
+            img {
+                height: 400px;
+                width: 100%;
+            }
+        }
+
+        .about_section_info_area {
+            .about_section_title {
+                font-size: $heading_4;
+                line-height: 2.5rem;
+            }
+
+            a.about_cta_btn {
+                width: 100%;
+                padding: 1rem 1rem;
+            }
+        }
+    }
+
+    main section.services_section {
+        padding: 4rem 2rem;
+
+        .service_section_info {
+            text-align: left;
+
+            .service_section_title {
+                font-size: $heading_4;
+            }
+        }
+
+        .services_container {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+        }
+    }
+
+    main section.glimpse_of_work {
         .wrapper .carousel {
-            grid-auto-columns: 100% !important;
+            grid-auto-columns: 100%;
         }
     }
 }

@@ -44,7 +44,7 @@ nav.nav_container {
   background-color: #FCFFFF;
   padding: 1rem 8rem;
   z-index: 9999;
-  border: 1px solid rgba(12, 23, 28, 0.2509803922);
+  border-bottom: 1px solid rgba(12, 23, 28, 0.2509803922);
 }
 nav.nav_container .hamberger {
   display: flex;
@@ -309,7 +309,6 @@ header .hero_image {
   position: absolute;
   z-index: -1;
 }
-
 header .hero_text_container {
   height: 100%;
   padding: 0 8rem;
@@ -325,7 +324,7 @@ header .hero_text_container .hero_title_text {
   margin-bottom: 2rem;
 }
 header .hero_text_container .hero_body_text {
-  width: 80ch;
+  width: 60%;
 }
 header .hero_text_container .hero_cta_area {
   margin-top: 4rem;
@@ -345,112 +344,159 @@ main section.section {
 main section.section:last-child {
   margin-bottom: 8rem;
 }
-main section.service_showcase_area .service_container {
+main section.about_section {
   margin-bottom: 8rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "service_info service_image";
-  gap: 6rem;
-}
-main section.service_showcase_area .service_container .service_image {
-  grid-area: service_image;
-}
-main section.service_showcase_area .service_container .service_info {
-  grid-area: service_info;
-}
-main section.service_showcase_area .service_container:nth-child(even) {
-  grid-template-areas: "service_image service_info";
-}
-main section.service_showcase_area .service_container .service_info h3 {
-  font-size: 3.157rem;
-  margin-bottom: 1rem;
-}
-main section.service_showcase_area .service_container .service_info a {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 4rem;
-  gap: 1rem;
-}
-main section.service_showcase_area .service_container .service_info a p.view_more_btn {
-  color: #0c171c;
-}
-main section.service_showcase_area .service_container .service_info a:hover svg {
-  transform: translate(5px);
-}
-main section.service_showcase_area .service_container .service_image {
-  overflow: hidden;
-  height: 550px;
-  width: 100%;
-}
-main section.service_showcase_area .service_container .service_image img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 0;
-     object-position: 50% 0;
-}
-main section.call_to_action .cta_imge_area {
-  position: relative;
-  padding: 0;
-  height: 70vh;
-}
-main section.call_to_action .cta_imge_area img {
-  padding: 0 !important;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main section.call_to_action .cta_imge_area .call_to_action_textarea {
-  position: absolute;
-  top: 3%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 100%;
-  color: #fff;
-  text-align: center;
-}
-main section.call_to_action .cta_imge_area .call_to_action_textarea .cta_title {
-  font-size: 4.209rem;
-}
-main section.call_to_action .cta_imge_area .call_to_action_textarea .cta_desc {
-  font-size: 1rem;
-}
-main section.call_to_action .cta_footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(12, 23, 28, 0.2509803922);
-  padding: 1rem 8rem;
-  margin: 0;
+  gap: 3rem;
 }
-main section.call_to_action .cta_footer .cta_footer_textarea h1.cta_footer_title {
-  font-size: 2.369rem;
+main section.about_section .about_section_image_area {
+  width: 100%;
 }
-main section.call_to_action .cta_footer .btn_cta_footer a {
+main section.about_section .about_section_image_area img {
+  height: 600px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  filter: grayscale(1);
+}
+main section.about_section .about_section_info_area .about_section_sub_heading {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #ad50d2;
+  margin-bottom: 1rem;
+}
+main section.about_section .about_section_info_area .about_section_title {
+  font-size: 3.157rem;
+  line-height: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+main section.about_section .about_section_info_area .about_section_desc {
+  margin-bottom: 4rem;
+}
+main section.about_section .about_section_info_area a.about_cta_btn {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   padding: 1rem 2rem;
   border-radius: 0rem;
-  background-color: #0c171c;
+  background-color: #ad50d2;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  width: 30%;
 }
-main section.call_to_action .cta_footer .btn_cta_footer a p {
+main section.about_section .about_section_info_area a.about_cta_btn p {
   color: #FCFFFF;
 }
-main section.call_to_action .cta_footer .btn_cta_footer a:hover svg {
-  transform: translate(4px);
+main section.about_section .about_section_info_area a.about_cta_btn .btn_arrow {
+  transition: all 0.2s ease-in-out;
+  color: #FCFFFF;
 }
-main section.call_to_action .cta_footer .btn_cta_footer a svg {
-  transition: all 0.3s ease-in-out;
+main section.about_section .about_section_info_area a.about_cta_btn:hover > .btn_arrow {
+  transform: translateX(5px);
+  transition: all 0.2s ease-in-out;
 }
-main section.call_to_action .cta_footer .btn_cta_footer a svg path {
-  fill: #FCFFFF;
+main section.about_section .about_section_info_area .about_social_media {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main section.about_section .about_section_info_area .about_social_media .social_icons {
+  color: #0c171c;
+  font-size: 20px;
+  padding: 0.5rem;
+  border-radius: 100%;
+  transition: 0.2s ease-in-out;
+}
+main section.about_section .about_section_info_area .about_social_media .social_icons:hover {
+  background: #ad50d2;
+}
+main section.services_section {
+  background-color: #0c171c;
+  padding: 4rem 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main section.services_section .service_section_info {
+  text-align: center;
+}
+main section.services_section .service_section_info .service_section_sub_title {
+  font-weight: bold;
+  color: #ad50d2;
+  margin-bottom: 1rem;
+}
+main section.services_section .service_section_info .service_section_title {
+  font-size: 3.157rem;
+  color: #FCFFFF;
+}
+main section.services_section .services_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+main section.services_section .services_container .card {
+  position: relative;
+  height: 60vh;
+  border: 1px solid rgba(255, 255, 255, 0.4235294118);
+  overflow: hidden;
+}
+main section.services_section .services_container .card .card_image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  opacity: 5%;
+  transition: all 0.2s ease-in-out;
+}
+main section.services_section .services_container .card:hover > .card_image {
+  opacity: 50%;
+}
+main section.services_section .services_container .card .service_count {
+  position: absolute;
+  top: 4%;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 10rem;
+  background: #0c171c;
+  box-shadow: 1px 1px 5px rgba(12, 23, 28, 0.7490196078);
+}
+main section.services_section .services_container .card .service_count .service_number {
+  color: #FCFFFF;
+}
+main section.services_section .services_container .card .card_service_info_area {
+  position: absolute;
+  bottom: 4%;
+  color: #FCFFFF;
+  padding: 1rem;
+}
+main section.services_section .services_container .card .card_service_info_area .card_title {
+  margin-bottom: 2rem;
+  font-family: "Open Sans", sans-serif;
+}
+main section.services_section .services_container .card .card_service_info_area .card_desc {
+  margin-bottom: 1rem;
+}
+main section.services_section .services_container .card .card_service_info_area .card_btn .btn {
+  color: #FCFFFF;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3411764706);
+  transition: all 0.2s ease-in-out;
+}
+main section.services_section .services_container .card .card_service_info_area .card_btn .btn:hover {
+  border-bottom: 1px solid #ffffff;
 }
 main section.glimpse_of_work {
   display: flex;
@@ -531,41 +577,6 @@ main section.glimpse_of_work .wrapper .control_button .control svg {
 main section.glimpse_of_work .wrapper .control_button .control svg path {
   fill: #FCFFFF;
 }
-main section.instagram_work_area {
-  margin: 8rem 0;
-}
-main section.instagram_work_area h3 {
-  font-size: 3.157rem;
-  text-align: center;
-}
-main section.instagram_work_area .insta_pic_area {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  margin-top: 2rem;
-}
-main section.instagram_work_area .insta_pic_area .insta_pic_container {
-  position: relative;
-  overflow: hidden;
-  height: 250px;
-  width: 200px;
-  top: 0;
-  left: 0;
-  flex: 1;
-}
-main section.instagram_work_area .insta_pic_area .insta_pic_container:hover img {
-  transform: scale(1.05);
-}
-main section.instagram_work_area .insta_pic_area .insta_pic_container img {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 0.5s ease-in-out;
-}
 main section.contact_us .contact_us_area, main section.contact_us .contact_us_area .contact_info {
   display: flex;
   flex-direction: column;
@@ -602,9 +613,18 @@ main section.contact_us .contact_us_area a.btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 main section.contact_us .contact_us_area a.btn p {
   color: #FCFFFF;
+}
+main section.contact_us .contact_us_area a.btn .btn_arrow {
+  transition: all 0.2s ease-in-out;
+  color: #FCFFFF;
+}
+main section.contact_us .contact_us_area a.btn:hover > .btn_arrow {
+  transform: translateX(5px);
+  transition: all 0.2s ease-in-out;
 }
 main section.contact_us .contact_us_area a.btn p {
   color: #FCFFFF;
@@ -642,75 +662,47 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   }
   .hero_container .hero_text_container .hero_body_text {
     padding-right: 0.5rem;
-    width: 50ch;
+    width: 90%;
   }
-  section.section {
-    margin: 4rem 4rem 0 !important;
+  main section.section {
+    margin: 4rem 4rem 0;
   }
-  section.section:last-child {
-    margin-bottom: 4rem !important;
+  main section.section:last-child {
+    margin-bottom: 4rem;
   }
-  section.service_showcase_area .service_container {
-    grid-template-columns: repeat(1, 1fr) !important;
-    grid-template-areas: "service_image" "service_info" !important;
-    gap: 2rem !important;
-  }
-  section.service_showcase_area .service_container .service_info h3.service_title {
-    font-size: 2.5rem;
-  }
-  section.service_showcase_area .service_container .service_info p.service_desc {
-    font-size: 0.875rem;
-  }
-  section.service_showcase_area .service_container .service_info a {
-    margin-top: 2rem;
-  }
-  section.service_showcase_area .service_container .service_info a p.view_more_btn {
-    font-size: 0.875rem;
-  }
-  section.call_to_action .cta_imge_area .call_to_action_textarea .cta_title {
-    font-size: 2.5rem !important;
-  }
-  section.call_to_action .cta_imge_area .call_to_action_textarea .cta_desc p {
-    font-size: 0.875rem !important;
-  }
-  section.call_to_action .cta_footer {
-    flex-direction: column !important;
+  main section.about_section {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 4rem;
     gap: 1rem;
-    align-items: flex-start !important;
-    padding: 1rem 4rem !important;
   }
-  section.call_to_action .cta_footer .cta_footer_textarea h1.cta_footer_title {
-    font-size: 1rem !important;
+  main section.about_section .about_section_image_area img {
+    height: 400px;
+    width: inherit;
   }
-  section.call_to_action .cta_footer .cta_footer_textarea p.cta_footer_desc {
-    font-size: 0.875rem;
+  main section.about_section .about_section_info_area .about_section_title {
+    font-size: 3.157rem;
+    line-height: 3.5rem;
   }
-  section.call_to_action .cta_footer .btn_cta_footer a {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    border-radius: 0rem;
-    background-color: #0c171c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem !important;
+  main section.about_section .about_section_info_area .about_section_desc {
+    margin-bottom: 2rem;
   }
-  section.call_to_action .cta_footer .btn_cta_footer a p {
-    color: #FCFFFF;
+  main section.about_section .about_section_info_area a.about_cta_btn {
+    width: 100%;
   }
-  section.call_to_action .cta_footer .btn_cta_footer a p {
-    font-size: 0.875rem;
+  main section.services_section {
+    padding: 4rem 4rem;
   }
-  section.call_to_action .cta_footer .btn_cta_footer a:hover svg {
-    transform: translate(4px);
+  main section.services_section .service_section_info .service_section_title {
+    font-size: 3.157rem;
   }
-  section.call_to_action .cta_footer .btn_cta_footer a svg {
-    transition: all 0.3s ease-in-out;
+  main section.services_section .services_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
-  section.call_to_action .cta_footer .btn_cta_footer a svg path {
-    fill: #FCFFFF;
+  main section.services_section .services_container .card .card_image {
+    opacity: 30%;
   }
   section.glimpse_of_work .wrapper .carousel {
     grid-auto-columns: calc(50% - 12px) !important;
@@ -724,12 +716,43 @@ main section.contact_us .contact_us_area a.btn:hover svg {
     font-size: 2.369rem;
   }
   .hero_container .hero_text_container .hero_body_text {
-    width: 30ch;
+    width: 100%;
   }
-  section.section {
-    margin: 2rem 2rem 0 !important;
+  main section.section {
+    margin: 2rem 2rem 0;
   }
-  section.glimpse_of_work .wrapper .carousel {
-    grid-auto-columns: 100% !important;
+  main section.about_section {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  main section.about_section .about_section_image_area img {
+    height: 400px;
+    width: 100%;
+  }
+  main section.about_section .about_section_info_area .about_section_title {
+    font-size: 2.369rem;
+    line-height: 2.5rem;
+  }
+  main section.about_section .about_section_info_area a.about_cta_btn {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+  main section.services_section {
+    padding: 4rem 2rem;
+  }
+  main section.services_section .service_section_info {
+    text-align: left;
+  }
+  main section.services_section .service_section_info .service_section_title {
+    font-size: 2.369rem;
+  }
+  main section.services_section .services_container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  main section.glimpse_of_work .wrapper .carousel {
+    grid-auto-columns: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
