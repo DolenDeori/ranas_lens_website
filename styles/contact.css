@@ -420,7 +420,7 @@ main section.contact_form_area .input_group_area .input_group textarea {
   padding: 0.5rem;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  border-radius: 0rem;
+  border-radius: 1rem;
   background-color: rgba(12, 23, 28, 0.0509803922);
   border: 2px solid rgba(12, 23, 28, 0.1019607843);
 }
@@ -432,15 +432,16 @@ main section.contact_form_area .input_group_area .input_group textarea {
   min-height: 3rem;
 }
 main section.contact_form_area button.btn {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  padding: 1rem 2rem;
-  border-radius: 0rem;
   background-color: #ad50d2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  padding: 0.6rem 2rem;
+  border-radius: 10rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #FCFFFF;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #ad50d2;
   cursor: pointer;
   gap: 1rem;
   width: 100%;
@@ -448,16 +449,9 @@ main section.contact_form_area button.btn {
   border: none;
   outline: none;
 }
-main section.contact_form_area button.btn p {
-  color: #FCFFFF;
-}
-main section.contact_form_area button.btn .btn_arrow {
-  transition: all 0.2s ease-in-out;
-  color: #FCFFFF;
-}
-main section.contact_form_area button.btn:hover > .btn_arrow {
-  transform: translateX(5px);
-  transition: all 0.2s ease-in-out;
+main section.contact_form_area button.btn:hover {
+  background: rgba(173, 80, 210, 0.2431372549);
+  color: #ad50d2;
 }
 main section.contact_form_area button.btn.disabled {
   cursor: not-allowed;

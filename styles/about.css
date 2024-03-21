@@ -494,26 +494,20 @@ main section.contact_us .contact_us_area .contact_info svg {
 }
 main section.contact_us .contact_us_area a.btn {
   margin-top: 3rem;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  padding: 1rem 2rem;
-  border-radius: 0rem;
   background-color: #ad50d2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-main section.contact_us .contact_us_area a.btn p {
+  padding: 0.6rem 2rem;
+  border-radius: 10rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
   color: #FCFFFF;
-}
-main section.contact_us .contact_us_area a.btn .btn_arrow {
+  font-weight: bold;
   transition: all 0.2s ease-in-out;
-  color: #FCFFFF;
+  border: 1px solid #ad50d2;
 }
-main section.contact_us .contact_us_area a.btn:hover > .btn_arrow {
-  transform: translateX(5px);
-  transition: all 0.2s ease-in-out;
+main section.contact_us .contact_us_area a.btn:hover {
+  background: rgba(173, 80, 210, 0.2431372549);
+  color: #ad50d2;
 }
 main section.contact_us .contact_us_area a.btn p {
   color: #FCFFFF;

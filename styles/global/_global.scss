@@ -43,7 +43,7 @@ $heading_5_t: 1.25rem; //(45px/21px)rem
 $paragraph_t: 0.875rem; //(16px/21px)rem
 
 //? BORDER RADIUS
-$border_radius: 0rem;
+$border_radius: 1rem;
 
 body {
     background-color: $color_white;
@@ -125,28 +125,20 @@ p {
 
 //? MAKE BUTTON
 @mixin make_button($color_f, $color_b) {
+    background-color: $color_primary;
+    padding: .6rem 2rem;
+    border-radius: 10rem;
     font-family: $open_sans;
-    font-size: $paragraph;
-    padding: 1rem 2rem;
-    border-radius: $border_radius;
-    background-color: $color_b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $color_white;
+    font-weight: bold;
+    transition: all .2s ease-in-out;
+    border: 1px solid $color_primary;
 
-    p {
-        color: $color_f;
-    }
-
-    .btn_arrow {
-        transition: all .2s ease-in-out;
-        color: $color_white;
-    }
-
-    &:hover>.btn_arrow {
-        transform: translateX(5px);
-        transition: all .2s ease-in-out;
+    &:hover {
+        background: $color_primary_light;
+        color: $color_primary;
     }
 }
 

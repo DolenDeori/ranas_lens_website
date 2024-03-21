@@ -317,7 +317,7 @@ header .error_text_container .text_area .btn {
   padding: 1rem 2rem;
   font-family: "Open Sans", sans-serif;
   color: white;
-  border-radius: 0rem;
+  border-radius: 1rem;
 }
 header .error_text_container .text_area .btn:hover {
   background-color: #ad50d2;
