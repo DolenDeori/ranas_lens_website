@@ -58,25 +58,6 @@ main {
                 @include make_button($color_white, $color_primary, $color_primary_light);
                 width: 30%;
             }
-
-            .about_social_media {
-                margin-top: 2rem;
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-
-                .social_icons {
-                    color: $dark100;
-                    font-size: 20px;
-                    padding: 0.5rem;
-                    border-radius: 100%;
-                    transition: 0.2s ease-in-out;
-
-                    &:hover {
-                        background: $color_primary;
-                    }
-                }
-            }
         }
     }
 
