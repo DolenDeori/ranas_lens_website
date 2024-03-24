@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #FCFFFF;
+  background-color: #fcffff;
 }
 
 li {
@@ -41,7 +41,7 @@ nav.nav_container {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #FCFFFF;
+  background-color: #fcffff;
   padding: 1rem 8rem;
   z-index: 9999;
   border-bottom: 1px solid rgba(12, 23, 28, 0.2509803922);
@@ -109,7 +109,7 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 .nav_link_container ul.nav_links {
   position: fixed;
-  background: #FCFFFF;
+  background: #fcffff;
   height: 0%;
   width: 100%;
   display: flex;
@@ -212,7 +212,7 @@ nav.nav_container .social_container i.social_icons:hover {
     height: 100%;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   nav.nav_container {
     padding: 1rem 2rem;
   }
@@ -316,7 +316,7 @@ header .hero_text_container {
   flex-direction: column;
   justify-content: center;
   margin-bottom: auto;
-  color: #FCFFFF;
+  color: #fcffff;
 }
 header .hero_text_container .hero_title_text {
   font-size: 5.61rem;
@@ -332,8 +332,8 @@ header .hero_text_container .hero_cta_area {
 header .hero_text_container .hero_cta_area a {
   padding: 1rem 3rem;
   background-color: rgba(12, 23, 28, 0.7490196078);
-  color: #FCFFFF;
-  border: 2px solid #FCFFFF;
+  color: #fcffff;
+  border: 2px solid #fcffff;
   font-family: "Open Sans", sans-serif;
   border-radius: 10rem;
 }
@@ -385,7 +385,7 @@ main section.about_section .about_section_info_area a.about_cta_btn {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
-  color: #FCFFFF;
+  color: #fcffff;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
   border: 1px solid #ad50d2;
@@ -455,7 +455,7 @@ main section.services_section .service_section_info .service_section_sub_title {
 }
 main section.services_section .service_section_info .service_section_title {
   font-size: 3.157rem;
-  color: #FCFFFF;
+  color: #fcffff;
 }
 main section.services_section .services_container {
   display: grid;
@@ -496,12 +496,12 @@ main section.services_section .services_container .card .service_count {
   box-shadow: 1px 1px 5px rgba(12, 23, 28, 0.7490196078);
 }
 main section.services_section .services_container .card .service_count .service_number {
-  color: #FCFFFF;
+  color: #fcffff;
 }
 main section.services_section .services_container .card .card_service_info_area {
   position: absolute;
   bottom: 4%;
-  color: #FCFFFF;
+  color: #fcffff;
   margin: 0rem 1.5rem 1rem;
 }
 main section.services_section .services_container .card .card_service_info_area .card_title {
@@ -512,7 +512,7 @@ main section.services_section .services_container .card .card_service_info_area 
   margin-bottom: 1rem;
 }
 main section.services_section .services_container .card .card_service_info_area .card_btn .btn {
-  color: #FCFFFF;
+  color: #fcffff;
   font-family: "Open Sans", sans-serif;
   padding-bottom: 0.2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3411764706);
@@ -566,7 +566,7 @@ main section.portfolio_section .portfolio_info_area .portfolio_info_area_right .
 }
 main section.portfolio_section .portfolio_info_area .portfolio_info_area_right .portfolio_section_btn:hover {
   background-color: #ad50d2;
-  color: #FCFFFF;
+  color: #fcffff;
 }
 main section.portfolio_section .portfolio_img_area {
   display: grid;
@@ -594,7 +594,7 @@ main section.portfolio_section .portfolio_img_area .portfolio_img_card .portfoli
 main section.portfolio_section .portfolio_img_area .portfolio_img_card .portfolio_img_text_area {
   position: absolute;
   bottom: 0%;
-  color: #FCFFFF;
+  color: #fcffff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -612,81 +612,12 @@ main section.portfolio_section .portfolio_img_area .portfolio_img_card .portfoli
 }
 main section.portfolio_section .portfolio_img_area .portfolio_img_card .portfolio_img_text_area .line {
   content: "";
-  background: #FCFFFF;
+  background: #fcffff;
   width: 100%;
   height: 0.02rem;
 }
 main section.portfolio_section .portfolio_img_area .portfolio_img_card:hover > .portfolio_img {
   opacity: 80%;
-}
-main section.contact_us .contact_us_area, main section.contact_us .contact_us_area .contact_info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-  font-size: 3.157rem;
-}
-main section.contact_us .contact_us_area p, main section.contact_us .contact_us_area .contact_info p {
-  font-size: 1rem;
-  color: #0c171c;
-}
-main section.contact_us .contact_us_area .contact_info {
-  margin-top: 2rem;
-}
-main section.contact_us .contact_us_area .contact_info a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-main section.contact_us .contact_us_area .contact_info svg {
-  fill: #ad50d2;
-}
-main section.contact_us .contact_us_area a.btn {
-  margin-top: 3rem;
-  background-color: #ad50d2;
-  padding: 0.6rem 2rem;
-  border-radius: 10rem;
-  font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #FCFFFF;
-  font-weight: bold;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid #ad50d2;
-}
-main section.contact_us .contact_us_area a.btn:hover {
-  background: rgba(173, 80, 210, 0.2431372549);
-  color: #ad50d2;
-}
-main section.contact_us .contact_us_area a.btn p {
-  color: #FCFFFF;
-}
-main section.contact_us .contact_us_area a.btn svg {
-  height: 24px;
-  width: 24px;
-  margin-left: 1rem;
-  transition: all 0.3s ease-in-out;
-}
-main section.contact_us .contact_us_area a.btn svg path {
-  fill: #FCFFFF;
-}
-main section.contact_us .contact_us_area a.btn:hover svg {
-  transform: translate(5px);
-}
-@media screen and (max-width: 450px) {
-  main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-    font-size: 2.5rem;
-  }
-  main section.contact_us .contact_us_area a.btn .contact_info p {
-    font-size: 0.875rem;
-  }
-  main section.contact_us .contact_us_area a.btn svg {
-    height: 1rem;
-  }
 }
 
 @media screen and (max-width: 800px) {
@@ -724,9 +655,6 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   main section.about_section .about_section_info_area .about_section_desc {
     margin-bottom: 2rem;
   }
-  main section.about_section .about_section_info_area a.about_cta_btn {
-    width: 100%;
-  }
   main section.counter_section {
     margin-bottom: 4rem;
     grid-template-columns: repeat(2, 1fr);
@@ -744,11 +672,8 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   main section.services_section .services_container .card .card_image {
     opacity: 30%;
   }
-  section.glimpse_of_work .wrapper .carousel {
-    grid-auto-columns: calc(50% - 12px) !important;
-  }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   .hero_container .hero_text_container {
     padding: 0 2rem;
   }
@@ -775,10 +700,6 @@ main section.contact_us .contact_us_area a.btn:hover svg {
     font-size: 2.369rem;
     line-height: 2.5rem;
   }
-  main section.about_section .about_section_info_area a.about_cta_btn {
-    width: 100%;
-    padding: 1rem 1rem;
-  }
   main section.counter_section {
     margin-bottom: 4rem;
     grid-template-columns: repeat(1, 1fr);
@@ -801,8 +722,5 @@ main section.contact_us .contact_us_area a.btn:hover svg {
   main section.services_section .services_container {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
-  }
-  main section.glimpse_of_work .wrapper .carousel {
-    grid-auto-columns: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

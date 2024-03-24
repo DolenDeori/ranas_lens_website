@@ -1,7 +1,7 @@
 @import "./global/global";
-@import './global/navigation';
-@import './global/footer';
-@import './global/responsive';
+@import "./global/navigation";
+@import "./global/footer";
+@import "./global/responsive";
 
 header {
     @include make_header();
@@ -55,7 +55,7 @@ main {
             }
 
             a.about_cta_btn {
-                @include make_button($color_white, $color_primary);
+                @include make_button($color_white, $color_primary, $color_primary_light);
                 width: 30%;
             }
 
@@ -68,9 +68,9 @@ main {
                 .social_icons {
                     color: $dark100;
                     font-size: 20px;
-                    padding: .5rem;
+                    padding: 0.5rem;
                     border-radius: 100%;
-                    transition: .2s ease-in-out;
+                    transition: 0.2s ease-in-out;
 
                     &:hover {
                         background: $color_primary;
@@ -97,7 +97,7 @@ main {
                 content: "";
                 background: $dark100;
                 width: 100%;
-                height: .05rem;
+                height: 0.05rem;
             }
 
             .count_text {
@@ -152,10 +152,10 @@ main {
                     object-fit: cover;
                     object-position: top;
                     opacity: 5%;
-                    transition: all .2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
                 }
 
-                &:hover>.card_image {
+                &:hover > .card_image {
                     opacity: 50%;
                 }
 
@@ -195,14 +195,14 @@ main {
                     .card_btn .btn {
                         color: $color_white;
                         font-family: $open_sans;
-                        padding-bottom: .2rem;
+                        padding-bottom: 0.2rem;
                         border-bottom: 1px solid #ffffff57;
-                        transition: all .2s ease-in-out;
+                        transition: all 0.2s ease-in-out;
                         text-transform: uppercase;
                         font-size: 12px;
 
                         &:hover {
-                            border-bottom: 1px solid #ffffff
+                            border-bottom: 1px solid #ffffff;
                         }
                     }
                 }
@@ -244,7 +244,7 @@ main {
                 .portfolio_section_btn {
                     background: $color_primary_light;
                     border: 1px solid $color_primary;
-                    padding: .6rem 2rem;
+                    padding: 0.6rem 2rem;
                     align-self: flex-start;
                     border-radius: 10rem;
                     color: $color_primary;
@@ -252,7 +252,7 @@ main {
                     text-transform: uppercase;
                     font-size: 14px;
                     font-weight: bold;
-                    transition: all .2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
 
                     &:hover {
                         background-color: $color_primary;
@@ -294,7 +294,7 @@ main {
                     flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
-                    gap: .5rem;
+                    gap: 0.5rem;
                     width: 100%;
                     padding: 1.5rem;
                     background: linear-gradient(180deg, #00000003, $dark75);
@@ -311,22 +311,17 @@ main {
                         content: "";
                         background: $color_white;
                         width: 100%;
-                        height: .02rem;
+                        height: 0.02rem;
                     }
                 }
 
-                &:hover>.portfolio_img {
+                &:hover > .portfolio_img {
                     opacity: 80%;
                 }
             }
         }
     }
-
-    section.contact_us {
-        @include make_contact_section();
-    }
 }
-
 
 //?? RESPONSIVE DESIGN
 
@@ -340,7 +335,7 @@ main {
             }
 
             .hero_body_text {
-                padding-right: .5rem;
+                padding-right: 0.5rem;
                 width: 90%;
             }
         }
@@ -377,10 +372,6 @@ main {
             .about_section_desc {
                 margin-bottom: 2rem;
             }
-
-            a.about_cta_btn {
-                width: 100%;
-            }
         }
     }
 
@@ -406,14 +397,6 @@ main {
                 .card_image {
                     opacity: 30%;
                 }
-            }
-        }
-    }
-
-    section.glimpse_of_work {
-        .wrapper {
-            .carousel {
-                grid-auto-columns: calc((100% / 2) - 12px) !important;
             }
         }
     }
@@ -456,28 +439,21 @@ main {
                 font-size: $heading_4;
                 line-height: 2.5rem;
             }
-
-            a.about_cta_btn {
-                width: 100%;
-                padding: 1rem 1rem;
-            }
         }
     }
-
 
     main section.counter_section {
         margin-bottom: 4rem;
         grid-template-columns: repeat(1, 1fr);
 
         .counter {
-            gap: .5rem;
+            gap: 0.5rem;
 
             .count_text {
-                font-size: $heading_4
+                font-size: $heading_4;
             }
         }
     }
-
 
     main section.services_section {
         padding: 4rem 2rem;
@@ -493,12 +469,6 @@ main {
         .services_container {
             grid-template-columns: repeat(1, 1fr);
             gap: 1rem;
-        }
-    }
-
-    main section.glimpse_of_work {
-        .wrapper .carousel {
-            grid-auto-columns: 100%;
         }
     }
 }

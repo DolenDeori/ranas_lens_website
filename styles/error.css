@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #FCFFFF;
+  background-color: #fcffff;
 }
 
 li {
@@ -41,7 +41,7 @@ nav.nav_container {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #FCFFFF;
+  background-color: #fcffff;
   padding: 1rem 8rem;
   z-index: 9999;
   border-bottom: 1px solid rgba(12, 23, 28, 0.2509803922);
@@ -109,7 +109,7 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 .nav_link_container ul.nav_links {
   position: fixed;
-  background: #FCFFFF;
+  background: #fcffff;
   height: 0%;
   width: 100%;
   display: flex;
@@ -189,7 +189,7 @@ nav.nav_container .social_container i.social_icons:hover {
   pointer-events: all;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   nav.nav_container {
     padding: 1rem 4rem;
   }
@@ -212,7 +212,7 @@ nav.nav_container .social_container i.social_icons:hover {
     height: 100%;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   nav.nav_container {
     padding: 1rem 2rem;
   }
@@ -304,7 +304,7 @@ header .error_text_container {
 }
 header .error_text_container .text_area h1 {
   font-size: 5.61rem;
-  color: #FA402F;
+  color: #fa402f;
 }
 header .error_text_container .text_area h2 {
   font-size: 4.209rem;
@@ -323,7 +323,7 @@ header .error_text_container .text_area .btn:hover {
   background-color: #ad50d2;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   header .error_text_container h2 {
     font-size: 3.5rem !important;
   }

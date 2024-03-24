@@ -1,4 +1,4 @@
-@import './responsive';
+@import "./responsive";
 
 * {
     margin: 0;
@@ -6,23 +6,21 @@
     box-sizing: border-box;
 }
 
-
 // ------------------------- VARIABLES -------------------------------
 //? COLORS
-$color_primary : #ad50d2;
-$color_primary_light : #ad50d23e;
-$color_white : #FCFFFF;
-$color_error : #FA402F;
-$dark100 : #0c171c;
-$dark75 : #0c171cbf;
-$dark25 : #0c171c40;
-$dark10 : #0c171c1a;
-$dark5 : #0c171c0d;
+$color_primary: #ad50d2;
+$color_primary_light: #ad50d23e;
+$color_white: #fcffff;
+$color_error: #fa402f;
+$dark100: #0c171c;
+$dark75: #0c171cbf;
+$dark25: #0c171c40;
+$dark10: #0c171c1a;
+$dark5: #0c171c0d;
 
 //? FONTS
-$open_sans: 'Open Sans', sans-serif;
-$playfair_display: 'Playfair Display', serif;
-
+$open_sans: "Open Sans", sans-serif;
+$playfair_display: "Playfair Display", serif;
 
 // 1rem = 16px
 //? FONTS SIZES DESKTOP
@@ -33,14 +31,6 @@ $heading_4: 2.369rem;
 $heading_5: 1.777rem;
 $heading_6: 1.333rem;
 $paragraph: 1rem;
-
-//? FONT SIZE FOR TABLET and MOILE
-$heading_1_t: 4.946rem; //(90px/21px)rem
-$heading_2_t: 3.5rem; //(64px/21px)rem
-$heading_3_t: 2.5rem; //(45px/21px)rem
-$heading_4_t: 1.75rem; //(45px/21px)rem
-$heading_5_t: 1.25rem; //(45px/21px)rem
-$paragraph_t: 0.875rem; //(16px/21px)rem
 
 //? BORDER RADIUS
 $border_radius: 1rem;
@@ -66,7 +56,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $playfair_display;
+    font-family: "Playfair Display", serif;
 }
 
 //? PARAGRAPH STYLING
@@ -124,101 +114,21 @@ p {
 }
 
 //? MAKE BUTTON
-@mixin make_button($color_f, $color_b) {
-    background-color: $color_primary;
-    padding: .6rem 2rem;
+@mixin make_button($color_text, $color_background, $color_light) {
+    background-color: $color_background;
+    padding: 0.6rem 2rem;
     border-radius: 10rem;
     font-family: $open_sans;
     text-transform: uppercase;
     font-size: 14px;
-    color: $color_white;
+    color: $color_text;
     font-weight: bold;
-    transition: all .2s ease-in-out;
-    border: 1px solid $color_primary;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid $color_background;
 
     &:hover {
         background: $color_primary_light;
-        color: $color_primary;
-    }
-}
-
-//? STYLING FOR CONTACT SECTION
-@mixin make_contact_section() {
-
-    .contact_us_area {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        h3 {
-            font-size: $heading_3;
-        }
-
-        p {
-            font-size: $paragraph;
-            color: $dark100;
-        }
-
-        .contact_info {
-            margin-top: 2rem;
-            @extend .contact_us_area;
-
-            a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: .5rem;
-                margin-top: .5rem;
-            }
-
-            svg {
-                fill: $color_primary;
-            }
-        }
-
-        a.btn {
-            margin-top: 3rem;
-            @include make_button($color_white, $color_primary);
-
-            p {
-                color: $color_white;
-            }
-
-            svg {
-                height: 24px;
-                width: 24px;
-                margin-left: 1rem;
-                transition: all .3s ease-in-out;
-
-                path {
-                    fill: $color_white;
-                }
-            }
-
-            &:hover svg {
-                transform: translate(5px);
-            }
-        }
-    }
-
-    //? CONTACT SECTION RESPONSIVE CODE
-    @media screen and (max-width: 450px) {
-        .contact_us_area {
-            h3 {
-                font-size: $heading_3_t;
-            }
-
-            a.btn {
-                .contact_info p {
-                    font-size: $paragraph_t;
-                }
-
-                svg {
-                    height: 1rem;
-                }
-            }
-        }
+        color: $color_background;
     }
 }
 

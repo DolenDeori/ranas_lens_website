@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #FCFFFF;
+  background-color: #fcffff;
 }
 
 li {
@@ -41,7 +41,7 @@ nav.nav_container {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #FCFFFF;
+  background-color: #fcffff;
   padding: 1rem 8rem;
   z-index: 9999;
   border-bottom: 1px solid rgba(12, 23, 28, 0.2509803922);
@@ -109,7 +109,7 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 .nav_link_container ul.nav_links {
   position: fixed;
-  background: #FCFFFF;
+  background: #fcffff;
   height: 0%;
   width: 100%;
   display: flex;
@@ -212,7 +212,7 @@ nav.nav_container .social_container i.social_icons:hover {
     height: 100%;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   nav.nav_container {
     padding: 1rem 2rem;
   }
@@ -317,7 +317,7 @@ header .hero_text_container {
   flex-direction: column;
   justify-content: center;
   margin-bottom: auto;
-  color: #FCFFFF;
+  color: #fcffff;
 }
 header .hero_text_container .hero_title_text {
   font-size: 5.61rem;
@@ -333,8 +333,8 @@ header .hero_text_container .hero_cta_area {
 header .hero_text_container .hero_cta_area a {
   padding: 1rem 3rem;
   background-color: rgba(12, 23, 28, 0.7490196078);
-  color: #FCFFFF;
-  border: 2px solid #FCFFFF;
+  color: #fcffff;
+  border: 2px solid #fcffff;
   font-family: "Open Sans", sans-serif;
   border-radius: 10rem;
 }
@@ -346,7 +346,7 @@ header .hero_text_container {
   transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
-  color: #FCFFFF;
+  color: #fcffff;
 }
 header .hero_text_container h1 {
   font-size: 5.61rem;
@@ -430,7 +430,7 @@ main section.contact_us .contact_us_area a.btn {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
-  color: #FCFFFF;
+  color: #fcffff;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
   border: 1px solid #ad50d2;
@@ -440,7 +440,7 @@ main section.contact_us .contact_us_area a.btn:hover {
   color: #ad50d2;
 }
 main section.contact_us .contact_us_area a.btn p {
-  color: #FCFFFF;
+  color: #fcffff;
 }
 main section.contact_us .contact_us_area a.btn svg {
   height: 24px;
@@ -449,7 +449,7 @@ main section.contact_us .contact_us_area a.btn svg {
   transition: all 0.3s ease-in-out;
 }
 main section.contact_us .contact_us_area a.btn svg path {
-  fill: #FCFFFF;
+  fill: #fcffff;
 }
 main section.contact_us .contact_us_area a.btn:hover svg {
   transform: translate(5px);
@@ -519,7 +519,7 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 .lightbox_control .control_btn svg path {
   padding: 2rem;
-  fill: #FCFFFF;
+  fill: #fcffff;
 }
 
 .lightbox_control.active_control {
@@ -560,7 +560,7 @@ main section.contact_us .contact_us_area a.btn:hover svg {
     padding: 0rem 1rem;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   header .hero_text_container h1 {
     font-size: 3.5rem;
   }

@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #FCFFFF;
+  background-color: #fcffff;
 }
 
 li {
@@ -41,7 +41,7 @@ nav.nav_container {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #FCFFFF;
+  background-color: #fcffff;
   padding: 1rem 8rem;
   z-index: 9999;
   border-bottom: 1px solid rgba(12, 23, 28, 0.2509803922);
@@ -109,7 +109,7 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 .nav_link_container ul.nav_links {
   position: fixed;
-  background: #FCFFFF;
+  background: #fcffff;
   height: 0%;
   width: 100%;
   display: flex;
@@ -212,7 +212,7 @@ nav.nav_container .social_container i.social_icons:hover {
     height: 100%;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   nav.nav_container {
     padding: 1rem 2rem;
   }
@@ -316,7 +316,7 @@ header .hero_text_container {
   flex-direction: column;
   justify-content: center;
   margin-bottom: auto;
-  color: #FCFFFF;
+  color: #fcffff;
 }
 header .hero_text_container .hero_title_text {
   font-size: 5.61rem;
@@ -332,8 +332,8 @@ header .hero_text_container .hero_cta_area {
 header .hero_text_container .hero_cta_area a {
   padding: 1rem 3rem;
   background-color: rgba(12, 23, 28, 0.7490196078);
-  color: #FCFFFF;
-  border: 2px solid #FCFFFF;
+  color: #fcffff;
+  border: 2px solid #fcffff;
   font-family: "Open Sans", sans-serif;
   border-radius: 10rem;
 }
@@ -346,7 +346,7 @@ header .hero_text_container {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #FCFFFF;
+  background: #fcffff;
   border-bottom: 1px solid #ad50d2;
 }
 header .hero_text_container .contact_info {
@@ -401,14 +401,14 @@ main section.contact_form_area .input_group_area .input_group {
   margin-bottom: 2rem;
 }
 main section.contact_form_area .input_group_area .input_group .error {
-  color: #FA402F;
+  color: #fa402f;
 }
 main section.contact_form_area .input_group_area .input_group label {
   font-family: "Open Sans", sans-serif;
   color: #0c171c;
 }
 main section.contact_form_area .input_group_area .input_group label.error {
-  color: #FA402F;
+  color: #fa402f;
 }
 main section.contact_form_area .input_group_area .input_group input,
 main section.contact_form_area .input_group_area .input_group select,
@@ -438,7 +438,7 @@ main section.contact_form_area button.btn {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
-  color: #FCFFFF;
+  color: #fcffff;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
   border: 1px solid #ad50d2;
@@ -463,7 +463,7 @@ main section.contact_form_area button.btn:hover svg {
 main section.contact_form_area button.btn svg {
   height: 1rem;
   transition: all 0.3s ease-in-out;
-  fill: #FCFFFF;
+  fill: #fcffff;
 }
 
 @media screen and (max-width: 800px) {
@@ -491,7 +491,7 @@ main section.contact_form_area button.btn svg {
     font-size: 0.875rem;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   header .hero_text_container .contact_info a svg {
     height: 0.7rem;
   }
