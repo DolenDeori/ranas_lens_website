@@ -189,7 +189,7 @@ nav.nav_container .social_container i.social_icons:hover {
   pointer-events: all;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   nav.nav_container {
     padding: 1rem 4rem;
   }
@@ -265,7 +265,7 @@ footer.footer_area .social_container .social_icon svg:hover {
 
 @media screen and (max-width: 1040px) {
   footer.footer_area {
-    font-size: 0.875rem;
+    font-size: 1rem;
     padding: 1rem 2rem;
   }
   footer.footer_area .social_container svg {
@@ -394,22 +394,6 @@ main section.about_section .about_section_info_area a.about_cta_btn {
 main section.about_section .about_section_info_area a.about_cta_btn:hover {
   background: rgba(173, 80, 210, 0.2431372549);
   color: #ad50d2;
-}
-main section.about_section .about_section_info_area .about_social_media {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-main section.about_section .about_section_info_area .about_social_media .social_icons {
-  color: #0c171c;
-  font-size: 20px;
-  padding: 0.5rem;
-  border-radius: 100%;
-  transition: 0.2s ease-in-out;
-}
-main section.about_section .about_section_info_area .about_social_media .social_icons:hover {
-  background: #ad50d2;
 }
 main section.counter_section {
   display: grid;
@@ -620,7 +604,7 @@ main section.portfolio_section .portfolio_img_area .portfolio_img_card:hover > .
   opacity: 80%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .hero_container .hero_text_container {
     padding: 0 4rem;
   }
@@ -671,6 +655,96 @@ main section.portfolio_section .portfolio_img_area .portfolio_img_card:hover > .
   }
   main section.services_section .services_container .card .card_image {
     opacity: 30%;
+  }
+  main section.portfolio_section {
+    gap: 2rem;
+  }
+  main section.portfolio_section .portfolio_info_area {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  main section.portfolio_section .portfolio_info_area .portfolio_info_area_left {
+    flex: 2fr;
+    width: 200%;
+  }
+  main section.portfolio_section .portfolio_info_area .portfolio_info_area_left .portfolio_section_title {
+    font-size: 3.157rem;
+  }
+  main section.portfolio_section .portfolio_info_area .portfolio_info_area_right {
+    width: 100%;
+    flex: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main section.portfolio_section .portfolio_info_area .portfolio_info_area_right .portfolio_section_btn {
+    background: rgba(173, 80, 210, 0.2431372549);
+    border: 1px solid #ad50d2;
+    padding: 0.6rem 2rem;
+    align-self: flex-start;
+    border-radius: 10rem;
+    color: #ad50d2;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+  }
+  main section.portfolio_section .portfolio_info_area .portfolio_info_area_right .portfolio_section_btn:hover {
+    background-color: #ad50d2;
+    color: #fcffff;
+  }
+  main section.portfolio_section .portfolio_img_area {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+  main section.portfolio_section .portfolio_img_area .grid_col_span_2 {
+    grid-column: span 2;
+  }
+  main section.portfolio_section .portfolio_img_area .portfolio_img_card {
+    background-color: #0c171c;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+  }
+  main section.portfolio_section .portfolio_img_area .portfolio_img_card .portfolio_img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    opacity: 30%;
+    transition: all 0.2s ease-in-out;
+  }
+  main section.portfolio_section .portfolio_img_area .portfolio_img_card .portfolio_img_text_area {
+    position: absolute;
+    bottom: 0%;
+    color: #fcffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0117647059), rgba(12, 23, 28, 0.7490196078));
+  }
+  main section.portfolio_section .portfolio_img_area .portfolio_img_card .portfolio_img_text_area .portfolio_img_title {
+    font-family: "Open Sans", sans-serif;
+  }
+  main section.portfolio_section .portfolio_img_area .portfolio_img_card .portfolio_img_text_area .portfolio_img_sub_title {
+    font-size: 14px;
+  }
+  main section.portfolio_section .portfolio_img_area .portfolio_img_card .portfolio_img_text_area .line {
+    content: "";
+    background: #fcffff;
+    width: 100%;
+    height: 0.02rem;
+  }
+  main section.portfolio_section .portfolio_img_area .portfolio_img_card:hover > .portfolio_img {
+    opacity: 80%;
   }
 }
 @media screen and (max-width: 550px) {

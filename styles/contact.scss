@@ -161,11 +161,11 @@ main {
 
         section.contact_info_area {
             h1 {
-                font-size: $heading_2_t;
+                font-size: $heading_2;
             }
 
             p {
-                font-size: $paragraph_t;
+                font-size: $paragraph;
                 width: 100%;
                 margin: auto;
             }
@@ -177,13 +177,13 @@ main {
 
             .input_group_area .input_group {
                 label p {
-                    font-size: $paragraph_t;
+                    font-size: $paragraph;
                 }
 
                 input,
                 select,
                 textarea {
-                    font-size: $paragraph_t;
+                    font-size: $paragraph;
                 }
             }
         }
@@ -201,7 +201,7 @@ main {
                 }
 
                 p {
-                    font-size: $paragraph_t;
+                    font-size: $paragraph;
                 }
             }
         }
@@ -214,7 +214,7 @@ main {
             text-align: left;
 
             h1 {
-                font-size: $heading_3_t;
+                font-size: $heading_3;
             }
         }
 
@@ -236,7 +236,7 @@ main {
             }
 
             button.btn {
-                font-size: $paragraph_t;
+                font-size: $paragraph;
             }
         }
     }

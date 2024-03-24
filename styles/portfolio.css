@@ -189,7 +189,7 @@ nav.nav_container .social_container i.social_icons:hover {
   pointer-events: all;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   nav.nav_container {
     padding: 1rem 4rem;
   }
@@ -265,7 +265,7 @@ footer.footer_area .social_container .social_icon svg:hover {
 
 @media screen and (max-width: 1040px) {
   footer.footer_area {
-    font-size: 0.875rem;
+    font-size: 1rem;
     padding: 1rem 2rem;
   }
   footer.footer_area .social_container svg {
@@ -396,75 +396,6 @@ main section.fashion_pics .gallery .img_container img {
 main section.fashion_pics .gallery .img_container img:hover {
   filter: brightness(-1);
 }
-main section.contact_us .contact_us_area, main section.contact_us .contact_us_area .contact_info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-  font-size: 3.157rem;
-}
-main section.contact_us .contact_us_area p, main section.contact_us .contact_us_area .contact_info p {
-  font-size: 1rem;
-  color: #0c171c;
-}
-main section.contact_us .contact_us_area .contact_info {
-  margin-top: 2rem;
-}
-main section.contact_us .contact_us_area .contact_info a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-main section.contact_us .contact_us_area .contact_info svg {
-  fill: #ad50d2;
-}
-main section.contact_us .contact_us_area a.btn {
-  margin-top: 3rem;
-  background-color: #ad50d2;
-  padding: 0.6rem 2rem;
-  border-radius: 10rem;
-  font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #fcffff;
-  font-weight: bold;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid #ad50d2;
-}
-main section.contact_us .contact_us_area a.btn:hover {
-  background: rgba(173, 80, 210, 0.2431372549);
-  color: #ad50d2;
-}
-main section.contact_us .contact_us_area a.btn p {
-  color: #fcffff;
-}
-main section.contact_us .contact_us_area a.btn svg {
-  height: 24px;
-  width: 24px;
-  margin-left: 1rem;
-  transition: all 0.3s ease-in-out;
-}
-main section.contact_us .contact_us_area a.btn svg path {
-  fill: #fcffff;
-}
-main section.contact_us .contact_us_area a.btn:hover svg {
-  transform: translate(5px);
-}
-@media screen and (max-width: 450px) {
-  main section.contact_us .contact_us_area h3, main section.contact_us .contact_us_area .contact_info h3 {
-    font-size: 2.5rem;
-  }
-  main section.contact_us .contact_us_area a.btn .contact_info p {
-    font-size: 0.875rem;
-  }
-  main section.contact_us .contact_us_area a.btn svg {
-    height: 1rem;
-  }
-}
 
 #lightBox {
   position: fixed;
@@ -543,9 +474,9 @@ main section.contact_us .contact_us_area a.btn:hover svg {
     border-radius: 1rem;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   header .hero_text_container h1 {
-    font-size: 4.946rem;
+    font-size: 3.157rem;
   }
   section.section {
     margin: 4rem 4rem 0 !important;
@@ -562,10 +493,10 @@ main section.contact_us .contact_us_area a.btn:hover svg {
 }
 @media screen and (max-width: 550px) {
   header .hero_text_container h1 {
-    font-size: 3.5rem;
+    font-size: 3.157rem;
   }
   header .hero_text_container p {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   section.section {
     margin: 4rem 2rem 0 !important;

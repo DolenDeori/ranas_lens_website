@@ -22,11 +22,9 @@ header .hero_text_container {
     }
 
     h3 {
-        font-size: $heading_3
+        font-size: $heading_3;
     }
 }
-
-
 
 //? STYLING ALL THE FULTER BUTTONS start ----------------------------
 .filter_links_container {
@@ -62,7 +60,7 @@ main {
                 overflow: hidden;
                 position: relative;
                 cursor: pointer;
-                margin-bottom: .8rem;
+                margin-bottom: 0.8rem;
 
                 img {
                     width: 100%;
@@ -77,15 +75,9 @@ main {
             }
         }
     }
-
-
-    section.contact_us {
-        @include make_contact_section();
-    }
 }
 
 //? Light box Styling
-
 
 #lightBox {
     position: fixed;
@@ -101,7 +93,7 @@ main {
         height: 600px;
         object-fit: cover;
         object-position: 50% 50%;
-        animation: show_image .5s ease-in-out forwards;
+        animation: show_image 0.5s ease-in-out forwards;
     }
 }
 
@@ -156,8 +148,7 @@ main {
 
 //? MAIN BODY STYLING end --------------------------
 
-
-//? RESPONSIVE STYLING 
+//? RESPONSIVE STYLING
 @media screen and (max-width: 900px) {
     section.fashion_pics {
         .gallery {
@@ -179,13 +170,12 @@ main {
             border-radius: $border_radius;
         }
     }
-
 }
 
 @include tablet {
     header .hero_text_container {
         h1 {
-            font-size: $heading_1_t;
+            font-size: $heading_3;
         }
     }
 
@@ -211,11 +201,11 @@ main {
 @include mobile {
     header .hero_text_container {
         h1 {
-            font-size: $heading_2_t;
+            font-size: $heading_3;
         }
 
         p {
-            font-size: $paragraph_t;
+            font-size: $paragraph;
         }
     }
 
@@ -244,7 +234,6 @@ main {
         padding: 0rem 0rem;
 
         .control_btn {
-
             svg {
                 height: 4rem;
                 width: 1.5rem;

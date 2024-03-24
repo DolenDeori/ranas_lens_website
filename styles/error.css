@@ -265,7 +265,7 @@ footer.footer_area .social_container .social_icon svg:hover {
 
 @media screen and (max-width: 1040px) {
   footer.footer_area {
-    font-size: 0.875rem;
+    font-size: 1rem;
     padding: 1rem 2rem;
   }
   footer.footer_area .social_container svg {
@@ -325,6 +325,6 @@ header .error_text_container .text_area .btn:hover {
 
 @media screen and (max-width: 350px) {
   header .error_text_container h2 {
-    font-size: 3.5rem !important;
+    font-size: 3.157rem !important;
   }
 }/*# sourceMappingURL=error.css.map */
