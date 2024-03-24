@@ -55,8 +55,7 @@ main {
             }
 
             a.about_cta_btn {
-                @include make_button($color_white, $color_primary, $color_primary_light);
-                width: 30%;
+                @include make_button($color_primary, $color_white, $color_primary_light, $color_primary);
             }
         }
     }
@@ -222,23 +221,9 @@ main {
                 flex-direction: column;
                 justify-content: space-between;
 
-                .portfolio_section_btn {
-                    background: $color_primary_light;
-                    border: 1px solid $color_primary;
-                    padding: 0.6rem 2rem;
+                a.portfolio_section_btn {
+                    @include make_button($color_primary_light, $color_primary, $color_primary, $color_white);
                     align-self: flex-start;
-                    border-radius: 10rem;
-                    color: $color_primary;
-                    font-family: $open_sans;
-                    text-transform: uppercase;
-                    font-size: 14px;
-                    font-weight: bold;
-                    transition: all 0.2s ease-in-out;
-
-                    &:hover {
-                        background-color: $color_primary;
-                        color: $color_white;
-                    }
                 }
             }
         }
@@ -383,106 +368,34 @@ main {
     }
 
     main section.portfolio_section {
-        gap: 2rem;
+        gap: 3rem;
 
         .portfolio_info_area {
-            display: flex;
-            justify-content: space-between;
             flex-direction: column;
+            gap: 2rem;
 
             .portfolio_info_area_left {
-                flex: 2fr;
-                width: 200%;
+                flex: 1fr;
+                width: 100%;
 
                 .portfolio_section_title {
-                    font-size: $heading_3;
+                    line-height: 3.5rem;
                 }
             }
 
             .portfolio_info_area_right {
                 width: 100%;
                 flex: 1fr;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                .portfolio_section_btn {
-                    background: $color_primary_light;
-                    border: 1px solid $color_primary;
-                    padding: 0.6rem 2rem;
-                    align-self: flex-start;
-                    border-radius: 10rem;
-                    color: $color_primary;
-                    font-family: $open_sans;
-                    text-transform: uppercase;
-                    font-size: 14px;
-                    font-weight: bold;
-                    transition: all 0.2s ease-in-out;
-
-                    &:hover {
-                        background-color: $color_primary;
-                        color: $color_white;
-                    }
-                }
+                gap: 2rem;
             }
         }
 
         .portfolio_img_area {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
 
             .grid_col_span_2 {
                 grid-column: span 2;
-            }
-
-            .portfolio_img_card {
-                background-color: $dark100;
-                width: 100%;
-                overflow: hidden;
-                position: relative;
-                border-radius: $border_radius;
-
-                .portfolio_img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    opacity: 30%;
-                    transition: all 0.2s ease-in-out;
-                }
-
-                .portfolio_img_text_area {
-                    position: absolute;
-                    bottom: 0%;
-                    color: $color_white;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    gap: 0.5rem;
-                    width: 100%;
-                    padding: 1.5rem;
-                    background: linear-gradient(180deg, #00000003, $dark75);
-
-                    .portfolio_img_title {
-                        font-family: $open_sans;
-                    }
-
-                    .portfolio_img_sub_title {
-                        font-size: 14px;
-                    }
-
-                    .line {
-                        content: "";
-                        background: $color_white;
-                        width: 100%;
-                        height: 0.02rem;
-                    }
-                }
-
-                &:hover > .portfolio_img {
-                    opacity: 80%;
-                }
             }
         }
     }
@@ -555,6 +468,32 @@ main {
         .services_container {
             grid-template-columns: repeat(1, 1fr);
             gap: 1rem;
+        }
+    }
+
+    main section.portfolio_section {
+        .portfolio_info_area {
+            .portfolio_info_area_left {
+                .portfolio_section_title {
+                    font-size: $heading_4;
+                    line-height: 3rem;
+                }
+            }
+        }
+
+        .portfolio_img_area {
+            grid-template-columns: repeat(1, 1fr);
+
+            .portfolio_img_card {
+                max-height: 45vh;
+                .portfolio_img {
+                    object-position: top;
+                }
+            }
+
+            .grid_col_span_2 {
+                grid-column: span 1;
+            }
         }
     }
 }
