@@ -1,84 +1,37 @@
+@import "./global";
+
 footer.footer_area {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 1rem 8rem;
-    background: $dark10;
-    font-family: $open_sans;
-    font-size: $paragraph;
-    color: $dark75;
-
-    .short_links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        a {
-            margin: 0rem 1rem;
-            color: $dark75;
-
-            &:hover {
-                color: $dark100;
-            }
-        }
-    }
+    background: $dark5;
+    padding: 1.5rem 4rem;
 
     .social_container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .social_icon svg {
-            margin: 0rem 1rem;
-            transition: .3s ease-in-out;
-            color: $dark75;
-
-            &:hover {
+        gap: 0.5rem;
+        a.footer_social_link {
+            i.social_icons {
+                padding: 0.5rem;
+                cursor: pointer;
+                font-size: 18px;
+                border-radius: 100%;
                 color: $dark100;
+
+                &:hover {
+                    background: $color_primary_light;
+                }
             }
         }
     }
 }
 
-@media screen and (max-width:1040px) {
+@include mobile {
     footer.footer_area {
-        font-size: $paragraph;
-        padding: 1rem 2rem;
-
-        .social_container {
-            svg {
-                height: .8rem;
-                width: .8rem;
-            }
-        }
-
-        .copyright_text p {
-            font-size: .8rem;
-        }
-    }
-}
-
-@media screen and (max-width:900px) {
-    footer.footer_area {
-        flex-wrap: wrap-reverse;
-        justify-content: center;
-        gap: .7rem;
-        padding: 1rem 1rem;
-
-        .links.dots {
-            display: none;
-        }
-    }
-}
-
-@media screen and (max-width: 375px) {
-    footer.footer_area {
-        align-items: flex-start;
-        padding: 1rem 0rem;
-
-        .short_links a {
-            margin: 0rem .5rem;
-        }
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        gap: 1rem;
     }
 }
