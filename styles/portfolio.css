@@ -42,7 +42,7 @@ nav.nav_container {
   align-items: center;
   width: 100%;
   background-color: #fcffff;
-  padding: 1rem 8rem;
+  padding: 1rem 4rem;
   z-index: 9999;
   border-bottom: 1px solid rgba(12, 23, 28, 0.2509803922);
 }
@@ -189,7 +189,7 @@ nav.nav_container .social_container i.social_icons:hover {
   pointer-events: all;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 980px) {
   nav.nav_container {
     padding: 1rem 4rem;
   }
@@ -474,7 +474,7 @@ main section.fashion_pics .gallery .img_container img:hover {
     border-radius: 1rem;
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 980px) {
   header .hero_text_container h1 {
     font-size: 3.157rem;
   }

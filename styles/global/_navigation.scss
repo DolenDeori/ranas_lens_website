@@ -1,11 +1,11 @@
-@import './responsive';
+@import "./responsive";
 
 //? VARIABLE for hamberger
-$animation_timing : 200ms ease-in-out;
-$bar_height: .15rem;
+$animation_timing: 200ms ease-in-out;
+$bar_height: 0.15rem;
 $bar_width: 1.5rem;
-$bar_gap: .3rem;
-$hamberger_height: calc(($bar_height*3) + ($bar_gap)*2);
+$bar_gap: 0.3rem;
+$hamberger_height: calc(($bar_height * 3) + ($bar_gap) * 2);
 $x_width: calc($hamberger_height * 1.41421356237);
 
 nav.nav_container {
@@ -15,7 +15,7 @@ nav.nav_container {
     align-items: center;
     width: 100%;
     background-color: $color_white;
-    padding: 1rem 8rem;
+    padding: 1rem 4rem;
     z-index: 9999;
     border-bottom: 1px solid $dark25;
 
@@ -72,7 +72,7 @@ nav.nav_container {
 
     .social_container {
         i.social_icons {
-            padding: .5rem;
+            padding: 0.5rem;
             cursor: pointer;
             font-size: 18px;
             border-radius: 100%;
@@ -83,7 +83,6 @@ nav.nav_container {
         }
     }
 }
-
 
 //? NAVIGATION LINKS CONTAINER STYLING
 .nav_link_container {
@@ -140,7 +139,7 @@ nav.nav_container {
 
             a {
                 color: $dark100;
-                transition: all .2s ease-in-out;
+                transition: all 0.2s ease-in-out;
 
                 &:hover {
                     color: $color_primary;
@@ -152,7 +151,7 @@ nav.nav_container {
             display: none;
 
             .social_icons_2 {
-                padding: .5rem;
+                padding: 0.5rem;
                 cursor: pointer;
                 font-size: 18px;
                 border-radius: 100%;
@@ -190,8 +189,7 @@ nav.nav_container {
     }
 }
 
-
-//? RESPONSIVE STYLING ----------------------------------------- 
+//? RESPONSIVE STYLING -----------------------------------------
 
 @include tablet {
     nav.nav_container {

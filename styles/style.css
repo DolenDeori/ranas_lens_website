@@ -42,7 +42,7 @@ nav.nav_container {
   align-items: center;
   width: 100%;
   background-color: #fcffff;
-  padding: 1rem 8rem;
+  padding: 1rem 4rem;
   z-index: 9999;
   border-bottom: 1px solid rgba(12, 23, 28, 0.2509803922);
 }
@@ -189,7 +189,7 @@ nav.nav_container .social_container i.social_icons:hover {
   pointer-events: all;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 980px) {
   nav.nav_container {
     padding: 1rem 4rem;
   }
@@ -339,7 +339,7 @@ header .hero_text_container .hero_cta_area a {
 }
 
 main section.section {
-  margin: 8rem 8rem 0;
+  margin: 8rem 4rem 0;
 }
 main section.section:last-child {
   margin-bottom: 8rem;
@@ -423,7 +423,7 @@ main section.counter_section .counter .count_sub_text {
 }
 main section.services_section {
   background-color: #0c171c;
-  padding: 4rem 8rem;
+  padding: 4rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -602,8 +602,133 @@ main section.portfolio_section .portfolio_img_area .portfolio_img_card .portfoli
 main section.portfolio_section .portfolio_img_area .portfolio_img_card:hover > .portfolio_img {
   opacity: 80%;
 }
+main section.testimonial_section {
+  margin: 8rem 0rem;
+  padding: 4rem 4rem;
+  background-color: #0c171c;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main section.testimonial_section .testimonial_section_text_area {
+  text-align: center;
+}
+main section.testimonial_section .testimonial_section_text_area p.testimonial_section_sub_title {
+  color: #ad50d2;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+main section.testimonial_section .testimonial_section_text_area h1.testimonial_section_title {
+  font-size: 3.157rem;
+  font-family: "Playfair Display", serif;
+  color: #fcffff;
+}
+main section.testimonial_section .testimonial_cards_area {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas: "one one two five" "three four four five";
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2352941176);
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+  opacity: 50%;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card:nth-child(1) {
+  grid-area: one;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card:nth-child(2) {
+  grid-area: two;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card:nth-child(3) {
+  grid-area: three;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card:nth-child(4) {
+  grid-area: four;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card:nth-child(5) {
+  grid-area: five;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card:hover {
+  background-color: rgba(0, 0, 0, 0.231372549);
+  box-shadow: 1px 1px 20px rgba(27, 27, 27, 0.4941176471);
+  border: 1px solid rgba(255, 255, 255, 0.5254901961);
+  opacity: 100%;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_profile {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_profile img.testimonial_img {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 100%;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_profile .testimonial_info {
+  color: #fcffff;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_profile .testimonial_info .testimonial_name {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.333rem;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_profile .testimonial_info .testimonial_title {
+  color: #ad50d2;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card .line {
+  content: "";
+  height: 0.02rem;
+  background-color: rgba(255, 255, 255, 0.2352941176);
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_review_area {
+  color: #fcffff;
+  font-family: "Open Sans", sans-serif;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_review_area h1.testimonial_review_title {
+  font-size: 1.333rem;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 1rem;
+}
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1170px) {
+  main section.testimonial_section {
+    margin: 4rem 0rem;
+  }
+  main section.testimonial_section .testimonial_cards_area {
+    grid-template-areas: "one one" "two five" "three five" "four four";
+  }
+  main section.testimonial_section .testimonial_cards_area .testimonial_card {
+    gap: 1.5rem;
+    padding: 1.5rem;
+    opacity: 100%;
+  }
+  main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_profile {
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  main section.testimonial_section .testimonial_section_text_area {
+    text-align: left;
+  }
+  main section.testimonial_section .testimonial_cards_area {
+    gap: 1rem;
+    grid-template-areas: "one" "two" "three" "four" "five";
+  }
+  main section.testimonial_section .testimonial_cards_area .testimonial_card {
+    opacity: 100%;
+  }
+}
+@media screen and (max-width: 980px) {
   .hero_container .hero_text_container {
     padding: 0 4rem;
   }
@@ -748,5 +873,23 @@ main section.portfolio_section .portfolio_img_area .portfolio_img_card:hover > .
   }
   main section.portfolio_section .portfolio_img_area .grid_col_span_2 {
     grid-column: span 1;
+  }
+  main section.testimonial_section {
+    margin: 4rem 0rem;
+    padding: 4rem 2rem;
+  }
+  main section.testimonial_section .testimonial_section_text_area {
+    text-align: left;
+  }
+  main section.testimonial_section .testimonial_section_text_area h1.testimonial_section_title {
+    font-size: 2.369rem;
+  }
+  main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_profile {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_review_area p.testimonial_review {
+    line-height: 1.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
