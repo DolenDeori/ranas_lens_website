@@ -128,7 +128,8 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 .nav_link_container ul.nav_links .links {
   font-family: "Playfair Display", serif;
-  font-size: 2.369rem;
+  font-size: 3.157rem;
+  font-weight: 700;
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
@@ -293,6 +294,15 @@ footer.footer_area .social_container a.footer_social_link i.social_icons:hover {
     gap: 1rem;
   }
 }
+.sub_title {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: #ad50d2;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
 header {
   overflow: hidden;
   position: relative;
@@ -361,12 +371,6 @@ main section.about_section .about_section_image_area img {
   filter: grayscale(1);
   border-radius: 1rem;
 }
-main section.about_section .about_section_info_area .about_section_sub_heading {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  color: #ad50d2;
-  margin-bottom: 1rem;
-}
 main section.about_section .about_section_info_area .about_section_title {
   font-size: 3.157rem;
   line-height: 3.5rem;
@@ -383,7 +387,7 @@ main section.about_section .about_section_info_area a.about_cta_btn {
   text-transform: uppercase;
   font-size: 14px;
   color: #fcffff;
-  font-weight: bold;
+  font-weight: 500;
   transition: all 0.2s ease-in-out;
   border: 1px solid #ad50d2;
 }
@@ -413,10 +417,10 @@ main section.counter_section .counter .line {
 main section.counter_section .counter .count_text {
   font-size: 3.157rem;
   font-family: "Open Sans", sans-serif;
-  font-weight: bolder;
+  font-weight: 600;
 }
 main section.counter_section .counter .count_sub_text {
-  font-weight: bold;
+  font-weight: 500;
 }
 main section.services_section {
   background-color: #0c171c;
@@ -428,11 +432,6 @@ main section.services_section {
 main section.services_section .service_section_info {
   text-align: center;
 }
-main section.services_section .service_section_info .service_section_sub_title {
-  font-weight: bold;
-  color: #ad50d2;
-  margin-bottom: 1rem;
-}
 main section.services_section .service_section_info .service_section_title {
   font-size: 3.157rem;
   color: #fcffff;
@@ -440,7 +439,7 @@ main section.services_section .service_section_info .service_section_title {
 main section.services_section .services_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
 }
 main section.services_section .services_container .card {
   position: relative;
@@ -487,6 +486,7 @@ main section.services_section .services_container .card .card_service_info_area 
 main section.services_section .services_container .card .card_service_info_area .card_title {
   margin-bottom: 2rem;
   font-family: "Open Sans", sans-serif;
+  font-weight: 500;
 }
 main section.services_section .services_container .card .card_service_info_area .card_desc {
   margin-bottom: 1rem;
@@ -507,11 +507,6 @@ main section.portfolio_section {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-}
-main section.portfolio_section .portfolio_section_sub_title {
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #ad50d2;
 }
 main section.portfolio_section .portfolio_info_area {
   display: flex;
@@ -539,7 +534,7 @@ main section.portfolio_section .portfolio_info_area .portfolio_info_area_right a
   text-transform: uppercase;
   font-size: 14px;
   color: #ad50d2;
-  font-weight: bold;
+  font-weight: 500;
   transition: all 0.2s ease-in-out;
   border: 1px solid rgba(173, 80, 210, 0.2431372549);
   align-self: flex-start;
@@ -610,13 +605,6 @@ main section.testimonial_section {
 main section.testimonial_section .testimonial_section_text_area {
   text-align: center;
 }
-main section.testimonial_section .testimonial_section_text_area p.testimonial_section_sub_title {
-  color: #ad50d2;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
 main section.testimonial_section .testimonial_section_text_area h1.testimonial_section_title {
   font-size: 3.157rem;
   font-family: "Playfair Display", serif;
@@ -678,6 +666,7 @@ main section.testimonial_section .testimonial_cards_area .testimonial_card .test
 main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_profile .testimonial_info .testimonial_name {
   font-family: "Open Sans", sans-serif;
   font-size: 1.333rem;
+  font-weight: 500;
 }
 main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_profile .testimonial_info .testimonial_title {
   color: #ad50d2;
@@ -695,6 +684,96 @@ main section.testimonial_section .testimonial_cards_area .testimonial_card .test
   font-size: 1.333rem;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 1rem;
+  font-weight: 500;
+}
+main section.insta_section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main section.insta_section .insta_section_text_area {
+  text-align: center;
+}
+main section.insta_section .insta_section_text_area h1.insta_section_title {
+  font-size: 3.157rem;
+}
+main section.insta_section .insta_cards_area {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+main section.insta_section .insta_cards_area .insta_card {
+  border: 1px solid rgba(12, 23, 28, 0.0509803922);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+main section.insta_section .insta_cards_area .insta_card:hover {
+  border: 1px solid rgba(51, 51, 51, 0.4745098039);
+}
+main section.insta_section .insta_cards_area .insta_card .insta_profile_info_area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #0c171c;
+  padding: 1rem 1.5rem;
+}
+main section.insta_section .insta_cards_area .insta_card .insta_profile_info_area .insta_profile_pic {
+  height: 40px;
+  width: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: middle;
+     object-position: middle;
+  border-radius: 100%;
+}
+main section.insta_section .insta_cards_area .insta_card .insta_profile_info_area .insta_profile_info h1.insta_username {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+main section.insta_section .insta_cards_area .insta_card .insta_profile_info_area .insta_profile_info p.insta_post_date {
+  font-size: 12px;
+  color: rgba(12, 23, 28, 0.2509803922);
+}
+main section.insta_section .insta_cards_area .insta_card .insta_img_area {
+  height: 35vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+main section.insta_section .insta_cards_area .insta_card .insta_img_area .insta_img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section.insta_section .insta_cards_area .insta_card .insta_img_area .insta_btn_link_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fcffff;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+main section.insta_section .insta_cards_area .insta_card .insta_like_comment_area {
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+main section.insta_section .insta_cards_area .insta_card .insta_like_comment_area .interaction_count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  color: rgba(12, 23, 28, 0.7490196078);
+}
+main section.insta_section .insta_cards_area .insta_card .insta_like_comment_area .interaction_count .interaction_icon {
+  font-size: 1.5rem;
+}
+main section.insta_section .insta_cards_area .insta_card .insta_like_comment_area .interaction_count .count_text {
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1170px) {
@@ -712,6 +791,9 @@ main section.testimonial_section .testimonial_cards_area .testimonial_card .test
   main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_profile {
     gap: 1.5rem;
   }
+  main section.insta_section .insta_cards_area {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (max-width: 750px) {
   main section.testimonial_section .testimonial_section_text_area {
@@ -723,6 +805,11 @@ main section.testimonial_section .testimonial_cards_area .testimonial_card .test
   }
   main section.testimonial_section .testimonial_cards_area .testimonial_card {
     opacity: 100%;
+  }
+}
+@media screen and (max-width: 670px) {
+  main section.insta_section .insta_cards_area {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media screen and (max-width: 980px) {
@@ -802,6 +889,9 @@ main section.testimonial_section .testimonial_cards_area .testimonial_card .test
   }
   main section.portfolio_section .portfolio_img_area .grid_col_span_2 {
     grid-column: span 2;
+  }
+  main section.insta_section .insta_section_text_area {
+    text-align: left;
   }
 }
 @media screen and (max-width: 550px) {
@@ -888,5 +978,16 @@ main section.testimonial_section .testimonial_cards_area .testimonial_card .test
   }
   main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_review_area p.testimonial_review {
     line-height: 1.5rem;
+  }
+  main section.insta_section .insta_section_text_area h1.insta_section_title {
+    font-size: 2.369rem;
+    line-height: 3rem;
+  }
+  main section.insta_section .insta_cards_area .insta_card .insta_profile_info_area {
+    padding: 0.6rem;
+    gap: 0.6rem;
+  }
+  main section.insta_section .insta_cards_area .insta_card .insta_like_comment_area {
+    padding: 0.6rem;
   }
 }/*# sourceMappingURL=style.css.map */

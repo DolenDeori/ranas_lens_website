@@ -128,7 +128,8 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 .nav_link_container ul.nav_links .links {
   font-family: "Playfair Display", serif;
-  font-size: 2.369rem;
+  font-size: 3.157rem;
+  font-weight: 700;
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;

@@ -110,8 +110,9 @@ nav.nav_container {
         }
 
         .links {
-            font-family: $playfair_display;
-            font-size: $heading_4;
+            font-family: $heading_font;
+            font-size: $heading_3;
+            font-weight: $bold;
             opacity: 0;
             transform: translateY(10px);
             transition: all 0.3s ease;

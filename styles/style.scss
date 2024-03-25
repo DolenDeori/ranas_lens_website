@@ -3,6 +3,16 @@
 @import "./global/footer";
 @import "./global/responsive";
 
+// STYLE FILE GLOBAL SETTING
+.sub_title {
+    font-size: $paragraph;
+    font-family: $paragraph_font;
+    font-weight: 500;
+    color: $color_primary;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
 header {
     @include make_header();
 }
@@ -37,13 +47,6 @@ main {
         }
 
         .about_section_info_area {
-            .about_section_sub_heading {
-                font-family: $open_sans;
-                font-weight: bold;
-                color: $color_primary;
-                margin-bottom: 1rem;
-            }
-
             .about_section_title {
                 font-size: $heading_3;
                 line-height: 3.5rem;
@@ -82,12 +85,12 @@ main {
 
             .count_text {
                 font-size: $heading_3;
-                font-family: $open_sans;
-                font-weight: bolder;
+                font-family: $paragraph_font;
+                font-weight: 600;
             }
 
             .count_sub_text {
-                font-weight: bold;
+                font-weight: 500;
             }
         }
     }
@@ -102,12 +105,6 @@ main {
         .service_section_info {
             text-align: center;
 
-            .service_section_sub_title {
-                font-weight: bold;
-                color: $color_primary;
-                margin-bottom: 1rem;
-            }
-
             .service_section_title {
                 font-size: $heading_3;
                 color: $color_white;
@@ -117,7 +114,7 @@ main {
         .services_container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 1.5rem;
 
             .card {
                 position: relative;
@@ -165,7 +162,8 @@ main {
 
                     .card_title {
                         margin-bottom: 2rem;
-                        font-family: $open_sans;
+                        font-family: $paragraph_font;
+                        font-weight: $medium;
                     }
 
                     .card_desc {
@@ -174,7 +172,7 @@ main {
 
                     .card_btn .btn {
                         color: $color_white;
-                        font-family: $open_sans;
+                        font-family: $paragraph_font;
                         padding-bottom: 0.2rem;
                         border-bottom: 1px solid #ffffff57;
                         transition: all 0.2s ease-in-out;
@@ -194,12 +192,6 @@ main {
         display: flex;
         flex-direction: column;
         gap: 3rem;
-
-        .portfolio_section_sub_title {
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: $color_primary;
-        }
 
         .portfolio_info_area {
             display: flex;
@@ -266,7 +258,7 @@ main {
                     background: linear-gradient(180deg, #00000003, $dark75);
 
                     .portfolio_img_title {
-                        font-family: $open_sans;
+                        font-family: $paragraph_font;
                     }
 
                     .portfolio_img_sub_title {
@@ -299,17 +291,9 @@ main {
         .testimonial_section_text_area {
             text-align: center;
 
-            p.testimonial_section_sub_title {
-                color: $color_primary;
-                font-family: $open_sans;
-                font-size: $paragraph;
-                font-weight: bold;
-                margin-bottom: 1rem;
-            }
-
             h1.testimonial_section_title {
                 font-size: $heading_3;
-                font-family: $playfair_display;
+                font-family: $heading_font;
                 color: $color_white;
             }
         }
@@ -370,8 +354,9 @@ main {
                     .testimonial_info {
                         color: $color_white;
                         .testimonial_name {
-                            font-family: $open_sans;
+                            font-family: $paragraph_font;
                             font-size: $heading_6;
+                            font-weight: $medium;
                         }
                         .testimonial_title {
                             color: $color_primary;
@@ -387,11 +372,115 @@ main {
 
                 .testimonial_review_area {
                     color: $color_white;
-                    font-family: $open_sans;
+                    font-family: $paragraph_font;
                     h1.testimonial_review_title {
                         font-size: $heading_6;
-                        font-family: $open_sans;
+                        font-family: $paragraph_font;
                         margin-bottom: 1rem;
+                        font-weight: $medium;
+                    }
+                }
+            }
+        }
+    }
+
+    section.insta_section {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        .insta_section_text_area {
+            text-align: center;
+
+            h1.insta_section_title {
+                font-size: $heading_3;
+            }
+        }
+
+        .insta_cards_area {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+
+            .insta_card {
+                border: 1px solid $dark5;
+                border-radius: $border_radius;
+                overflow: hidden;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    border: 1px solid #33333379;
+                }
+
+                .insta_profile_info_area {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    color: $dark100;
+                    padding: 1rem 1.5rem;
+
+                    .insta_profile_pic {
+                        height: 40px;
+                        width: 40px;
+                        object-fit: cover;
+                        object-position: middle;
+                        border-radius: 100%;
+                    }
+
+                    .insta_profile_info {
+                        h1.insta_username {
+                            font-family: $paragraph_font;
+                            font-size: 1rem;
+                            font-weight: $semi_bold;
+                        }
+                        p.insta_post_date {
+                            font-size: 12px;
+                            color: $dark25;
+                        }
+                    }
+                }
+
+                .insta_img_area {
+                    height: 35vh;
+                    width: 100%;
+                    position: relative;
+                    overflow: hidden;
+
+                    .insta_img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    .insta_btn_link_text {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: $color_white;
+                        font-size: $paragraph;
+                        font-family: $paragraph_font;
+                    }
+                }
+
+                .insta_like_comment_area {
+                    padding: 1rem 1.5rem;
+                    display: flex;
+                    gap: 1rem;
+
+                    .interaction_count {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.2rem;
+                        color: $dark75;
+
+                        .interaction_icon {
+                            font-size: 1.5rem;
+                        }
+
+                        .count_text {
+                            font-weight: $semi_bold;
+                        }
                     }
                 }
             }
@@ -422,6 +511,12 @@ main {
             }
         }
     }
+
+    main section.insta_section {
+        .insta_cards_area {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -441,6 +536,14 @@ main {
             .testimonial_card {
                 opacity: 100%;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 670px) {
+    main section.insta_section {
+        .insta_cards_area {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
@@ -551,6 +654,12 @@ main {
             .grid_col_span_2 {
                 grid-column: span 2;
             }
+        }
+    }
+
+    main section.insta_section {
+        .insta_section_text_area {
+            text-align: left;
         }
     }
 }
@@ -674,6 +783,26 @@ main {
                     p.testimonial_review {
                         line-height: 1.5rem;
                     }
+                }
+            }
+        }
+    }
+
+    main section.insta_section {
+        .insta_section_text_area {
+            h1.insta_section_title {
+                font-size: $heading_4;
+                line-height: 3rem;
+            }
+        }
+        .insta_cards_area {
+            .insta_card {
+                .insta_profile_info_area {
+                    padding: 0.6rem;
+                    gap: 0.6rem;
+                }
+                .insta_like_comment_area {
+                    padding: 0.6rem;
                 }
             }
         }
