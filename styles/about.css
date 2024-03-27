@@ -342,14 +342,18 @@ header .hero_content_area .hero_image_area img.hero_img:nth-child(5) {
   grid-area: five;
 }
 header .hero_content_area .hero_info_area {
-  margin-top: 2rem;
-  width: 60%;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-header .hero_content_area .hero_info_area h1.hero_title {
+header .hero_content_area .hero_info_area .grid_col_span_2 {
+  grid-column: span 2;
+}
+header .hero_content_area .hero_info_area .hero_about_area h1.hero_title {
   font-size: 3.157rem;
   line-height: 3.5rem;
 }
-header .hero_content_area .hero_info_area p.hero_section_bio {
+header .hero_content_area .hero_info_area .hero_about_area p.hero_section_bio {
   margin-top: 1rem;
 }
 
@@ -366,7 +370,10 @@ main section.section:last-child {
   }
   .hero_container .hero_content_area .hero_info_area {
     margin-top: 2rem;
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .hero_container .hero_content_area .hero_info_area .hero_about_area p.hero_section_bio {
+    margin-top: 1rem;
   }
   main section.section {
     margin: 4rem 4rem 0;
@@ -383,10 +390,7 @@ main section.section:last-child {
     grid-template-rows: 30vh 20vh 20vh;
     grid-template-areas: "one two two" "three five five" "four four four";
   }
-  .hero_container .hero_content_area .hero_info_area {
-    width: 100%;
-  }
-  .hero_container .hero_content_area .hero_info_area .hero_title {
+  .hero_container .hero_content_area .hero_info_area .hero_about_area h1.hero_title {
     font-size: 2.369rem;
     line-height: 3rem;
   }
