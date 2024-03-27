@@ -150,11 +150,14 @@ nav.nav_container .social_container i.social_icons:hover {
   opacity: 1;
   transform: translateY(0px);
 }
-.nav_link_container ul.nav_links .links a {
+.nav_link_container ul.nav_links .links a.link {
   color: #0c171c;
   transition: all 0.2s ease-in-out;
 }
-.nav_link_container ul.nav_links .links a:hover {
+.nav_link_container ul.nav_links .links a.link.active {
+  color: #ad50d2;
+}
+.nav_link_container ul.nav_links .links a.link:hover {
   color: #ad50d2;
 }
 .nav_link_container ul.nav_links .social_container_2 {

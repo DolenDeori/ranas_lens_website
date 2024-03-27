@@ -3,153 +3,132 @@
 @import "./global/footer";
 @import "./global/responsive";
 
-//? HEADER STYLING
-header {
-    @include make_header();
+// STYLE FILE GLOBAL SETTING
+.sub_title {
+    font-size: $paragraph;
+    font-family: $paragraph_font;
+    font-weight: 500;
+    color: $color_primary;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
-//? MAIN BODY CONTENT STYLING
+// HEADER STYLING
+header {
+    .hero_content_area {
+        padding: 8rem 4rem 4rem 4rem;
+        display: flex;
+        flex-direction: column;
+
+        .hero_image_area {
+            display: grid;
+            grid-template-rows: 45vh 30vh;
+            grid-template-areas:
+                "one two three"
+                "one four five";
+            gap: 0.5rem;
+            overflow: hidden;
+            border-radius: $border_radius;
+
+            img.hero_img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                filter: grayscale(100);
+
+                &:nth-child(1) {
+                    grid-area: one;
+                }
+                &:nth-child(2) {
+                    grid-area: two;
+                }
+                &:nth-child(3) {
+                    grid-area: three;
+                }
+                &:nth-child(4) {
+                    grid-area: four;
+                }
+                &:nth-child(5) {
+                    grid-area: five;
+                }
+            }
+        }
+
+        .hero_info_area {
+            margin-top: 2rem;
+            width: 60%;
+
+            h1.hero_title {
+                font-size: $heading_3;
+                line-height: 3.5rem;
+            }
+
+            p.hero_section_bio {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
 main {
     section.section {
-        padding: 8rem 8rem 0;
-    }
+        margin: 8rem 4rem 0; // top | left and right | bottom
 
-    section:last-child {
-        padding-bottom: 8rem;
-    }
-
-    //? SECTION 1 & 2 ABOUT US AREA STYLING
-    section.about_us_area {
-        .about_founder_container {
-            #founder {
-                grid-area: founder;
-
-                h3 {
-                    font-size: $heading_3;
-                    line-height: 2rem;
-                    margin-bottom: 2rem;
-                }
-            }
-
-            #founder_img {
-                grid-area: founder_img;
-                overflow: hidden;
-                max-height: 500px;
-
-                .img {
-                    width: 100%;
-                    object-fit: cover;
-                    filter: grayscale(1);
-                }
-            }
-
-            display: grid;
-            grid-template-areas: "founder founder_img";
-            gap: 6rem;
-        }
-
-        .about_team_container {
-            #team {
-                grid-area: team;
-
-                h3 {
-                    font-size: $heading_3;
-                    margin-bottom: 2rem;
-                }
-            }
-
-            #team_img {
-                grid-area: team_img;
-                overflow: hidden;
-                max-height: 500px;
-
-                .img {
-                    width: 100%;
-                    object-fit: cover;
-                    filter: grayscale(1);
-                }
-            }
-
-            display: grid;
-            grid-template-areas: "team_img team";
-            gap: 8rem;
-            margin-top: 8rem;
-        }
-    }
-
-    //? SECTION 3 WORK COUNTER STYLING
-    section.work_counter {
-        .wrok_1 {
-            grid-area: work1;
-        }
-
-        .wrok_2 {
-            grid-area: work2;
-        }
-
-        .wrok_3 {
-            grid-area: work3;
-        }
-
-        .wrok_4 {
-            grid-area: work4;
-        }
-
-        display: grid;
-        grid-template-areas: "work1 work2 work3 work4";
-
-        .work {
-            text-align: center;
-            color: $dark100;
-
-            h1 {
-                font-size: $heading_2;
-            }
-
-            h4 {
-                font-size: $paragraph;
-                color: $dark75;
-            }
-        }
-    }
-
-    //? SECTION 4 INSTAGRAM AREA STYLING
-    section.instagram_work_area {
-        h3 {
-            font-size: $heading_3;
-            text-align: center;
-        }
-
-        .insta_pic_area {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            overflow: hidden;
-            margin-top: 4rem;
-            gap: 1rem;
-
-            .insta_pic_container {
-                position: relative;
-                overflow: hidden;
-                height: 300px;
-                top: 0;
-                left: 0;
-                flex: 1;
-
-                &:hover img {
-                    transform: scale(1.05);
-                }
-
-                img {
-                    position: absolute;
-                    width: 100%;
-                    top: 0;
-                    left: 0;
-                    object-fit: cover;
-                    transition: all 0.5s ease-in-out;
-                }
-            }
+        &:last-child {
+            margin-bottom: 8rem;
         }
     }
 }
 
 //? RESPONSIVE DESIGN
+@include tablet {
+    .hero_container {
+        .hero_content_area {
+            .hero_image_area {
+                grid-template-areas:
+                    "one two two"
+                    "three four five";
+            }
+
+            .hero_info_area {
+                margin-top: 2rem;
+                width: 100%;
+            }
+        }
+    }
+    main section.section {
+        margin: 4rem 4rem 0; // top | left and right | bottom
+
+        &:last-child {
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+@include mobile {
+    .hero_container {
+        .hero_content_area {
+            padding: 6rem 2rem 2rem 2rem;
+            .hero_image_area {
+                grid-template-rows: 30vh 20vh 20vh;
+                grid-template-areas:
+                    "one two two"
+                    "three five five"
+                    "four four four";
+            }
+
+            .hero_info_area {
+                width: 100%;
+
+                .hero_title {
+                    font-size: $heading_4;
+                    line-height: 3rem;
+                }
+            }
+        }
+    }
+
+    main section.section {
+        margin: 4rem 2rem 0;
+    }
+}

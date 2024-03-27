@@ -150,11 +150,14 @@ nav.nav_container .social_container i.social_icons:hover {
   opacity: 1;
   transform: translateY(0px);
 }
-.nav_link_container ul.nav_links .links a {
+.nav_link_container ul.nav_links .links a.link {
   color: #0c171c;
   transition: all 0.2s ease-in-out;
 }
-.nav_link_container ul.nav_links .links a:hover {
+.nav_link_container ul.nav_links .links a.link.active {
+  color: #ad50d2;
+}
+.nav_link_container ul.nav_links .links a.link:hover {
   color: #ad50d2;
 }
 .nav_link_container ul.nav_links .social_container_2 {
@@ -294,157 +297,100 @@ footer.footer_area .social_container a.footer_social_link i.social_icons:hover {
     gap: 1rem;
   }
 }
-header {
-  overflow: hidden;
-  position: relative;
-  height: 100vh;
+.sub_title {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: #ad50d2;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
-header .hero_image {
-  height: 100vh;
+
+header .hero_content_area {
+  padding: 8rem 4rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+header .hero_content_area .hero_image_area {
+  display: grid;
+  grid-template-rows: 45vh 30vh;
+  grid-template-areas: "one two three" "one four five";
+  gap: 0.5rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+header .hero_content_area .hero_image_area img.hero_img {
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  position: absolute;
-  z-index: -1;
+  filter: grayscale(100);
 }
-header .hero_text_container {
-  height: 100%;
-  padding: 0 8rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: auto;
-  color: #fcffff;
+header .hero_content_area .hero_image_area img.hero_img:nth-child(1) {
+  grid-area: one;
 }
-header .hero_text_container .hero_title_text {
-  font-size: 5.61rem;
-  line-height: 1em;
-  margin-bottom: 2rem;
+header .hero_content_area .hero_image_area img.hero_img:nth-child(2) {
+  grid-area: two;
 }
-header .hero_text_container .hero_body_text {
+header .hero_content_area .hero_image_area img.hero_img:nth-child(3) {
+  grid-area: three;
+}
+header .hero_content_area .hero_image_area img.hero_img:nth-child(4) {
+  grid-area: four;
+}
+header .hero_content_area .hero_image_area img.hero_img:nth-child(5) {
+  grid-area: five;
+}
+header .hero_content_area .hero_info_area {
+  margin-top: 2rem;
   width: 60%;
 }
-header .hero_text_container .hero_cta_area {
-  margin-top: 4rem;
+header .hero_content_area .hero_info_area h1.hero_title {
+  font-size: 3.157rem;
+  line-height: 3.5rem;
 }
-header .hero_text_container .hero_cta_area a {
-  padding: 1rem 3rem;
-  background-color: rgba(12, 23, 28, 0.7490196078);
-  color: #fcffff;
-  border: 2px solid #fcffff;
-  font-family: "Open Sans", sans-serif;
-  border-radius: 10rem;
+header .hero_content_area .hero_info_area p.hero_section_bio {
+  margin-top: 1rem;
 }
 
 main section.section {
-  padding: 8rem 8rem 0;
+  margin: 8rem 4rem 0;
 }
-main section:last-child {
-  padding-bottom: 8rem;
+main section.section:last-child {
+  margin-bottom: 8rem;
 }
-main section.about_us_area .about_founder_container {
-  display: grid;
-  grid-template-areas: "founder founder_img";
-  gap: 6rem;
+
+@media screen and (max-width: 980px) {
+  .hero_container .hero_content_area .hero_image_area {
+    grid-template-areas: "one two two" "three four five";
+  }
+  .hero_container .hero_content_area .hero_info_area {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  main section.section {
+    margin: 4rem 4rem 0;
+  }
+  main section.section:last-child {
+    margin-bottom: 4rem;
+  }
 }
-main section.about_us_area .about_founder_container #founder {
-  grid-area: founder;
-}
-main section.about_us_area .about_founder_container #founder h3 {
-  font-size: 3.157rem;
-  line-height: 2rem;
-  margin-bottom: 2rem;
-}
-main section.about_us_area .about_founder_container #founder_img {
-  grid-area: founder_img;
-  overflow: hidden;
-  max-height: 500px;
-}
-main section.about_us_area .about_founder_container #founder_img .img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: grayscale(1);
-}
-main section.about_us_area .about_team_container {
-  display: grid;
-  grid-template-areas: "team_img team";
-  gap: 8rem;
-  margin-top: 8rem;
-}
-main section.about_us_area .about_team_container #team {
-  grid-area: team;
-}
-main section.about_us_area .about_team_container #team h3 {
-  font-size: 3.157rem;
-  margin-bottom: 2rem;
-}
-main section.about_us_area .about_team_container #team_img {
-  grid-area: team_img;
-  overflow: hidden;
-  max-height: 500px;
-}
-main section.about_us_area .about_team_container #team_img .img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: grayscale(1);
-}
-main section.work_counter {
-  display: grid;
-  grid-template-areas: "work1 work2 work3 work4";
-}
-main section.work_counter .wrok_1 {
-  grid-area: work1;
-}
-main section.work_counter .wrok_2 {
-  grid-area: work2;
-}
-main section.work_counter .wrok_3 {
-  grid-area: work3;
-}
-main section.work_counter .wrok_4 {
-  grid-area: work4;
-}
-main section.work_counter .work {
-  text-align: center;
-  color: #0c171c;
-}
-main section.work_counter .work h1 {
-  font-size: 4.209rem;
-}
-main section.work_counter .work h4 {
-  font-size: 1rem;
-  color: rgba(12, 23, 28, 0.7490196078);
-}
-main section.instagram_work_area h3 {
-  font-size: 3.157rem;
-  text-align: center;
-}
-main section.instagram_work_area .insta_pic_area {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  overflow: hidden;
-  margin-top: 4rem;
-  gap: 1rem;
-}
-main section.instagram_work_area .insta_pic_area .insta_pic_container {
-  position: relative;
-  overflow: hidden;
-  height: 300px;
-  top: 0;
-  left: 0;
-  flex: 1;
-}
-main section.instagram_work_area .insta_pic_area .insta_pic_container:hover img {
-  transform: scale(1.05);
-}
-main section.instagram_work_area .insta_pic_area .insta_pic_container img {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 0.5s ease-in-out;
+@media screen and (max-width: 550px) {
+  .hero_container .hero_content_area {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+  .hero_container .hero_content_area .hero_image_area {
+    grid-template-rows: 30vh 20vh 20vh;
+    grid-template-areas: "one two two" "three five five" "four four four";
+  }
+  .hero_container .hero_content_area .hero_info_area {
+    width: 100%;
+  }
+  .hero_container .hero_content_area .hero_info_area .hero_title {
+    font-size: 2.369rem;
+    line-height: 3rem;
+  }
+  main section.section {
+    margin: 4rem 2rem 0;
+  }
 }/*# sourceMappingURL=about.css.map */

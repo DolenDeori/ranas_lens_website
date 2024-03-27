@@ -150,11 +150,14 @@ nav.nav_container .social_container i.social_icons:hover {
   opacity: 1;
   transform: translateY(0px);
 }
-.nav_link_container ul.nav_links .links a {
+.nav_link_container ul.nav_links .links a.link {
   color: #0c171c;
   transition: all 0.2s ease-in-out;
 }
-.nav_link_container ul.nav_links .links a:hover {
+.nav_link_container ul.nav_links .links a.link.active {
+  color: #ad50d2;
+}
+.nav_link_container ul.nav_links .links a.link:hover {
   color: #ad50d2;
 }
 .nav_link_container ul.nav_links .social_container_2 {
@@ -816,6 +819,13 @@ main section.insta_section .insta_cards_area .insta_card {
 main section.insta_section .insta_cards_area .insta_card:hover {
   border: 1px solid rgba(51, 51, 51, 0.4745098039);
 }
+main section.insta_section .insta_cards_area .insta_card:hover > .insta_img_area .insta_img {
+  opacity: 80%;
+}
+main section.insta_section .insta_cards_area .insta_card:hover > .insta_img_area .insta_btn_link_text {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
 main section.insta_section .insta_cards_area .insta_card .insta_profile_info_area {
   display: flex;
   align-items: center;
@@ -853,21 +863,18 @@ main section.insta_section .insta_cards_area .insta_card .insta_img_area .insta_
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 80%;
+  transition: all 0.2s ease-in-out;
 }
 main section.insta_section .insta_cards_area .insta_card .insta_img_area .insta_btn_link_text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
   color: #fcffff;
   font-size: 1rem;
   font-family: "Open Sans", sans-serif;
   opacity: 0;
   transition: all 0.2s ease-in-out;
-}
-main section.insta_section .insta_cards_area .insta_card .insta_img_area:hover > .insta_btn_link_text {
-  opacity: 1;
 }
 main section.insta_section .insta_cards_area .insta_card .insta_like_comment_area {
   padding: 1rem 1.5rem;

@@ -518,6 +518,14 @@ main {
                     border: 1px solid #33333379;
                 }
 
+                &:hover > .insta_img_area .insta_img {
+                    opacity: 80%;
+                }
+
+                &:hover > .insta_img_area .insta_btn_link_text {
+                    opacity: 1;
+                    transform: translate(-50%, -50%);
+                }
                 .insta_profile_info_area {
                     display: flex;
                     align-items: center;
@@ -557,22 +565,18 @@ main {
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
-                        opacity: 80%;
+                        transition: all 0.2s ease-in-out;
                     }
-
                     .insta_btn_link_text {
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%, -50%);
+                        transform: translate(-50%, -30%);
                         color: $color_white;
                         font-size: $paragraph;
                         font-family: $paragraph_font;
                         opacity: 0;
                         transition: all 0.2s ease-in-out;
-                    }
-                    &:hover > .insta_btn_link_text {
-                        opacity: 1;
                     }
                 }
 

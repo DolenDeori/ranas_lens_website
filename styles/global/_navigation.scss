@@ -138,9 +138,13 @@ nav.nav_container {
                 transform: translateY(0px);
             }
 
-            a {
+            a.link {
                 color: $dark100;
                 transition: all 0.2s ease-in-out;
+
+                &.active {
+                    color: $color_primary;
+                }
 
                 &:hover {
                     color: $color_primary;
