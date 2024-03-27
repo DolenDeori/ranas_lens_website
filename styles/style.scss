@@ -281,8 +281,8 @@ main {
     }
 
     section.testimonial_section {
-        margin: 8rem 0rem;
-        padding: 4rem 4rem;
+        margin: 8rem 0rem 0 0;
+        padding: 4rem 4rem 0 4rem;
         background-color: $dark100;
         display: flex;
         flex-direction: column;
@@ -379,6 +379,105 @@ main {
                         margin-bottom: 1rem;
                         font-weight: $medium;
                     }
+
+                    p.testimonial_review {
+                        font-weight: $light;
+                    }
+                }
+            }
+        }
+    }
+
+    section.contact_section {
+        .contact_section_area {
+            height: 70vh;
+            width: 100%;
+            background-color: $dark75;
+            position: relative;
+            overflow: hidden;
+
+            .contact_section_info {
+                position: absolute;
+                z-index: 1;
+                height: 100%;
+                width: 100%;
+
+                .contact_info_text {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 4rem;
+                    gap: 1rem;
+
+                    h1.contact_section_title {
+                        font-size: $heading_3;
+                        color: $color_white;
+                    }
+
+                    p.contact_section_desc {
+                        font-size: $paragraph_font;
+                        color: $color_white;
+                        text-align: center;
+                        margin-bottom: 2rem;
+                    }
+
+                    .contact_info_area {
+                        color: $color_white;
+                        display: flex;
+                        gap: 1rem;
+                        margin-bottom: 1rem;
+
+                        .contact {
+                            color: $color_white;
+                            font-family: $paragraph_font;
+                            border: 1px solid #ffffff36;
+                            border-radius: 10rem;
+                            padding: 0 2rem 0 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 1rem;
+                            transition: all 0.2s ease-in-out;
+                            &:hover {
+                                border: 1px solid #ffffff77;
+                            }
+                            i.contact_icon {
+                                padding: 1rem;
+                                background: $dark75;
+                                border-radius: 100%;
+                                font-family: 18px;
+                            }
+                        }
+                    }
+                }
+                .contact_cta_btn {
+                    .contact_btn {
+                        @include make_button($color_white, $dark75, $dark75, $color_white);
+                    }
+                }
+            }
+
+            .contact_section_img_area {
+                height: 100%;
+                width: 100%;
+
+                img.contact_section_img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .img_overlay {
+                    content: "";
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    height: 300%;
+                    width: 100%;
+                    background: linear-gradient(180deg, $dark100, #00000000);
                 }
             }
         }
@@ -491,7 +590,7 @@ main {
 //?? RESPONSIVE DESIGN
 @media screen and (max-width: 1170px) {
     main section.testimonial_section {
-        margin: 4rem 0rem;
+        margin: 4rem 0 0 0;
 
         .testimonial_cards_area {
             grid-template-areas:
@@ -544,6 +643,29 @@ main {
     main section.insta_section {
         .insta_cards_area {
             grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    main section.contact_section {
+        .contact_section_area {
+            .contact_section_info {
+                .contact_info_text {
+                    align-items: flex-start;
+
+                    p.contact_section_desc {
+                        text-align: left;
+                    }
+
+                    .contact_info_area {
+                        flex-direction: column;
+                        justify-content: flex-start;
+
+                        .contact {
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -761,7 +883,7 @@ main {
     }
 
     main section.testimonial_section {
-        margin: 4rem 0rem;
+        margin: 4rem 0 0 0;
         padding: 4rem 2rem;
 
         .testimonial_section_text_area {
@@ -782,6 +904,27 @@ main {
                 .testimonial_review_area {
                     p.testimonial_review {
                         line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    main section.contact_section {
+        .contact_section_area {
+            .contact_section_info {
+                .contact_info_text {
+                    padding: 0 2rem;
+
+                    h1.contact_section_title {
+                        font-size: $heading_4;
+                    }
+
+                    .contact_info_area {
+                        .contact {
+                            padding: 0 1rem 0 0;
+                            gap: 0.5rem;
+                        }
                     }
                 }
             }

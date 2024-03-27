@@ -105,7 +105,7 @@ nav.nav_container .social_container i.social_icons:hover {
 
 .nav_link_container {
   position: relative;
-  z-index: 1;
+  z-index: 9000;
 }
 .nav_link_container ul.nav_links {
   position: fixed;
@@ -595,8 +595,8 @@ main section.portfolio_section .portfolio_img_area .portfolio_img_card:hover > .
   opacity: 80%;
 }
 main section.testimonial_section {
-  margin: 8rem 0rem;
-  padding: 4rem 4rem;
+  margin: 8rem 0rem 0 0;
+  padding: 4rem 4rem 0 4rem;
   background-color: #0c171c;
   display: flex;
   flex-direction: column;
@@ -685,6 +685,104 @@ main section.testimonial_section .testimonial_cards_area .testimonial_card .test
   font-family: "Open Sans", sans-serif;
   margin-bottom: 1rem;
   font-weight: 500;
+}
+main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_review_area p.testimonial_review {
+  font-weight: 300;
+}
+main section.contact_section .contact_section_area {
+  height: 70vh;
+  width: 100%;
+  background-color: rgba(12, 23, 28, 0.7490196078);
+  position: relative;
+  overflow: hidden;
+}
+main section.contact_section .contact_section_area .contact_section_info {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+main section.contact_section .contact_section_area .contact_section_info .contact_info_text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
+  gap: 1rem;
+}
+main section.contact_section .contact_section_area .contact_section_info .contact_info_text h1.contact_section_title {
+  font-size: 3.157rem;
+  color: #fcffff;
+}
+main section.contact_section .contact_section_area .contact_section_info .contact_info_text p.contact_section_desc {
+  font-size: "Open Sans", sans-serif;
+  color: #fcffff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+main section.contact_section .contact_section_area .contact_section_info .contact_info_text .contact_info_area {
+  color: #fcffff;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+main section.contact_section .contact_section_area .contact_section_info .contact_info_text .contact_info_area .contact {
+  color: #fcffff;
+  font-family: "Open Sans", sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.2117647059);
+  border-radius: 10rem;
+  padding: 0 2rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+main section.contact_section .contact_section_area .contact_section_info .contact_info_text .contact_info_area .contact:hover {
+  border: 1px solid rgba(255, 255, 255, 0.4666666667);
+}
+main section.contact_section .contact_section_area .contact_section_info .contact_info_text .contact_info_area .contact i.contact_icon {
+  padding: 1rem;
+  background: rgba(12, 23, 28, 0.7490196078);
+  border-radius: 100%;
+  font-family: 18px;
+}
+main section.contact_section .contact_section_area .contact_section_info .contact_cta_btn .contact_btn {
+  background-color: #fcffff;
+  padding: 0.6rem 2rem;
+  border-radius: 10rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(12, 23, 28, 0.7490196078);
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #fcffff;
+}
+main section.contact_section .contact_section_area .contact_section_info .contact_cta_btn .contact_btn:hover {
+  background: rgba(12, 23, 28, 0.7490196078);
+  color: #fcffff;
+}
+main section.contact_section .contact_section_area .contact_section_img_area {
+  height: 100%;
+  width: 100%;
+}
+main section.contact_section .contact_section_area .contact_section_img_area img.contact_section_img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section.contact_section .contact_section_area .contact_section_img_area .img_overlay {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 300%;
+  width: 100%;
+  background: linear-gradient(180deg, #0c171c, rgba(0, 0, 0, 0));
 }
 main section.insta_section {
   display: flex;
@@ -778,7 +876,7 @@ main section.insta_section .insta_cards_area .insta_card .insta_like_comment_are
 
 @media screen and (max-width: 1170px) {
   main section.testimonial_section {
-    margin: 4rem 0rem;
+    margin: 4rem 0 0 0;
   }
   main section.testimonial_section .testimonial_cards_area {
     grid-template-areas: "one one" "two five" "three five" "four four";
@@ -810,6 +908,19 @@ main section.insta_section .insta_cards_area .insta_card .insta_like_comment_are
 @media screen and (max-width: 670px) {
   main section.insta_section .insta_cards_area {
     grid-template-columns: repeat(1, 1fr);
+  }
+  main section.contact_section .contact_section_area .contact_section_info .contact_info_text {
+    align-items: flex-start;
+  }
+  main section.contact_section .contact_section_area .contact_section_info .contact_info_text p.contact_section_desc {
+    text-align: left;
+  }
+  main section.contact_section .contact_section_area .contact_section_info .contact_info_text .contact_info_area {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  main section.contact_section .contact_section_area .contact_section_info .contact_info_text .contact_info_area .contact {
+    justify-content: flex-start;
   }
 }
 @media screen and (max-width: 980px) {
@@ -962,7 +1073,7 @@ main section.insta_section .insta_cards_area .insta_card .insta_like_comment_are
     grid-column: span 1;
   }
   main section.testimonial_section {
-    margin: 4rem 0rem;
+    margin: 4rem 0 0 0;
     padding: 4rem 2rem;
   }
   main section.testimonial_section .testimonial_section_text_area {
@@ -978,6 +1089,16 @@ main section.insta_section .insta_cards_area .insta_card .insta_like_comment_are
   }
   main section.testimonial_section .testimonial_cards_area .testimonial_card .testimonial_review_area p.testimonial_review {
     line-height: 1.5rem;
+  }
+  main section.contact_section .contact_section_area .contact_section_info .contact_info_text {
+    padding: 0 2rem;
+  }
+  main section.contact_section .contact_section_area .contact_section_info .contact_info_text h1.contact_section_title {
+    font-size: 2.369rem;
+  }
+  main section.contact_section .contact_section_area .contact_section_info .contact_info_text .contact_info_area .contact {
+    padding: 0 1rem 0 0;
+    gap: 0.5rem;
   }
   main section.insta_section .insta_section_text_area h1.insta_section_title {
     font-size: 2.369rem;
