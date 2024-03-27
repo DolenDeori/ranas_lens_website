@@ -18,6 +18,13 @@ header {
 }
 
 main {
+    section.section_hidden {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    section.area {
+        transition: all 0.5s ease-in;
+    }
     section.section {
         margin: 8rem 4rem 0; // top | left and right | bottom
 
@@ -83,7 +90,7 @@ main {
                 height: 0.05rem;
             }
 
-            .count_text {
+            .counter_text {
                 font-size: $heading_3;
                 font-family: $paragraph_font;
                 font-weight: 600;
@@ -544,12 +551,15 @@ main {
                     width: 100%;
                     position: relative;
                     overflow: hidden;
+                    background-color: $dark100;
 
                     .insta_img {
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
+                        opacity: 80%;
                     }
+
                     .insta_btn_link_text {
                         position: absolute;
                         top: 50%;
@@ -558,6 +568,11 @@ main {
                         color: $color_white;
                         font-size: $paragraph;
                         font-family: $paragraph_font;
+                        opacity: 0;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    &:hover > .insta_btn_link_text {
+                        opacity: 1;
                     }
                 }
 

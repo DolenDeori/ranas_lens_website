@@ -345,6 +345,13 @@ header .hero_text_container .hero_cta_area a {
   border-radius: 10rem;
 }
 
+main section.section_hidden {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+main section.area {
+  transition: all 0.5s ease-in;
+}
 main section.section {
   margin: 8rem 4rem 0;
 }
@@ -414,7 +421,7 @@ main section.counter_section .counter .line {
   width: 100%;
   height: 0.05rem;
 }
-main section.counter_section .counter .count_text {
+main section.counter_section .counter .counter_text {
   font-size: 3.157rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -839,12 +846,14 @@ main section.insta_section .insta_cards_area .insta_card .insta_img_area {
   width: 100%;
   position: relative;
   overflow: hidden;
+  background-color: #0c171c;
 }
 main section.insta_section .insta_cards_area .insta_card .insta_img_area .insta_img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 80%;
 }
 main section.insta_section .insta_cards_area .insta_card .insta_img_area .insta_btn_link_text {
   position: absolute;
@@ -854,6 +863,11 @@ main section.insta_section .insta_cards_area .insta_card .insta_img_area .insta_
   color: #fcffff;
   font-size: 1rem;
   font-family: "Open Sans", sans-serif;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+main section.insta_section .insta_cards_area .insta_card .insta_img_area:hover > .insta_btn_link_text {
+  opacity: 1;
 }
 main section.insta_section .insta_cards_area .insta_card .insta_like_comment_area {
   padding: 1rem 1.5rem;
