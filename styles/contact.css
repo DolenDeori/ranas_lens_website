@@ -348,6 +348,13 @@ header .hero_text_container .hero_cta_area a {
   border-radius: 10rem;
 }
 
+main section.section_hidden {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+main section.area {
+  transition: all 0.5s ease-in;
+}
 main section.section {
   margin: 8rem 4rem 0;
 }
