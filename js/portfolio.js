@@ -6,6 +6,8 @@ const imagebox = document.querySelectorAll(".gallery_image");
 const controls = document.querySelector(".lightbox_control");
 const next_btn = document.querySelector(".next_btn");
 const prev_btn = document.querySelector(".prev_btn");
+const close_btn = document.querySelector(".close_btn_icon");
+const lightbox_control = document.querySelector(".lightbox_control");
 const total_image = imagebox.length;
 let image_count = 0;
 
@@ -16,12 +18,12 @@ document.body.appendChild(lightbox);
 const add_image = function (src) {
   img.src = src;
   img.classList.add("ld_img");
+
   while (lightbox.firstChild) {
     lightbox.removeChild(lightbox.firstChild);
   }
   lightbox.appendChild(img);
 };
-
 
 imagebox.forEach((image, index) => {
   image.addEventListener("click", (e) => {
@@ -44,7 +46,19 @@ prev_btn.addEventListener("click", () => {
   add_image(imagebox[image_count].src);
 });
 
-lightbox.addEventListener("click", (e) => {
+lightbox_control.addEventListener("click", (e) => {
+  if (e.target !== e.currentTarget) return;
+  lightbox.classList.remove("active");
+  controls.classList.remove("active_control");
+});
+
+lightbox_control.addEventListener("click", (e) => {
+  if (e.target !== e.currentTarget) return;
+  lightbox.classList.remove("active");
+  controls.classList.remove("active_control");
+});
+
+close_btn.addEventListener("click", (e) => {
   if (e.target !== e.currentTarget) return;
   lightbox.classList.remove("active");
   controls.classList.remove("active_control");

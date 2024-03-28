@@ -17,4 +17,3 @@ pageArea.forEach((area) => {
   area.classList.add("section_hidden");
 });
 
-// Insta card Animation

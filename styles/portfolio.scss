@@ -3,74 +3,54 @@
 @import "./global/footer";
 @import "./global/responsive";
 
+// STYLE FILE GLOBAL SETTING
+.sub_title {
+    font-size: $paragraph;
+    font-family: $paragraph_font;
+    font-weight: 500;
+    color: $color_primary;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
 header {
-    height: 100vh;
     @include make_header();
-}
-
-header .hero_text_container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-    color: $color_white;
-
-    h1 {
-        font-size: $heading_1;
-    }
-
-    h3 {
-        font-size: $heading_3;
-    }
-}
-
-//? STYLING ALL THE FULTER BUTTONS start ----------------------------
-.filter_links_container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-    margin: 8rem auto 4rem auto;
-    padding: 0rem 8rem;
 }
 
 //? MAIN BODY STYLING start --------------------------
 main {
     section.section {
-        margin: 8rem 8rem 0;
+        margin: 8rem 4rem 0;
+
+        section:last-child {
+            margin-bottom: 8rem;
+        }
     }
 
-    section:last-child {
-        margin-bottom: 8rem;
-    }
-
-    section.fashion_pics {
-        h1.section_title {
-            margin-bottom: 2rem !important;
-            font-size: $heading_4;
+    section.portfolio_section {
+        h1.portfolio_section_title {
+            font-size: $heading_3;
         }
 
         .gallery {
             columns: 3 20rem;
+            margin-top: 2rem;
+            margin-bottom: 8rem;
 
             .img_container {
                 height: 100%;
+                width: 100%;
                 overflow: hidden;
                 position: relative;
                 cursor: pointer;
                 margin-bottom: 0.8rem;
 
-                img {
+                img.gallery_image {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    object-position: 50% 0%;
-
-                    &:hover {
-                        filter: brightness(-1);
-                    }
+                    object-position: top;
+                    border-radius: $border_radius;
                 }
             }
         }
@@ -78,7 +58,6 @@ main {
 }
 
 //? Light box Styling
-
 #lightBox {
     position: fixed;
     top: 0;
@@ -87,7 +66,9 @@ main {
     width: 100%;
     z-index: 10000;
     background: $dark75;
+    backdrop-filter: blur(20px);
     display: none;
+    transition: all 0.4s ease-in-out;
 
     .ld_img {
         height: 600px;
@@ -116,27 +97,33 @@ main {
 .lightbox_control {
     position: fixed;
     width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0 8rem;
+    top: 0%;
+    left: 0%;
     z-index: 100001;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0rem;
     display: none;
 
-    .control_btn {
-        padding: 1rem;
+    .control_icon {
+        color: $color_white;
+        font-size: $heading_4;
         cursor: pointer;
+    }
 
-        svg {
-            height: 8rem;
-            width: 2rem;
-            // background: lightseagreen;
+    .close_btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-            path {
-                padding: 2rem;
-                fill: $color_white;
-            }
-        }
+    .prev_next_btn {
+        display: flex;
+        gap: 4rem;
     }
 }
 
@@ -146,13 +133,36 @@ main {
     align-items: center;
 }
 
-//? MAIN BODY STYLING end --------------------------
+//? MAIN BODY STYLING END
 
 //? RESPONSIVE STYLING
-@media screen and (max-width: 900px) {
-    section.fashion_pics {
+@include tablet {
+    .hero_container {
+        .hero_text_container {
+            padding: 0 4rem;
+
+            .hero_title_text {
+                font-size: $heading_3;
+            }
+
+            .hero_body_text {
+                padding-right: 0.5rem;
+                width: 90%;
+            }
+        }
+    }
+
+    main section.section {
+        margin: 4rem 4rem 0; // top | left and right | bottom
+
+        &:last-child {
+            margin-bottom: 4rem;
+        }
+    }
+
+    section.portfolio_section {
         .gallery {
-            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -163,81 +173,47 @@ main {
     }
 
     .lightbox_control {
-        padding: 0rem 4rem;
+        padding: 4rem 0rem;
 
         .control_btn {
-            background-color: $dark25;
-            border-radius: $border_radius;
+            border-radius: 100%;
         }
-    }
-}
-
-@include tablet {
-    header .hero_text_container {
-        h1 {
-            font-size: $heading_3;
-        }
-    }
-
-    section.section {
-        margin: 4rem 4rem 0 !important;
-    }
-
-    section:last-child {
-        margin-bottom: 4rem !important;
-    }
-
-    #lightBox {
-        .ld_img {
-            height: 500px;
-        }
-    }
-
-    .lightbox_control {
-        padding: 0rem 1rem;
     }
 }
 
 @include mobile {
-    header .hero_text_container {
-        h1 {
-            font-size: $heading_3;
-        }
+    .hero_container {
+        .hero_text_container {
+            padding: 0 2rem;
 
-        p {
-            font-size: $paragraph;
+            .hero_title_text {
+                font-size: $heading_4;
+            }
+
+            .hero_body_text {
+                width: 100%;
+            }
         }
     }
 
-    section.section {
-        margin: 4rem 2rem 0 !important;
-    }
-
-    section:last-child {
-        margin-bottom: 4rem !important;
+    main section.section {
+        margin: 4rem 2rem 0;
     }
 
     section.fashion_pics {
         .gallery {
-            grid-template-columns: repeat(1, 1fr) !important;
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 
     #lightBox {
         .ld_img {
             height: auto;
-            width: 100%;
+            width: 90%;
         }
     }
 
     .lightbox_control {
-        padding: 0rem 0rem;
-
-        .control_btn {
-            svg {
-                height: 4rem;
-                width: 1.5rem;
-            }
-        }
+        padding: 4rem 0rem;
     }
 }
