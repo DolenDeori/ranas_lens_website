@@ -132,7 +132,6 @@ nav.nav_container .social_container i.social_icons:hover {
   font-weight: 700;
   opacity: 0;
   transform: translateY(10px);
-  transition: all 0.3s ease;
 }
 .nav_link_container ul.nav_links .links:nth-child(1) {
   transition: all 0.3s ease 0.2s;
@@ -355,6 +354,9 @@ header .hero_content_area .hero_info_area .hero_about_area h1.hero_title {
 }
 header .hero_content_area .hero_info_area .hero_about_area p.hero_section_bio {
   margin-top: 1rem;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5rem;
 }
 
 main section.section {

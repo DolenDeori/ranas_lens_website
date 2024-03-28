@@ -132,7 +132,6 @@ nav.nav_container .social_container i.social_icons:hover {
   font-weight: 700;
   opacity: 0;
   transform: translateY(10px);
-  transition: all 0.3s ease;
 }
 .nav_link_container ul.nav_links .links:nth-child(1) {
   transition: all 0.3s ease 0.2s;

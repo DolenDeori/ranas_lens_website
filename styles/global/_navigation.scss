@@ -115,7 +115,6 @@ nav.nav_container {
             font-weight: $bold;
             opacity: 0;
             transform: translateY(10px);
-            transition: all 0.3s ease;
 
             &:nth-child(1) {
                 transition: all 0.3s ease 0.2s;

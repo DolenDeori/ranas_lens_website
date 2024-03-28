@@ -69,6 +69,9 @@ header {
 
                 p.hero_section_bio {
                     margin-top: 1rem;
+                    font-size: $paragraph;
+                    font-family: $paragraph_font;
+                    line-height: 1.5rem;
                 }
             }
         }
