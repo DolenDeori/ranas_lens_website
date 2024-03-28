@@ -357,6 +357,38 @@ main section.section:last-child {
 main section.contact_section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+main section.contact_section .contact_section_left .contact_info_box {
+  margin-bottom: 1rem;
+}
+main section.contact_section .contact_section_left .contact_info_box .contact_title,
+main section.contact_section .contact_section_left .contact_info_box .contact_info {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+main section.contact_section .contact_section_left .contact_info_box .contact_info {
+  border-bottom: 1px dashed blue;
+}
+main section.contact_section .contact_section_left .contact_info_box .social_media_title {
+  margin-bottom: 1rem;
+}
+main section.contact_section .contact_section_left .contact_social_info .contact_section_social_icons {
+  display: flex;
+  gap: 1rem;
+}
+main section.contact_section .contact_section_left .contact_social_info .contact_section_social_icons .contact_icons {
+  padding: 0.5rem;
+  background: #0c171c;
+  border-radius: 100%;
+  font-size: 18px;
+  color: #fcffff;
+  transition: background 0.2s ease-in-out;
+}
+main section.contact_section .contact_section_left .contact_social_info .contact_section_social_icons .contact_icons:hover {
+  background: #ad50d2;
 }
 main section.contact_section .contact_section_right {
   grid-column: span 2;
@@ -397,7 +429,7 @@ main section.contact_section .contact_section_right form.contact_form .contact_i
   border-radius: 1rem;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  transition: all 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
 }
 main section.contact_section .contact_section_right form.contact_form .contact_input_area .contact_input_box input.contact_input:active, main section.contact_section .contact_section_right form.contact_form .contact_input_area .contact_input_box input.contact_input:focus,
 main section.contact_section .contact_section_right form.contact_form .contact_input_area .contact_input_box select.select_contact_input:active,
@@ -448,10 +480,7 @@ main section.contact_section .contact_section_right form.contact_form button.con
     margin-bottom: 4rem;
   }
   main section.contact_section {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  main section.contact_section .contact_section_right {
-    grid-column: span 3;
+    grid-template-columns: repeat(1, 1fr);
   }
   main section.contact_section .contact_section_right h1.contact_section_title {
     line-height: 3.5rem;

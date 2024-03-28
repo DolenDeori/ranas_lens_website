@@ -30,6 +30,44 @@ main {
     section.contact_section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        .contact_section_left {
+            .contact_info_box {
+                margin-bottom: 1rem;
+                .contact_title,
+                .contact_info {
+                    font-family: $paragraph_font;
+                    font-size: $paragraph;
+                    margin-bottom: 0.4rem;
+                    font-weight: $bold;
+                }
+                .contact_info {
+                    border-bottom: 1px dashed blue;
+                }
+                .social_media_title {
+                    margin-bottom: 1rem;
+                }
+            }
+            .contact_social_info {
+                .contact_section_social_icons {
+                    display: flex;
+                    gap: 1rem;
+                    .contact_icons {
+                        padding: 0.5rem;
+                        background: $dark100;
+                        border-radius: 100%;
+                        font-size: 18px;
+                        color: $color_white;
+                        transition: background 0.2s ease-in-out;
+
+                        &:hover {
+                            background: $color_primary;
+                        }
+                    }
+                }
+            }
+        }
 
         .contact_section_right {
             grid-column: span 2;
@@ -70,7 +108,7 @@ main {
                             border-radius: $border_radius;
                             font-family: $paragraph_font;
                             font-size: $paragraph;
-                            transition: all 0.2s ease-in-out;
+                            transition: border 0.2s ease-in-out;
 
                             &:active,
                             &:focus {
@@ -121,10 +159,9 @@ main {
     }
 
     main section.contact_section {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(1, 1fr);
 
         .contact_section_right {
-            grid-column: span 3;
             h1.contact_section_title {
                 line-height: 3.5rem;
             }
