@@ -302,29 +302,42 @@ header .error_text_container {
   height: 100vh;
   padding: 1rem;
 }
-header .error_text_container .text_area h1 {
+header .error_text_container .text_area {
+  text-align: center;
+}
+header .error_text_container .text_area h1.subtitle {
   font-size: 5.61rem;
   color: #fa402f;
 }
-header .error_text_container .text_area h2 {
-  font-size: 4.209rem;
+header .error_text_container .text_area h2.title {
+  font-size: 3.157rem;
 }
-header .error_text_container .text_area p {
+header .error_text_container .text_area p.description {
   margin-bottom: 3rem;
 }
 header .error_text_container .text_area .btn {
-  background: #0c171c;
-  padding: 1rem 2rem;
+  background-color: #ad50d2;
+  padding: 0.6rem 2rem;
+  border-radius: 10rem;
   font-family: "Open Sans", sans-serif;
-  color: white;
-  border-radius: 1rem;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fcffff;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #ad50d2;
 }
 header .error_text_container .text_area .btn:hover {
-  background-color: #ad50d2;
+  background: rgba(173, 80, 210, 0.2431372549);
+  color: #ad50d2;
 }
 
-@media screen and (max-width: 350px) {
-  header .error_text_container h2 {
-    font-size: 3.157rem !important;
+@media screen and (max-width: 550px) {
+  header.hero_container .error_text_container .text_area {
+    text-align: left;
+  }
+  header.hero_container .error_text_container .text_area h2.title {
+    margin-top: 1rem;
+    font-size: 2.369rem;
   }
 }/*# sourceMappingURL=error.css.map */

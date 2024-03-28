@@ -1,48 +1,47 @@
-@import './global/global';
-@import './global/navigation';
+@import "./global/global";
+@import "./global/navigation";
 @import "./global/footer";
-@import './global/responsive';
+@import "./global/responsive";
 
-header .error_text_container {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    padding: 1rem;
+header {
+    .error_text_container {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        padding: 1rem;
 
-    .text_area {
-        h1 {
-            font-size: $heading_1;
-            color: $color_error;
-        }
+        .text_area {
+            text-align: center;
+            h1.subtitle {
+                font-size: $heading_1;
+                color: $color_error;
+            }
 
-        h2 {
-            font-size: $heading_2;
-        }
+            h2.title {
+                font-size: $heading_3;
+            }
 
-        p {
-            margin-bottom: 3rem;
-        }
+            p.description {
+                margin-bottom: 3rem;
+            }
 
-        .btn {
-            background: $dark100;
-            padding: 1rem 2rem;
-            font-family: $paragraph_font;
-            color: white;
-            border-radius: $border_radius;
-
-            &:hover {
-                background-color: $color_primary;
+            .btn {
+                @include make_button($color_primary, $color_white, $color_primary_light, $color_primary);
             }
         }
     }
 }
 
-
-@include mobile_small {
-    header .error_text_container {
-        h2 {
-            font-size: $heading_3 !important;
+@include mobile {
+    header.hero_container {
+        .error_text_container {
+            .text_area {
+                text-align: left;
+                h2.title {
+                    margin-top: 1rem;
+                    font-size: $heading_4;
+                }
+            }
         }
     }
-
 }
