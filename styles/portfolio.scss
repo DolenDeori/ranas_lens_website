@@ -19,6 +19,14 @@ header {
 
 //? MAIN BODY STYLING start --------------------------
 main {
+    section.section_hidden {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    section.area {
+        transition: all 0.5s ease-in;
+    }
+
     section.section {
         margin: 8rem 4rem 0;
 
