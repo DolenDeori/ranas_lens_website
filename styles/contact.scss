@@ -3,183 +3,153 @@
 @import "./global/footer";
 @import "./global/responsive";
 
-//? CONTACT HEADER AREA STYLING start -------------------------------
-header {
-    @include make_header();
-
-    .hero_text_container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        padding: 1rem 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: $color_white;
-        border-bottom: 1px solid $color_primary;
-
-        .contact_info {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100%;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-
-            a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 0.5rem;
-                color: $color_primary;
-
-                svg {
-                    fill: $color_primary;
-                }
-            }
-        }
-    }
+// STYLE FILE GLOBAL SETTING
+.sub_title {
+    font-size: $paragraph;
+    font-family: $paragraph_font;
+    font-weight: 500;
+    color: $color_primary;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
-//? CONTACT HEADER AREA STYLING end -------------------------------
-
-//? MAIN BODY STYLING start ---------------------------------------
+header {
+    @include make_header();
+    height: 80vh;
+}
 
 main {
-    padding: 0rem 8rem;
+    section.section {
+        margin: 8rem 4rem 0; // top | left and right | bottom
 
-    //? CONTACT INFO AREA STYLING ------------
-    section.contact_info_area {
-        margin-top: 4rem;
-        text-align: center;
-
-        h1 {
-            font-size: $heading_2;
-        }
-
-        p {
-            width: 60%;
-            margin: 1rem auto;
+        &:last-child {
+            margin-bottom: 8rem;
         }
     }
 
-    //? CONTACT FORM AREA STYLING ------------
-    section.contact_form_area {
-        form {
-            width: 70%;
-            margin: 6rem auto;
-        }
+    section.contact_section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
 
-        .input_group_area {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
+        .contact_section_right {
+            grid-column: span 2;
+            h1.contact_section_title {
+                font-size: $heading_3;
+                margin-bottom: 1rem;
+            }
 
-            .input_group {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                width: 100%;
-                margin-bottom: 2rem;
+            form.contact_form {
+                margin-top: 2rem;
+                .contact_input_area {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 1rem;
 
-                .error {
-                    color: $color_error;
-                }
+                    .contact_input_box {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 0.5rem;
+                        width: 100%;
 
-                label {
-                    font-family: $paragraph_font;
-                    // font-weight: bold;
-                    color: $dark100;
+                        label.contact_label {
+                            font-family: $paragraph_font;
+                            font-size: $paragraph;
+                        }
 
-                    &.error {
-                        color: $color_error;
+                        input.contact_input,
+                        select.select_contact_input,
+                        textarea.input_message {
+                            padding: 0.5rem 1rem;
+                            width: 100%;
+                            outline: none;
+                            border: 1px solid $dark25;
+                            border-radius: $border_radius;
+                            font-family: $paragraph_font;
+                            font-size: $paragraph;
+                            transition: all 0.2s ease-in-out;
+
+                            &:active,
+                            &:focus {
+                                border: 1px solid $dark75;
+                            }
+                        }
+
+                        textarea.input_message {
+                            min-width: 100%;
+                            max-width: 100%;
+                            min-height: 20vh;
+                        }
                     }
                 }
 
-                input,
-                select,
-                textarea {
-                    outline: none;
-                    width: 100%;
-                    height: 2.5rem;
-                    margin-top: 0.5rem;
-                    padding: 0.5rem;
-                    font-family: $paragraph_font;
-                    font-size: $paragraph;
-                    border-radius: $border_radius;
-                    background-color: $dark5;
-                    border: 2px solid $dark10;
+                button.contact_form_submit_btn {
+                    margin-top: 1rem;
+                    @include make_button($color_primary, $color_white, $color_primary_light, $color_primary);
+                    cursor: pointer;
                 }
-
-                textarea {
-                    height: 8rem;
-                    width: 100%;
-                    resize: vertical;
-                    max-height: 10rem;
-                    min-height: 3rem;
-                }
-            }
-        }
-
-        button.btn {
-            cursor: pointer;
-            gap: 1rem;
-            width: 100%;
-            margin-top: 2rem;
-            border: none;
-            outline: none;
-
-            &.disabled {
-                cursor: not-allowed;
-                opacity: 50%;
-            }
-
-            &:hover svg {
-                transform: translate(5px);
-            }
-
-            svg {
-                height: 1rem;
-                transition: all 0.3s ease-in-out;
-                fill: $color_white;
             }
         }
     }
 }
 
-//? RESPONSIVE STYLING
 @include tablet {
-    main {
-        padding: 0rem 4rem;
+    .hero_container {
+        .hero_text_container {
+            padding: 0 4rem;
 
-        section.contact_info_area {
-            h1 {
-                font-size: $heading_2;
+            .hero_title_text {
+                font-size: $heading_3;
             }
 
-            p {
-                font-size: $paragraph;
-                width: 100%;
-                margin: auto;
+            .hero_body_text {
+                padding-right: 0.5rem;
+                width: 90%;
             }
         }
+    }
 
-        section.contact_form_area form {
-            width: 100%;
-            margin: 2rem auto;
+    main section.section {
+        margin: 4rem 4rem 0; // top | left and right | bottom
 
-            .input_group_area .input_group {
-                label p {
-                    font-size: $paragraph;
+        &:last-child {
+            margin-bottom: 4rem;
+        }
+    }
+
+    main section.contact_section {
+        grid-template-columns: repeat(4, 1fr);
+
+        .contact_section_right {
+            grid-column: span 3;
+            h1.contact_section_title {
+                line-height: 3.5rem;
+            }
+
+            form.contact_form {
+                .contact_select {
+                    flex-direction: column;
                 }
+            }
+        }
+    }
+}
 
-                input,
-                select,
-                textarea {
-                    font-size: $paragraph;
+@media screen and (max-width: 780px) {
+    main section.contact_section {
+        grid-template-columns: repeat(1, 1fr);
+
+        .contact_section_right {
+            h1.contact_section_title {
+                line-height: 3.5rem;
+            }
+
+            form.contact_form {
+                .contact_select {
+                    flex-direction: column;
                 }
             }
         }
@@ -187,50 +157,37 @@ main {
 }
 
 @include mobile {
-    header {
+    .hero_container {
         .hero_text_container {
-            .contact_info a {
-                svg {
-                    height: 0.7rem;
-                }
+            padding: 0 2rem;
 
-                p {
-                    font-size: $paragraph;
-                }
+            .hero_title_text {
+                font-size: $heading_4;
+            }
+
+            .hero_body_text {
+                width: 100%;
             }
         }
     }
 
-    main {
-        padding: 0rem 2rem;
+    main section.section {
+        margin: 4rem 2rem 0;
+    }
 
-        section.contact_info_area {
-            text-align: left;
+    main section.contact_section {
+        grid-template-columns: repeat(1, 1fr);
 
-            h1 {
-                font-size: $heading_3;
-            }
-        }
-
-        section.contact_form_area {
-            .input_group_area {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0rem;
-
-                .input_group {
-                    margin-bottom: 1rem;
-                }
-
-                textarea {
-                    height: 5rem !important;
-                    max-height: 8rem;
-                    min-height: 3rem;
-                }
+        .contact_section_right {
+            h1.contact_section_title {
+                font-size: $heading_4;
+                line-height: 3rem;
             }
 
-            button.btn {
-                font-size: $paragraph;
+            form.contact_form {
+                .contact_input_area {
+                    flex-direction: column;
+                }
             }
         }
     }
