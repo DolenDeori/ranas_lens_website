@@ -35,6 +35,27 @@ p {
   height: 100%;
 }
 
+.loading_screen {
+  content: "";
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: #fcffff;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.loading_screen.hide_loadin_screen {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
 nav.nav_container {
   position: fixed;
   display: flex;
@@ -263,6 +284,27 @@ p {
 .main_body {
   min-height: 100vh;
   height: 100%;
+}
+
+.loading_screen {
+  content: "";
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: #fcffff;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.loading_screen.hide_loadin_screen {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
 }
 
 footer.footer_area {
