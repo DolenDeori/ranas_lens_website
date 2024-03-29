@@ -56,6 +56,14 @@ p {
   display: none;
 }
 
+body {
+  opacity: 0;
+}
+body.open_body {
+  opacity: 100%;
+  transition: 0.5s ease-in;
+}
+
 nav.nav_container {
   position: fixed;
   display: flex;
@@ -305,6 +313,14 @@ p {
   opacity: 0;
   pointer-events: none;
   display: none;
+}
+
+body {
+  opacity: 0;
+}
+body.open_body {
+  opacity: 100%;
+  transition: 0.5s ease-in;
 }
 
 footer.footer_area {

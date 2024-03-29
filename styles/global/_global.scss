@@ -167,3 +167,12 @@ p {
         display: none;
     }
 }
+
+body {
+    opacity: 0;
+
+    &.open_body {
+        opacity: 100%;
+        transition: 0.5s ease-in;
+    }
+}
