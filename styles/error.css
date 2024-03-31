@@ -30,11 +30,6 @@ p {
   font-size: 1rem;
 }
 
-.main_body {
-  min-height: 100vh;
-  height: 100%;
-}
-
 .loading_screen {
   content: "";
   position: fixed;
@@ -56,10 +51,12 @@ p {
   display: none;
 }
 
-body {
+.main_body {
+  min-height: 100vh;
+  height: 100%;
   opacity: 0;
 }
-body.open_body {
+.main_body.open_body {
   opacity: 100%;
   transition: 0.5s ease-in;
 }
@@ -289,11 +286,6 @@ p {
   font-size: 1rem;
 }
 
-.main_body {
-  min-height: 100vh;
-  height: 100%;
-}
-
 .loading_screen {
   content: "";
   position: fixed;
@@ -315,10 +307,12 @@ p {
   display: none;
 }
 
-body {
+.main_body {
+  min-height: 100vh;
+  height: 100%;
   opacity: 0;
 }
-body.open_body {
+.main_body.open_body {
   opacity: 100%;
   transition: 0.5s ease-in;
 }

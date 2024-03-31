@@ -139,12 +139,6 @@ p {
     }
 }
 
-//? MAINBODY STYLING
-.main_body {
-    min-height: 100vh;
-    height: 100%;
-}
-
 // LOADING ANIMATION
 .loading_screen {
     content: "";
@@ -168,7 +162,10 @@ p {
     }
 }
 
-body {
+//? MAINBODY STYLING
+.main_body {
+    min-height: 100vh;
+    height: 100%;
     opacity: 0;
 
     &.open_body {
