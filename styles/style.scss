@@ -22,7 +22,7 @@ main {
         opacity: 0;
         transform: translateY(1rem);
     }
-    
+
     section.area {
         transition: all 0.5s ease-in;
     }
@@ -141,7 +141,7 @@ main {
                     transition: all 0.2s ease-in-out;
                 }
 
-                &:hover > .card_image {
+                &:hover>.card_image {
                     opacity: 50%;
                 }
 
@@ -282,7 +282,7 @@ main {
                     }
                 }
 
-                &:hover > .portfolio_img {
+                &:hover>.portfolio_img {
                     opacity: 80%;
                 }
             }
@@ -327,15 +327,19 @@ main {
                 &:nth-child(1) {
                     grid-area: one;
                 }
+
                 &:nth-child(2) {
                     grid-area: two;
                 }
+
                 &:nth-child(3) {
                     grid-area: three;
                 }
+
                 &:nth-child(4) {
                     grid-area: four;
                 }
+
                 &:nth-child(5) {
                     grid-area: five;
                 }
@@ -362,13 +366,16 @@ main {
 
                     .testimonial_info {
                         color: $color_white;
+
                         .testimonial_name {
                             font-family: $paragraph_font;
                             font-size: $heading_6;
                             font-weight: $medium;
                         }
+
                         .testimonial_title {
                             color: $color_primary;
+                            font-size: 14px;
                         }
                     }
                 }
@@ -382,6 +389,7 @@ main {
                 .testimonial_review_area {
                     color: $color_white;
                     font-family: $paragraph_font;
+
                     h1.testimonial_review_title {
                         font-size: $heading_6;
                         font-family: $paragraph_font;
@@ -391,6 +399,7 @@ main {
 
                     p.testimonial_review {
                         font-weight: $light;
+                        line-height: 1.5rem;
                     }
                 }
             }
@@ -450,9 +459,11 @@ main {
                             align-items: center;
                             gap: 1rem;
                             transition: all 0.2s ease-in-out;
+
                             &:hover {
                                 border: 1px solid #ffffff77;
                             }
+
                             i.contact_icon {
                                 padding: 1rem;
                                 background: $dark75;
@@ -462,6 +473,7 @@ main {
                         }
                     }
                 }
+
                 .contact_cta_btn {
                     .contact_btn {
                         @include make_button($color_white, $dark75, $dark75, $color_white);
@@ -520,14 +532,15 @@ main {
                     border: 1px solid #33333379;
                 }
 
-                &:hover > .insta_img_area .insta_img {
+                &:hover>.insta_img_area .insta_img {
                     opacity: 80%;
                 }
 
-                &:hover > .insta_img_area .insta_btn_link_text {
+                &:hover>.insta_img_area .insta_btn_link_text {
                     opacity: 1;
                     transform: translate(-50%, -50%);
                 }
+
                 .insta_profile_info_area {
                     display: flex;
                     align-items: center;
@@ -547,8 +560,9 @@ main {
                         h1.insta_username {
                             font-family: $paragraph_font;
                             font-size: 1rem;
-                            font-weight: $semi_bold;
+                            font-weight: lighter;
                         }
+
                         p.insta_post_date {
                             font-size: 12px;
                             color: $dark25;
@@ -569,6 +583,7 @@ main {
                         object-fit: cover;
                         transition: all 0.2s ease-in-out;
                     }
+
                     .insta_btn_link_text {
                         position: absolute;
                         top: 50%;
@@ -644,6 +659,7 @@ main {
         .testimonial_section_text_area {
             text-align: left;
         }
+
         .testimonial_cards_area {
             gap: 1rem;
             grid-template-areas:
@@ -892,6 +908,7 @@ main {
 
             .portfolio_img_card {
                 max-height: 45vh;
+
                 .portfolio_img {
                     object-position: top;
                 }
@@ -922,6 +939,7 @@ main {
                     justify-content: flex-start;
                     align-items: flex-start;
                 }
+
                 .testimonial_review_area {
                     p.testimonial_review {
                         line-height: 1.5rem;
@@ -959,12 +977,14 @@ main {
                 line-height: 3rem;
             }
         }
+
         .insta_cards_area {
             .insta_card {
                 .insta_profile_info_area {
                     padding: 0.6rem;
                     gap: 0.6rem;
                 }
+
                 .insta_like_comment_area {
                     padding: 0.6rem;
                 }

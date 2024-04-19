@@ -475,7 +475,7 @@ main section.insta_section .insta_cards_area .insta_card .insta_profile_info_are
 main section.insta_section .insta_cards_area .insta_card .insta_profile_info_area .insta_profile_info h1.insta_username {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: lighter;
 }
 main section.insta_section .insta_cards_area .insta_card .insta_profile_info_area .insta_profile_info p.insta_post_date {
   font-size: 12px;

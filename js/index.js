@@ -1,10 +1,12 @@
+"use strict";
+
 const loadingScreen = document.querySelector(".loading_screen");
 
 const body = document.querySelector(".main_body");
 
 window.addEventListener("load", () => {
   loadingScreen.classList.add("hide_loadin_screen");
-  
+
   body.classList.add("open_body");
 
   const pageArea = document.querySelectorAll(".area");
