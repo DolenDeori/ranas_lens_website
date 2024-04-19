@@ -242,13 +242,13 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 @media screen and (max-width: 550px) {
   nav.nav_container {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
   }
   nav.nav_container .logo_container .logo {
     height: 35px;
   }
   .nav_link_container ul.nav_links {
-    padding: 0em 2rem;
+    padding: 0em 1rem;
   }
   .nav_link_container ul.nav_links .link_area .links a {
     font-size: 2.369rem;
@@ -344,7 +344,7 @@ footer.footer_area .social_container a.footer_social_link i.social_icons:hover {
     text-align: center;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1rem;
     gap: 1rem;
   }
 }

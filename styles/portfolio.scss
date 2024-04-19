@@ -23,6 +23,7 @@ main {
         opacity: 0;
         transform: translateY(1rem);
     }
+
     section.area {
         transition: all 0.5s ease-in;
     }
@@ -192,7 +193,7 @@ main {
 @include mobile {
     .hero_container {
         .hero_text_container {
-            padding: 0 2rem;
+            padding: 0 1rem;
 
             .hero_title_text {
                 font-size: $heading_4;
@@ -205,7 +206,7 @@ main {
     }
 
     main section.section {
-        margin: 4rem 2rem 0;
+        margin: 4rem 1rem 0;
     }
 
     section.fashion_pics {

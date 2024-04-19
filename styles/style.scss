@@ -826,7 +826,7 @@ main {
 @include mobile {
     .hero_container {
         .hero_text_container {
-            padding: 0 2rem;
+            padding: 0 1rem;
 
             .hero_title_text {
                 font-size: $heading_4;
@@ -839,7 +839,7 @@ main {
     }
 
     main section.section {
-        margin: 4rem 2rem 0;
+        margin: 4rem 1rem 0;
     }
 
     main section.about_section {
@@ -877,7 +877,7 @@ main {
     }
 
     main section.services_section {
-        padding: 4rem 2rem;
+        padding: 2rem 1rem;
 
         .service_section_info {
             text-align: left;
@@ -922,7 +922,7 @@ main {
 
     main section.testimonial_section {
         margin: 4rem 0 0 0;
-        padding: 4rem 2rem;
+        padding: 2rem 1rem;
 
         .testimonial_section_text_area {
             text-align: left;
@@ -953,7 +953,8 @@ main {
         .contact_section_area {
             .contact_section_info {
                 .contact_info_text {
-                    padding: 0 2rem;
+                    padding: 0rem 1rem;
+                    padding-bottom: 2rem;
 
                     h1.contact_section_title {
                         font-size: $heading_4;

@@ -278,7 +278,7 @@ main {
 @include mobile {
     .hero_container {
         .hero_content_area {
-            padding: 6rem 2rem 2rem 2rem;
+            padding: 6rem 1rem 2rem 1rem; // top | Right | Botton | Left
 
             .hero_image_area {
                 grid-template-rows: 30vh 20vh 20vh;
@@ -300,7 +300,7 @@ main {
     }
 
     main section.section {
-        margin: 4rem 2rem 0;
+        margin: 4rem 1rem 0;
     }
 
     main section.insta_section {

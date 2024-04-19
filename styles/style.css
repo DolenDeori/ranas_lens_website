@@ -242,13 +242,13 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 @media screen and (max-width: 550px) {
   nav.nav_container {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
   }
   nav.nav_container .logo_container .logo {
     height: 35px;
   }
   .nav_link_container ul.nav_links {
-    padding: 0em 2rem;
+    padding: 0em 1rem;
   }
   .nav_link_container ul.nav_links .link_area .links a {
     font-size: 2.369rem;
@@ -344,7 +344,7 @@ footer.footer_area .social_container a.footer_social_link i.social_icons:hover {
     text-align: center;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1rem;
     gap: 1rem;
   }
 }
@@ -1081,7 +1081,7 @@ main section.insta_section .insta_cards_area .insta_card .insta_like_comment_are
 }
 @media screen and (max-width: 550px) {
   .hero_container .hero_text_container {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
   .hero_container .hero_text_container .hero_title_text {
     font-size: 2.369rem;
@@ -1090,7 +1090,7 @@ main section.insta_section .insta_cards_area .insta_card .insta_like_comment_are
     width: 100%;
   }
   main section.section {
-    margin: 4rem 2rem 0;
+    margin: 4rem 1rem 0;
   }
   main section.about_section {
     flex-direction: column;
@@ -1117,7 +1117,7 @@ main section.insta_section .insta_cards_area .insta_card .insta_like_comment_are
     font-size: 2.369rem;
   }
   main section.services_section {
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
   }
   main section.services_section .service_section_info {
     text-align: left;
@@ -1148,7 +1148,7 @@ main section.insta_section .insta_cards_area .insta_card .insta_like_comment_are
   }
   main section.testimonial_section {
     margin: 4rem 0 0 0;
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
   }
   main section.testimonial_section .testimonial_section_text_area {
     text-align: left;
@@ -1165,7 +1165,8 @@ main section.insta_section .insta_cards_area .insta_card .insta_like_comment_are
     line-height: 1.5rem;
   }
   main section.contact_section .contact_section_area .contact_section_info .contact_info_text {
-    padding: 0 2rem;
+    padding: 0rem 1rem;
+    padding-bottom: 2rem;
   }
   main section.contact_section .contact_section_area .contact_section_info .contact_info_text h1.contact_section_title {
     font-size: 2.369rem;

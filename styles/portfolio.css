@@ -242,13 +242,13 @@ nav.nav_container .social_container i.social_icons:hover {
 }
 @media screen and (max-width: 550px) {
   nav.nav_container {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
   }
   nav.nav_container .logo_container .logo {
     height: 35px;
   }
   .nav_link_container ul.nav_links {
-    padding: 0em 2rem;
+    padding: 0em 1rem;
   }
   .nav_link_container ul.nav_links .link_area .links a {
     font-size: 2.369rem;
@@ -344,7 +344,7 @@ footer.footer_area .social_container a.footer_social_link i.social_icons:hover {
     text-align: center;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1rem;
     gap: 1rem;
   }
 }
@@ -543,7 +543,7 @@ main section.portfolio_section .gallery .img_container img.gallery_image {
 }
 @media screen and (max-width: 550px) {
   .hero_container .hero_text_container {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
   .hero_container .hero_text_container .hero_title_text {
     font-size: 2.369rem;
@@ -552,7 +552,7 @@ main section.portfolio_section .gallery .img_container img.gallery_image {
     width: 100%;
   }
   main section.section {
-    margin: 4rem 2rem 0;
+    margin: 4rem 1rem 0;
   }
   section.fashion_pics .gallery {
     grid-template-columns: repeat(1, 1fr);

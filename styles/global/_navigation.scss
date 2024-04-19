@@ -227,7 +227,7 @@ nav.nav_container {
 
 @include mobile {
     nav.nav_container {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
 
         .logo_container .logo {
             height: 35px;
@@ -236,7 +236,7 @@ nav.nav_container {
 
     .nav_link_container {
         ul.nav_links {
-            padding: 0em 2rem;
+            padding: 0em 1rem;
 
             .link_area .links a {
                 font-size: $heading_4;

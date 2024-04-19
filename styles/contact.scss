@@ -44,24 +44,29 @@ main {
         .contact_section_left {
             .contact_info_box {
                 margin-bottom: 1rem;
+
                 .contact_title,
                 .contact_info {
                     font-family: $paragraph_font;
                     font-size: $paragraph;
                     margin-bottom: 0.4rem;
-                    font-weight: $bold;
+                    // font-weight: $bold;
                 }
+
                 .contact_info {
                     border-bottom: 1px dashed blue;
                 }
+
                 .social_media_title {
                     margin-bottom: 1rem;
                 }
             }
+
             .contact_social_info {
                 .contact_section_social_icons {
                     display: flex;
                     gap: 1rem;
+
                     .contact_icons {
                         padding: 0.5rem;
                         background: $dark100;
@@ -80,6 +85,7 @@ main {
 
         .contact_section_right {
             grid-column: span 2;
+
             h1.contact_section_title {
                 font-size: $heading_3;
                 margin-bottom: 1rem;
@@ -87,6 +93,7 @@ main {
 
             form.contact_form {
                 margin-top: 2rem;
+
                 .contact_input_area {
                     display: flex;
                     justify-content: flex-start;
@@ -205,7 +212,7 @@ main {
 @include mobile {
     .hero_container {
         .hero_text_container {
-            padding: 0 2rem;
+            padding: 0 1rem;
 
             .hero_title_text {
                 font-size: $heading_4;
@@ -218,7 +225,7 @@ main {
     }
 
     main section.section {
-        margin: 4rem 2rem 0;
+        margin: 4rem 1rem 0;
     }
 
     main section.contact_section {
