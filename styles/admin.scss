@@ -1,0 +1,53 @@
+@import "./global/global";
+@import "./global/responsive";
+
+
+.main_admin_login_body {
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+
+    .login_form_body {
+        .admin_page_title {
+            font-family: $heading_font;
+            margin-bottom: 3rem;
+        }
+
+        .form_box {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            margin-bottom: 1rem;
+
+            .admin_label {
+                font-family: $paragraph_font;
+            }
+
+            input.admin_input {
+                padding: 0.5rem 1rem;
+                width: 100%;
+                outline: none;
+                border: 1px solid $dark25;
+                border-radius: $border_radius;
+                font-family: $paragraph_font;
+                font-size: $paragraph;
+                transition: border 0.2s ease-in-out;
+
+                &:active,
+                &:focus {
+                    border: 1px solid $dark75;
+                }
+            }
+        }
+
+        .admin_login_btn {
+            margin-top: 1rem;
+            @include make_button($color_primary, $color_white, $color_primary_light, $color_primary);
+            cursor: pointer;
+        }
+    }
+}

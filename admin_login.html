@@ -4,20 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin - Through Rana's Lens</title>
+
+    <!-- CUSTOM CSS FILE -->
+    <link rel="stylesheet" href="styles/admin.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LOTTIE SCRIPT -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
-    <div class="login_form_body">
-      <form action="" method="post">
-        <div class="admin_user_name">
-          <label for="" class="admin_username_label">Username</label>
-          <input type="text" />
-        </div>
-        <div class="admin_user_name">
-          <label for="" class="admin_username_label">Password</label>
-          <input type="Password" />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+    <div class="main_admin_login_body">
+      <div class="login_form_body">
+        <h1 class="admin_page_title">Admin Login</h1>
+        <form action="" method="post">
+          <div class="form_box">
+            <label for="adminEmail" class="admin_label"> Your Email </label>
+            <input
+              class="admin_input"
+              type="email"
+              name="email"
+              id="adminEmail"
+            />
+          </div>
+          <div class="form_box">
+            <label for="adminPassword" class="admin_label"> Password </label>
+            <input
+              class="admin_input"
+              type="Password"
+              name="password"
+              id="adminPassword"
+            />
+          </div>
+          <button class="admin_login_btn" type="submit">Login</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

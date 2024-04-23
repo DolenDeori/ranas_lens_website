@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcffff;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.loading_screen {
+  content: "";
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: #fcffff;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.loading_screen.hide_loadin_screen {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.main_body {
+  min-height: 100vh;
+  height: 100%;
+  opacity: 0;
+}
+.main_body.open_body {
+  opacity: 100%;
+  transition: 0.5s ease-in;
+}
+
+.main_admin_login_body {
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.main_admin_login_body .login_form_body .admin_page_title {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 3rem;
+}
+.main_admin_login_body .login_form_body .form_box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.main_admin_login_body .login_form_body .form_box .admin_label {
+  font-family: "Open Sans", sans-serif;
+}
+.main_admin_login_body .login_form_body .form_box input.admin_input {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(12, 23, 28, 0.2509803922);
+  border-radius: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  transition: border 0.2s ease-in-out;
+}
+.main_admin_login_body .login_form_body .form_box input.admin_input:active, .main_admin_login_body .login_form_body .form_box input.admin_input:focus {
+  border: 1px solid rgba(12, 23, 28, 0.7490196078);
+}
+.main_admin_login_body .login_form_body .admin_login_btn {
+  margin-top: 1rem;
+  background-color: #ad50d2;
+  padding: 0.6rem 2rem;
+  border-radius: 10rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fcffff;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #ad50d2;
+  cursor: pointer;
+}
+.main_admin_login_body .login_form_body .admin_login_btn:hover {
+  background: rgba(173, 80, 210, 0.2431372549);
+  color: #ad50d2;
+}/*# sourceMappingURL=admin.css.map */
