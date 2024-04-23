@@ -20,6 +20,9 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
+    <div class="error_body">
+      <p>No user found with this email or password !</p>
+    </div>
     <div class="main_admin_login_body">
       <div class="login_form_body">
         <h1 class="admin_page_title">Admin Login</h1>
@@ -31,6 +34,8 @@
               type="email"
               name="email"
               id="adminEmail"
+              placeholder="user@email.com"
+              required
             />
           </div>
           <div class="form_box">
@@ -40,6 +45,8 @@
               type="Password"
               name="password"
               id="adminPassword"
+              placeholder="Password"
+              required
             />
           </div>
           <button class="admin_login_btn" type="submit">Login</button>
