@@ -1,0 +1,66 @@
+@import "../global/_global";
+@import '../global/responsive';
+
+header {
+    nav {
+
+        .navbar-toggler,
+        .navbar-toggler-icon {
+            border: 0;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-toggler:focus,
+        .navbar-toggler:active,
+        .navbar-toggler-icon:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-collapse {
+            .nav-item {
+                .nav-link {
+                    font-family: $paragraph_font;
+                    font-size: $paragraph;
+
+                    &.active {
+                        color: $color_primary;
+                    }
+
+                    &:hover {
+                        color: $color_primary;
+                    }
+                }
+            }
+
+            .log_out_btn {
+                @include make_button($color_primary, $color_white, $color_primary_light, $color_primary)
+            }
+        }
+    }
+}
+
+main {
+    section.section {
+        .section_title {
+            h3 {
+                font-family: $heading_font;
+                padding: 1rem 0rem;
+                border-bottom: 1px solid $dark75;
+
+                .admin_name {
+                    color: $color_primary;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    main {
+        section.section {
+            padding: 0 1rem;
+        }
+    }
+}

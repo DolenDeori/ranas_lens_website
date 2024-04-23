@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcffff;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.loading_screen {
+  content: "";
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: #fcffff;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.loading_screen.hide_loadin_screen {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.main_body {
+  min-height: 100vh;
+  height: 100%;
+  opacity: 0;
+}
+.main_body.open_body {
+  opacity: 100%;
+  transition: 0.5s ease-in;
+}
+
+header nav .navbar-toggler,
+header nav .navbar-toggler-icon {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+header nav .navbar-toggler:focus,
+header nav .navbar-toggler:active,
+header nav .navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+header nav .navbar-collapse .nav-item .nav-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+header nav .navbar-collapse .nav-item .nav-link.active {
+  color: #ad50d2;
+}
+header nav .navbar-collapse .nav-item .nav-link:hover {
+  color: #ad50d2;
+}
+header nav .navbar-collapse .log_out_btn {
+  background-color: #ad50d2;
+  padding: 0.6rem 2rem;
+  border-radius: 10rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fcffff;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #ad50d2;
+}
+header nav .navbar-collapse .log_out_btn:hover {
+  background: rgba(173, 80, 210, 0.2431372549);
+  color: #ad50d2;
+}
+
+main section.section .section_title h3 {
+  font-family: "Playfair Display", serif;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid rgba(12, 23, 28, 0.7490196078);
+}
+main section.section .section_title h3 .admin_name {
+  color: #ad50d2;
+}
+
+@media screen and (max-width: 550px) {
+  main section.section {
+    padding: 0 1rem;
+  }
+}/*# sourceMappingURL=dashboard.css.map */
