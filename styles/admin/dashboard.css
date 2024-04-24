@@ -144,34 +144,34 @@ main section.dashboard_heading .section_title h3 .admin_name {
 main section.admin_settings {
   margin: 2rem 0rem;
 }
-main section.admin_settings .container_left {
+main section.admin_settings .container_right {
   padding: 0;
 }
-main section.admin_settings .container_left .image_list_cards {
+main section.admin_settings .container_right .image_list_cards {
   margin-top: 1rem;
   height: 100vh;
   padding: 1rem;
   border-radius: 2rem;
   border: 5px solid rgba(12, 23, 28, 0.7490196078);
-  overflow-y: scroll;
   background-color: rgba(12, 23, 28, 0.0509803922);
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-main section.admin_settings .container_left .image_list_cards::-webkit-scrollbar {
+main section.admin_settings .container_right .image_list_cards::-webkit-scrollbar {
   width: 0rem;
 }
-main section.admin_settings .container_left .image_list_cards::-webkit-scrollbar-track {
+main section.admin_settings .container_right .image_list_cards::-webkit-scrollbar-track {
   background-color: rgba(12, 23, 28, 0.2509803922);
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-main section.admin_settings .container_left .image_list_cards::-webkit-scrollbar-thumb {
+main section.admin_settings .container_right .image_list_cards::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   background-color: rgba(12, 23, 28, 0.7490196078);
 }
-main section.admin_settings .container_left .image_list_cards .image_card {
+main section.admin_settings .container_right .image_list_cards .image_card {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -183,49 +183,54 @@ main section.admin_settings .container_left .image_list_cards .image_card {
   background: #fcffff;
   box-shadow: 1px 1px 10px rgba(12, 23, 28, 0.0509803922);
 }
-main section.admin_settings .container_left .image_list_cards .image_card .small_image_view .image_view {
+main section.admin_settings .container_right .image_list_cards .image_card .small_image_view .image_view {
   height: 40px;
-  border-radius: 1rem;
+  width: 40px;
+  border-radius: 0.5rem;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
-main section.admin_settings .container_left .image_list_cards .image_card .line {
+main section.admin_settings .container_right .image_list_cards .image_card .line {
   content: "";
   width: 0.1rem;
   height: 3rem;
   background: rgba(12, 23, 28, 0.2509803922);
 }
-main section.admin_settings .container_left .image_list_cards .image_card .image_info {
+main section.admin_settings .container_right .image_list_cards .image_card .image_info {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 100%;
   font-family: 1rem;
 }
-main section.admin_settings .container_left .image_list_cards .image_card .image_info .image_title {
-  font-size: 1.333rem;
+main section.admin_settings .container_right .image_list_cards .image_card .image_info .image_title {
+  font-size: 1rem;
+  font-weight: 500;
 }
-main section.admin_settings .container_left .image_list_cards .image_card .image_info .image_uplod_date {
+main section.admin_settings .container_right .image_list_cards .image_card .image_info .image_uplod_date {
   font-size: 12px;
 }
-main section.admin_settings .container_left .image_list_cards .image_card .image_operation {
+main section.admin_settings .container_right .image_list_cards .image_card .image_operation {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
 }
-main section.admin_settings .container_left .image_list_cards .image_card .image_operation .image_operation_icon {
+main section.admin_settings .container_right .image_list_cards .image_card .image_operation .image_operation_icon {
   padding: 0.5rem;
   border-radius: 1rem;
 }
-main section.admin_settings .container_left .image_list_cards .image_card .image_operation .image_operation_icon:hover {
+main section.admin_settings .container_right .image_list_cards .image_card .image_operation .image_operation_icon:hover {
   background-color: rgba(173, 80, 210, 0.2431372549);
 }
-main section.admin_settings .container_left .image_list_cards .image_card .image_operation .icon_delete:hover {
+main section.admin_settings .container_right .image_list_cards .image_card .image_operation .icon_delete:hover {
   color: #fa402f;
+  background-color: rgba(250, 64, 47, 0.2431372549);
 }
-main section.admin_settings .container_left .image_list_cards .image_card .image_operation .icon_view:hover,
-main section.admin_settings .container_left .image_list_cards .image_card .image_operation .icon_edit:hover {
+main section.admin_settings .container_right .image_list_cards .image_card .image_operation .icon_view:hover,
+main section.admin_settings .container_right .image_list_cards .image_card .image_operation .icon_edit:hover {
   color: #ad50d2;
 }
 
@@ -242,5 +247,16 @@ main section.admin_settings .container_left .image_list_cards .image_card .image
   }
   main section.section {
     padding: 0 1rem;
+  }
+  main section.admin_settings .amdin_items_container {
+    margin-bottom: 2rem;
+  }
+  main section.admin_settings .container_right .image_list_cards .image_card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  main section.admin_settings .container_right .image_list_cards .image_card .line {
+    display: none;
   }
 }/*# sourceMappingURL=dashboard.css.map */

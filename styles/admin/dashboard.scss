@@ -96,7 +96,7 @@ main {
     section.admin_settings {
         margin: 2rem 0rem;
 
-        .container_left {
+        .container_right {
             padding: 0;
 
             .image_list_cards {
@@ -105,8 +105,8 @@ main {
                 padding: 1rem;
                 border-radius: calc($border_radius + 1rem);
                 border: 5px solid $dark75;
-                overflow-y: scroll;
                 background-color: $dark5;
+                overflow-y: scroll;
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
@@ -141,8 +141,10 @@ main {
                     .small_image_view {
                         .image_view {
                             height: 40px;
-                            border-radius: $border_radius;
+                            width: 40px;
+                            border-radius: calc($border_radius - .5rem);
                             object-fit: cover;
+                            object-position: top;
                         }
                     }
 
@@ -162,7 +164,8 @@ main {
                         font-family: $paragraph;
 
                         .image_title {
-                            font-size: $heading_6;
+                            font-size: $paragraph;
+                            font-weight: $medium;
                         }
 
                         .image_uplod_date {
@@ -188,6 +191,7 @@ main {
                         .icon_delete {
                             &:hover {
                                 color: $color_error;
+                                background-color: $color_error_light;
                             }
                         }
 
@@ -219,6 +223,26 @@ main {
     main {
         section.section {
             padding: 0 1rem;
+        }
+
+        section.admin_settings {
+            .amdin_items_container {
+                margin-bottom: 2rem;
+            }
+
+            .container_right {
+                .image_list_cards {
+                    .image_card {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: .5rem;
+
+                        .line {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
     }
 }
