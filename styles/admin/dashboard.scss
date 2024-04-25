@@ -143,15 +143,14 @@ main {
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 1.5rem;
-                align-items: center;
 
                 .image_upload_btn {
-                    padding: .5rem 1rem;
                     background-color: $color_success;
                     border: 1px solid $color_success;
-                    border-radius: 10rem;
-                    color: $color_white;
                     font-family: $paragraph_font;
+                    color: $color_white;
+                    border-radius: 10rem;
+                    padding: .5rem 1rem;
                     transition: 0.2s ease-in-out;
 
                     &:hover {
@@ -162,19 +161,18 @@ main {
             }
 
             .image_list_cards {
-                margin-top: 1rem;
-                height: 65vh;
-                padding: .5rem;
+                display: flex;
+                flex-direction: column;
+                overflow-y: scroll;
+                background-color: $dark5;
+                border: 5px solid $dark5;
                 border-radius: calc($border_radius + .5rem);
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
-                border: 5px solid $dark5;
-                background-color: $dark5;
-                overflow-y: scroll;
-                overflow-x: hidden;
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
+                height: 65vh;
+                margin-top: 1rem;
+                padding: .5rem;
+                gap: .5rem;
 
                 &::-webkit-scrollbar {
                     width: .4rem;
@@ -186,24 +184,15 @@ main {
                     margin: .3rem;
                 }
 
-                &::-webkit-scrollbar-track {
-                    // background: black;
-                    border-left: 3px solid transparent;
-                    border-right: 3px solid transparent;
-                    background-clip: padding-box;
-                }
-
                 .image_card {
                     display: flex;
                     align-items: center;
-                    justify-content: flex-start;
-                    position: relative;
-                    gap: 1rem;
-                    padding: 1rem;
-                    border-radius: $border_radius;
-                    border: 1px solid $dark25;
                     background: $color_white;
                     box-shadow: 1px 1px 10px $dark5;
+                    border: 1px solid $dark25;
+                    border-radius: $border_radius;
+                    padding: 1rem;
+                    gap: 1rem;
 
                     .small_image_view {
                         .image_view {
@@ -252,6 +241,7 @@ main {
 
                             &:hover {
                                 background-color: $color_primary_light;
+                                color: $color_primary;
                             }
                         }
 
@@ -259,13 +249,6 @@ main {
                             &:hover {
                                 color: $color_error;
                                 background-color: $color_error_light;
-                            }
-                        }
-
-                        .icon_view,
-                        .icon_edit {
-                            &:hover {
-                                color: $color_primary;
                             }
                         }
                     }
@@ -288,10 +271,6 @@ main {
     }
 
     main {
-        section.section {
-            padding: 0 1rem;
-        }
-
         section.admin_settings {
             .amdin_items_container {
                 margin-bottom: 2rem;
@@ -309,7 +288,6 @@ main {
                     .image_card {
                         flex-direction: column;
                         align-items: flex-start;
-                        gap: .5rem;
 
                         .line {
                             display: none;
