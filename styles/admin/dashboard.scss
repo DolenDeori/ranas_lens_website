@@ -137,6 +137,30 @@ main {
         .container_right {
             padding: 0;
 
+            .image_container_heading {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                align-items: center;
+
+                .image_upload_btn {
+                    padding: .5rem 1rem;
+                    background-color: $color_success;
+                    border: 1px solid $color_success;
+                    border-radius: 10rem;
+                    color: $color_white;
+                    font-family: $paragraph_font;
+                    transition: 0.2s ease-in-out;
+
+                    &:hover {
+                        background-color: $color_success_light;
+                        color: $color_success;
+                    }
+                }
+            }
+
             .image_list_cards {
                 margin-top: 1rem;
                 height: 65vh;

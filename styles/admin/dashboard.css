@@ -175,6 +175,27 @@ main section.admin_settings .container_left .admin_info_form .form_btn_group .ad
 main section.admin_settings .container_right {
   padding: 0;
 }
+main section.admin_settings .container_right .image_container_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+main section.admin_settings .container_right .image_container_heading .image_upload_btn {
+  padding: 0.5rem 1rem;
+  background-color: #12c212;
+  border: 1px solid #12c212;
+  border-radius: 10rem;
+  color: #fcffff;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.2s ease-in-out;
+}
+main section.admin_settings .container_right .image_container_heading .image_upload_btn:hover {
+  background-color: rgba(18, 194, 18, 0.2431372549);
+  color: #12c212;
+}
 main section.admin_settings .container_right .image_list_cards {
   margin-top: 1rem;
   height: 65vh;
