@@ -62,10 +62,7 @@
                 >
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#">Portfolio</a>
+                <a class="nav-link" href="#">View images</a>
               </li>
             </ul>
             <a href="#" class="btn log_out_btn mx-2"
@@ -100,36 +97,30 @@
             <div class="admin_info_container container_left">
               <h4 class="admin_welcome_text">Welcome Dolen Deori</h4>
               <form class="admin_info_form mt-3" method="POST">
-                <div class="row">
-                  <div class="mb-3 col-lg-6 col-md-6 col-sm-12">
-                    <label for="first_name" class="form-label admin_info_label"
-                      >First name</label
-                    >
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        name="first_name"
-                        value="Dolen"
-                        class="form-control admin_info_input"
-                        id="first_name"
-                        disabled
-                      />
-                    </div>
-                  </div>
-                  <div class="mb-3 col-lg-6 col-md-6 col-sm-12">
-                    <label for="last_name" class="form-label admin_info_label"
-                      >Last Name</label
-                    >
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        name="last_name"
-                        value="Deori"
-                        class="form-control admin_info_input"
-                        id="last_name"
-                        disabled
-                      />
-                    </div>
+                <div class="row mb-3">
+                  <label
+                    for="username_input"
+                    class="form-label admin_info_label"
+                    >Full Name</label
+                  >
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      aria-label="Full Name"
+                      class="form-control"
+                      value="Dolen Deori"
+                      disabled
+                    />
+                    <span
+                      class="input-group-text input_edit_icon_area"
+                      id="basic-addon1"
+                      ><a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        data-bs-title="Edit Full Name"
+                        ><i class="ri-edit-fill input_edit_icon"></i></a
+                    ></span>
                   </div>
                 </div>
                 <div class="mb-3">
@@ -207,7 +198,7 @@
                 </a>
               </div>
               <div class="image_list_cards">
-                <div class="image_card">
+                <div class="image_card" aria-hidden="true">
                   <div class="small_image_view">
                     <img
                       src="./assests/images/fashion1.webp"
@@ -221,7 +212,289 @@
                       My first Image Lorem ipsum, dolor sit amet consectetur
                       adipisicing.
                     </p>
-                    <p class="image_uplod_date text-muted">21/07/2023</p>
+                    <p class="image_uplod_date text-muted mt-1">21/07/2023</p>
+                  </div>
+                  <div class="image_operation">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="View image"
+                    >
+                      <i class="ri-eye-fill image_operation_icon icon_view"></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Update image"
+                    >
+                      <i
+                        class="ri-edit-fill image_operation_icon icon_edit"
+                      ></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Delete image"
+                    >
+                      <i
+                        class="ri-delete-bin-fill image_operation_icon icon_delete"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="image_card" aria-hidden="true">
+                  <div class="small_image_view">
+                    <img
+                      src="./assests/images/fashion1.webp"
+                      alt=""
+                      class="image_view"
+                    />
+                  </div>
+                  <div class="line"></div>
+                  <div class="image_info">
+                    <p class="image_title">
+                      My first Image Lorem ipsum, dolor sit amet consectetur
+                      adipisicing.
+                    </p>
+                    <p class="image_uplod_date text-muted mt-1">21/07/2023</p>
+                  </div>
+                  <div class="image_operation">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="View image"
+                    >
+                      <i class="ri-eye-fill image_operation_icon icon_view"></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Update image"
+                    >
+                      <i
+                        class="ri-edit-fill image_operation_icon icon_edit"
+                      ></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Delete image"
+                    >
+                      <i
+                        class="ri-delete-bin-fill image_operation_icon icon_delete"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="image_card" aria-hidden="true">
+                  <div class="small_image_view">
+                    <img
+                      src="./assests/images/fashion1.webp"
+                      alt=""
+                      class="image_view"
+                    />
+                  </div>
+                  <div class="line"></div>
+                  <div class="image_info">
+                    <p class="image_title">
+                      My first Image Lorem ipsum, dolor sit amet consectetur
+                      adipisicing.
+                    </p>
+                    <p class="image_uplod_date text-muted mt-1">21/07/2023</p>
+                  </div>
+                  <div class="image_operation">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="View image"
+                    >
+                      <i class="ri-eye-fill image_operation_icon icon_view"></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Update image"
+                    >
+                      <i
+                        class="ri-edit-fill image_operation_icon icon_edit"
+                      ></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Delete image"
+                    >
+                      <i
+                        class="ri-delete-bin-fill image_operation_icon icon_delete"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="image_card" aria-hidden="true">
+                  <div class="small_image_view">
+                    <img
+                      src="./assests/images/fashion1.webp"
+                      alt=""
+                      class="image_view"
+                    />
+                  </div>
+                  <div class="line"></div>
+                  <div class="image_info">
+                    <p class="image_title">
+                      My first Image Lorem ipsum, dolor sit amet consectetur
+                      adipisicing.
+                    </p>
+                    <p class="image_uplod_date text-muted mt-1">21/07/2023</p>
+                  </div>
+                  <div class="image_operation">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="View image"
+                    >
+                      <i class="ri-eye-fill image_operation_icon icon_view"></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Update image"
+                    >
+                      <i
+                        class="ri-edit-fill image_operation_icon icon_edit"
+                      ></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Delete image"
+                    >
+                      <i
+                        class="ri-delete-bin-fill image_operation_icon icon_delete"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="image_card" aria-hidden="true">
+                  <div class="small_image_view">
+                    <img
+                      src="./assests/images/fashion1.webp"
+                      alt=""
+                      class="image_view"
+                    />
+                  </div>
+                  <div class="line"></div>
+                  <div class="image_info">
+                    <p class="image_title">
+                      My first Image Lorem ipsum, dolor sit amet consectetur
+                      adipisicing.
+                    </p>
+                    <p class="image_uplod_date text-muted mt-1">21/07/2023</p>
+                  </div>
+                  <div class="image_operation">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="View image"
+                    >
+                      <i class="ri-eye-fill image_operation_icon icon_view"></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Update image"
+                    >
+                      <i
+                        class="ri-edit-fill image_operation_icon icon_edit"
+                      ></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Delete image"
+                    >
+                      <i
+                        class="ri-delete-bin-fill image_operation_icon icon_delete"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="image_card" aria-hidden="true">
+                  <div class="small_image_view">
+                    <img
+                      src="./assests/images/fashion1.webp"
+                      alt=""
+                      class="image_view"
+                    />
+                  </div>
+                  <div class="line"></div>
+                  <div class="image_info">
+                    <p class="image_title">
+                      My first Image Lorem ipsum, dolor sit amet consectetur
+                      adipisicing.
+                    </p>
+                    <p class="image_uplod_date text-muted mt-1">21/07/2023</p>
+                  </div>
+                  <div class="image_operation">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="View image"
+                    >
+                      <i class="ri-eye-fill image_operation_icon icon_view"></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Update image"
+                    >
+                      <i
+                        class="ri-edit-fill image_operation_icon icon_edit"
+                      ></i>
+                    </a>
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Delete image"
+                    >
+                      <i
+                        class="ri-delete-bin-fill image_operation_icon icon_delete"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="image_card" aria-hidden="true">
+                  <div class="small_image_view">
+                    <img
+                      src="./assests/images/fashion1.webp"
+                      alt=""
+                      class="image_view"
+                    />
+                  </div>
+                  <div class="line"></div>
+                  <div class="image_info">
+                    <p class="image_title">
+                      My first Image Lorem ipsum, dolor sit amet consectetur
+                      adipisicing.
+                    </p>
+                    <p class="image_uplod_date text-muted mt-1">21/07/2023</p>
                   </div>
                   <div class="image_operation">
                     <a
@@ -259,6 +532,43 @@
           </div>
         </div>
       </section>
+
+      <section class="section image_upload_section" id="section--3">
+        <div class="upload_image_area">
+          <div class="close_upload_box">
+            <a href="#" type="button">
+              <i class="ri-close-circle-line"></i>
+            </a>
+          </div>
+          <h1 class="upload_form_heading">Upload your image</h1>
+          <form method="POST" class="image_upload_form">
+            <div class="input_area mt-3">
+              <label for="imageTitle" class="form-label image_upload_label">
+                Your image title
+              </label>
+              <input
+                type="text"
+                class="form-control image_upload_input"
+                id="imageTitle"
+                name="imageTitle"
+              />
+            </div>
+            <div class="input_area mt-3">
+              <label for="imageUpload" class="form-label image_upload_label">
+                Upload Image
+              </label>
+              <input
+                type="file"
+                class="form-control image_upload_input"
+                id="imageUpload"
+                name="imageUpload"
+              />
+            </div>
+
+            <button type="submit" class="image_submit_btn mt-3">Upload</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <script
@@ -266,13 +576,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-      const tooltipTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="tooltip"]'
-      );
-      const tooltipList = [...tooltipTriggerList].map(
-        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-      );
-    </script>
+    <script src="./js/dashboard.js"></script>
   </body>
 </html>

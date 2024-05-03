@@ -256,6 +256,63 @@ main {
             }
         }
     }
+
+    section.image_upload_section {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: $dark75;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+
+        &.show_upload_box {
+            opacity: 100%;
+            pointer-events: all;
+        }
+
+        .upload_image_area {
+            background: $color_white;
+            padding: 2rem;
+            border-radius: $border_radius;
+            position: relative;
+
+            .close_upload_box {
+                i {
+                    font-size: 18px;
+                    color: $dark100;
+                }
+            }
+        }
+
+        .image_upload_form {
+            .input_area {
+                font-family: $paragraph_font;
+
+                .image_upload_input {
+                    border: none;
+                    border: 1px solid $dark75;
+                    border-radius: $border_radius;
+
+                    &:focus,
+                    &:active {
+                        outline: 0;
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .image_submit_btn {
+                @include make_button($color_success_light, $color_success, $color_success, $color_white)
+            }
+        }
+    }
 }
 
 @include mobile {

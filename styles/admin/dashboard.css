@@ -183,8 +183,8 @@ main section.admin_settings .container_right .image_container_heading {
   gap: 1.5rem;
 }
 main section.admin_settings .container_right .image_container_heading .image_upload_btn {
-  background-color: #12c212;
-  border: 1px solid #12c212;
+  background-color: #3387e1;
+  border: 1px solid #3387e1;
   font-family: "Open Sans", sans-serif;
   color: #fcffff;
   border-radius: 10rem;
@@ -192,8 +192,8 @@ main section.admin_settings .container_right .image_container_heading .image_upl
   transition: 0.2s ease-in-out;
 }
 main section.admin_settings .container_right .image_container_heading .image_upload_btn:hover {
-  background-color: rgba(18, 194, 18, 0.2431372549);
-  color: #12c212;
+  background-color: rgba(51, 135, 225, 0.2431372549);
+  color: #3387e1;
 }
 main section.admin_settings .container_right .image_list_cards {
   display: flex;
@@ -273,6 +273,63 @@ main section.admin_settings .container_right .image_list_cards .image_card .imag
 main section.admin_settings .container_right .image_list_cards .image_card .image_operation .icon_delete:hover {
   color: #fa402f;
   background-color: rgba(250, 64, 47, 0.2431372549);
+}
+main section.image_upload_section {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: rgba(12, 23, 28, 0.7490196078);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+main section.image_upload_section.show_upload_box {
+  opacity: 100%;
+  pointer-events: all;
+}
+main section.image_upload_section .upload_image_area {
+  background: #fcffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+main section.image_upload_section .upload_image_area .close_upload_box i {
+  font-size: 18px;
+  color: #0c171c;
+}
+main section.image_upload_section .image_upload_form .input_area {
+  font-family: "Open Sans", sans-serif;
+}
+main section.image_upload_section .image_upload_form .input_area .image_upload_input {
+  border: none;
+  border: 1px solid rgba(12, 23, 28, 0.7490196078);
+  border-radius: 1rem;
+}
+main section.image_upload_section .image_upload_form .input_area .image_upload_input:focus, main section.image_upload_section .image_upload_form .input_area .image_upload_input:active {
+  outline: 0;
+  box-shadow: none;
+}
+main section.image_upload_section .image_upload_form .image_submit_btn {
+  background-color: rgba(51, 135, 225, 0.2431372549);
+  padding: 0.6rem 2rem;
+  border-radius: 10rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #3387e1;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(51, 135, 225, 0.2431372549);
+}
+main section.image_upload_section .image_upload_form .image_submit_btn:hover {
+  background: #3387e1;
+  color: #fcffff;
 }
 
 @media screen and (max-width: 550px) {
